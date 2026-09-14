@@ -4,7 +4,7 @@ Versions here match what's entered in the **Connect IQ Store upload form**
 (<https://apps-developer.garmin.com>). The store requires each upload to have a
 higher version than the last.
 
-## 1.2.0 — Warnings page: long rows no longer risk clipping
+## 1.2.0 — Warnings page fix + a clearer "car's asleep" message
 
 - `WarningsView.mc`: each warning row now checks its own width against the
   screen before drawing — if "Service due · N km" (or another long line like
@@ -12,6 +12,15 @@ higher version than the last.
   smaller round screen, that row drops to a smaller font instead of
   potentially clipping at the bezel. Short rows ("Check doors") are
   untouched. Reported by Nico after seeing it look tight in practice.
+- A command or status fetch that fails because the car's telematics module
+  is asleep (Volvo's `422 "Car offline or unavailable"`) used to fall
+  through to the same generic path as a real backend error, showing a
+  misleading "Reconnect Volvo (open the connect page)" — as if the problem
+  were the Volvo sign-in, not the car being unreachable. Backend now
+  returns a distinct `409` for this case (`watch_routes.py`'s
+  `_upstream_error()`); the watch shows "Car is asleep — try again shortly"
+  instead (`Backend.mc`, `MainView.mc`). Confirmed live: a command really
+  did fail this way, and a retry a few minutes later succeeded.
 
 ## 1.1.0 — pure-EV fix
 

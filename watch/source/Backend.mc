@@ -95,6 +95,8 @@ module Backend {
                 _cb.invoke(false, "rate");
             } else if (code == 502 || code == 503) {
                 _cb.invoke(false, "reconnect");
+            } else if (code == 409) {
+                _cb.invoke(false, "offline");
             } else if (code == Communications.BLE_CONNECTION_UNAVAILABLE
                     || code == Communications.BLE_HOST_TIMEOUT
                     || code == -104

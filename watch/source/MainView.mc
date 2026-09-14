@@ -303,6 +303,7 @@ class MainView extends WatchUi.View {
     function errorTextFor(key as String) as String {
         if (key.equals("phone")) { return "Phone not connected"; }
         if (key.equals("reconnect")) { return "Reconnect Volvo\n(open the connect page)"; }
+        if (key.equals("offline")) { return "Car is asleep —\ntry again shortly"; }
         if (key.equals("rate")) { return "Busy — try again"; }
         if (key.equals("pair")) { return "Pairing failed —\ncheck the code"; }
         return "Can't reach backend";

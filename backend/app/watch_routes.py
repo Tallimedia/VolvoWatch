@@ -53,6 +53,12 @@ def _upstream_error(exc: VolvoError, where: str) -> HTTPException:
         return HTTPException(502, "reconnect Volvo — open the connect page")
     if exc.status == 429:
         return HTTPException(429, "Volvo is rate limiting — try again shortly")
+    if exc.status == 422:
+        # Volvo's UNPROCESSABLE_ENTITY for "car offline or unavailable" — the
+        # telematics module is asleep, not a real error. 409 (not 502/503,
+        # which the watch already treats as "reconnect Volvo") so it can be
+        # told apart and shown as "try again shortly" instead.
+        return HTTPException(409, "car is offline or asleep — try again shortly")
     return HTTPException(502, "Volvo request failed")
 
 
