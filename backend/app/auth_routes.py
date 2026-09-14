@@ -18,28 +18,11 @@ from .db import OAuthFlow, PairingCode, User, purge_expired, session_scope
 from .pkce import code_challenge_s256, generate_code_verifier, generate_state
 from .service import get_client, store_token
 from .volvo import VolvoError
+from .webshell import page as _page
 
 router = APIRouter(tags=["auth"])
 
 _log = logging.getLogger(__name__)
-
-
-def _page(title: str, body: str) -> str:
-    return f"""<!doctype html><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>{title}</title>
-<style>
- body{{font:16px/1.5 system-ui,sans-serif;margin:0;padding:2rem;
-   background:#0b1020;color:#e7ecf5;display:flex;justify-content:center}}
- main{{max-width:26rem;width:100%}}
- h1{{font-size:1.3rem}}
- a.btn,button{{display:inline-block;background:#3b6ef0;color:#fff;border:0;
-   border-radius:.6rem;padding:.8rem 1.2rem;font-size:1rem;text-decoration:none;cursor:pointer}}
- code{{background:#1c2540;padding:.15rem .4rem;border-radius:.3rem}}
- .code{{font-size:2.2rem;letter-spacing:.35rem;font-weight:700;background:#1c2540;
-   padding:1rem;border-radius:.6rem;text-align:center;margin:1rem 0}}
- .muted{{color:#9fb0cc;font-size:.9rem}}
-</style><main>{body}</main>"""
 
 
 @router.get("/", response_class=HTMLResponse)
@@ -47,17 +30,18 @@ def _page(title: str, body: str) -> str:
 async def link_landing() -> str:
     return _page(
         "VolvoWatch — connect",
-        '<p class="muted">This page pairs a <b>Garmin watch</b> running the '
+        '<p class="text-muted">This page pairs a <b>Garmin watch</b> running the '
         "VolvoWatch app with your Volvo — it's not something you need unless "
         "you already have that app open on your wrist or phone.</p>"
         "<h1>Connect your Volvo</h1>"
         "<p>Sign in with your Volvo ID to let VolvoWatch read your car's status "
         "and start climatisation from your watch.</p>"
-        '<p><a class="btn" href="/auth/login">Sign in with Volvo</a></p>'
-        '<p class="muted">You sign in on Volvo\'s own site. This service never sees '
+        '<p><a class="btn btn-primary" style="text-transform: uppercase; '
+        'letter-spacing: 0.06em" href="/auth/login">Sign in with Volvo</a></p>'
+        '<p class="text-muted">You sign in on Volvo\'s own site. This service never sees '
         "your password. Afterwards you'll get a short pairing code to enter in "
         "the watch app.</p>"
-        '<p class="muted">Provided as-is with no SLA. Currently free; if that ever '
+        '<p class="text-muted">Provided as-is with no SLA. Currently free; if that ever '
         "changes you'll be asked to accept before anything is charged — see the "
         '<a href="/terms">Terms of Service</a>.</p>',
     )
@@ -122,12 +106,28 @@ async def auth_callback(request: Request, code: str = "", state: str = "", error
 
     return _page(
         "VolvoWatch — paired",
-        "<h1>Almost done</h1>"
-        f"<p>Connected to <code>{html.escape(vin_display)}</code>.</p>"
-        "<p>Open the VolvoWatch settings in the Garmin Connect app and enter this "
-        "pairing code:</p>"
-        f'<div class="code">{pairing}</div>'
-        '<p class="muted">The code is valid for 15 minutes and can be used once.</p>',
+        '<div class="blueprint" style="padding: 26px">'
+        '<div style="font-family: var(--font-heading); font-size: 12px; '
+        'letter-spacing: 0.08em; text-transform: uppercase; '
+        'color: var(--color-neutral-600); margin-bottom: 14px">Pairing</div>'
+        "<h3 style=\"font-size: 26px; margin: 0 0 8px\">Almost done</h3>"
+        f'<p style="margin: 0 0 6px; color: var(--color-neutral-800)">Connected to '
+        f'<code style="font-family: ui-monospace, monospace; '
+        f'background: var(--color-accent-100); padding: 1px 5px">'
+        f"{html.escape(vin_display)}</code>.</p>"
+        '<p style="margin: 0 0 16px; color: var(--color-neutral-800)">Open the '
+        "VolvoWatch settings in the Garmin Connect app and enter this pairing "
+        "code:</p>"
+        '<div style="border: 1px solid var(--color-accent); '
+        "background: var(--color-accent-100); padding: 20px; text-align: center; "
+        "font-family: var(--font-heading); font-size: 40px; letter-spacing: 0.3em; "
+        f'font-weight: 700; color: var(--color-accent-900)">{pairing}</div>'
+        '<p style="margin: 14px 0 0; font-size: 13px; color: var(--color-neutral-600)">'
+        "The code is valid for 15 minutes and can be used once.</p>"
+        '<i class="corner tl"></i><i class="corner tr"></i>'
+        '<i class="corner bl"></i><i class="corner br"></i>'
+        "</div>",
+        crumb="Paired",
     )
 
 

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VolvoWatch — your Volvo on your wrist</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { margin: 0; }
+  a { color: var(--color-accent-700); }
+  a:hover { color: var(--color-accent-900); }
+</style>
+</head>
+<body>
+<div style="background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); font-size: 15px; line-height: 1.55">
+
+  <nav style="display: flex; align-items: center; gap: 24px; padding: 14px 32px; border-bottom: 1px solid var(--color-divider); position: sticky; top: 0; background: var(--color-bg); z-index: 5; flex-wrap: wrap">
+    <a href="#" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-text)">
+      <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="5">
+        <path d="M8 27 32 9l24 18"></path>
+        <path d="M14 27v29h36V27"></path>
+        <path d="M32 56V41" stroke="var(--color-accent)"></path>
+      </svg>
+      <span style="font-family: var(--font-heading); font-weight: 600; font-size: 17px; letter-spacing: 0.06em; text-transform: uppercase">Tallimedia</span>
+    </a>
+    <span style="color: var(--color-neutral-400)">/</span>
+    <span style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-weight: 600; font-size: 17px">
+      <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="21" stroke="var(--color-accent-900)" stroke-width="5"></circle>
+        <path d="M11 32a21 21 0 0 1 42 0" stroke="var(--color-accent)" stroke-width="5"></path>
+        <path d="M32 15 V32 L45 39" stroke="var(--color-accent-900)" stroke-width="6" stroke-linecap="square"></path>
+      </svg>
+      VolvoWatch
+    </span>
+    <div style="flex: 1"></div>
+    <div style="display: flex; align-items: center; gap: 22px; font-family: var(--font-heading); font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em">
+      <a href="#overview" style="text-decoration: none; color: var(--color-neutral-700)">Overview</a>
+      <a href="#screens" style="text-decoration: none; color: var(--color-neutral-700)">Screens</a>
+      <a href="#setup" style="text-decoration: none; color: var(--color-neutral-700)">Setup</a>
+      <a href="#requirements" style="text-decoration: none; color: var(--color-neutral-700)">Requirements</a>
+      <a class="btn btn-primary blueprint" href="#" style="color: var(--color-bg); text-transform: uppercase; letter-spacing: 0.06em">
+        Get it on Connect IQ
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </a>
+    </div>
+  </nav>
+
+  <header style="max-width: 1240px; margin: 0 auto; padding: 0 32px">
+    <div style="display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center; padding: 72px 0 64px; border-bottom: 1px solid var(--color-divider)">
+      <div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px">
+          <span class="tag tag-accent">Connect IQ · Widget</span>
+          <span class="tag tag-outline">v1.0.0</span>
+          <span class="tag tag-neutral">Europe / EMEA</span>
+        </div>
+        <h1 style="font-size: 76px; line-height: 0.94; letter-spacing: -0.02em; margin: 0 0 20px; text-wrap: balance">Your Volvo,<br>on your wrist.</h1>
+        <p style="font-size: 19px; max-width: 44ch; color: var(--color-neutral-800); margin: 0 0 28px; text-wrap: pretty">VolvoWatch puts your car's live status in the glance carousel and gives you a status page, a charging page, a trip page and a warnings page — plus climate control — without reaching for your phone.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px">
+          <a class="btn btn-primary blueprint" href="#" style="color: var(--color-bg); font-size: 15px; padding: 13px 22px; text-transform: uppercase; letter-spacing: 0.06em">
+            Install from Connect IQ
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          </a>
+          <a class="btn btn-secondary" href="#setup" style="font-size: 15px; padding: 13px 22px; text-transform: uppercase; letter-spacing: 0.06em">Setup guide</a>
+        </div>
+        <p style="font-size: 13px; color: var(--color-neutral-600); max-width: 48ch; margin: 0">An independent project, not affiliated with, endorsed by, or supported by Volvo Cars. "Volvo" is a trademark of Volvo Trademark Holding AB. Built on the public Volvo Cars Developer API.</p>
+      </div>
+
+      <figure style="position: relative">
+        <div class="blueprint" style="padding: 28px; background: repeating-linear-gradient(0deg, transparent 0 27px, color-mix(in srgb, var(--color-text) 6%, transparent) 27px 28px), repeating-linear-gradient(90deg, transparent 0 27px, color-mix(in srgb, var(--color-text) 6%, transparent) 27px 28px)">
+          <img src="../assets/screenshot-1-status.png" alt="VolvoWatch status page on a Garmin fenix" style="width: 100%; height: auto">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+        <div style="position: absolute; top: 34%; left: -8px; display: flex; align-items: center; gap: 8px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--color-bg); padding: 2px 6px; border: 1px solid var(--color-divider)">Combined range</span>
+          <span style="width: 48px; height: 1px; background: var(--color-accent)"></span>
+        </div>
+        <div style="position: absolute; bottom: 30%; right: -8px; display: flex; align-items: center; gap: 8px; flex-direction: row-reverse">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--color-bg); padding: 2px 6px; border: 1px solid var(--color-divider)">Lock · doors · service</span>
+          <span style="width: 48px; height: 1px; background: var(--color-accent)"></span>
+        </div>
+        <figcaption style="margin-top: 10px; display: flex; justify-content: space-between; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px">
+          <span>Fig. 01 — Status page, fēnix 8</span><span>454 × 454</span>
+        </figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section id="overview" style="max-width: 1240px; margin: 0 auto; padding: 64px 32px">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px">
+      <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700)">01</span>
+      <h2 style="font-size: 40px; margin: 0">What it shows</h2>
+      <span style="flex: 1; height: 1px; background: var(--color-divider)"></span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider)">
+      <div style="background: var(--color-bg); padding: 26px">
+        <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 12px">Page 1</div>
+        <h3 style="font-size: 24px; margin: 0 0 10px">Status</h3>
+        <p style="margin: 0; color: var(--color-neutral-800)">Combined petrol and electric range as a single number, lock state, whether every door and window is shut, and a service reminder when due.</p>
+      </div>
+      <div style="background: var(--color-bg); padding: 26px">
+        <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 12px">Page 2</div>
+        <h3 style="font-size: 24px; margin: 0 0 10px">Charging</h3>
+        <p style="margin: 0; color: var(--color-neutral-800)">Battery percentage, AC/DC, and time to full while plugged in — the battery figure turns green the moment it's actively charging.</p>
+      </div>
+      <div style="background: var(--color-bg); padding: 26px">
+        <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 12px">Page 3</div>
+        <h3 style="font-size: 24px; margin: 0 0 10px">Trip</h3>
+        <p style="margin: 0; color: var(--color-neutral-800)">A large odometer — handy when a fuel card asks for the mileage — average fuel consumption, and both trip meters.</p>
+      </div>
+      <div style="background: var(--color-bg); padding: 26px">
+        <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 12px">Page 4</div>
+        <h3 style="font-size: 24px; margin: 0 0 10px">Warnings</h3>
+        <p style="margin: 0; color: var(--color-neutral-800)">A real list, not just an icon: doors and windows called out separately, service due, washer fluid, tyre pressure — or a plain "no active warnings".</p>
+      </div>
+      <div style="background: var(--color-bg); padding: 26px">
+        <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 12px">Command</div>
+        <h3 style="font-size: 24px; margin: 0 0 10px">Climate control</h3>
+        <p style="margin: 0; color: var(--color-neutral-800)">Start and stop climatisation from the watch, with a confirmation step. The app reports what the car actually answered, not just that a command was sent.</p>
+      </div>
+      <div style="background: var(--color-bg); padding: 26px">
+        <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 12px">Carousel</div>
+        <h3 style="font-size: 24px; margin: 0 0 10px">Glance card</h3>
+        <p style="margin: 0; color: var(--color-neutral-800)">Battery, fuel and range at a glance from the widget carousel, before you open anything.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens" style="background: var(--color-accent-900); color: #f5f8fd; padding: 64px 0">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px">
+      <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px">
+        <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-300)">02</span>
+        <h2 style="font-size: 40px; margin: 0; color: #f5f8fd">Every screen</h2>
+        <span style="flex: 1; height: 1px; background: color-mix(in srgb, #f5f8fd 26%, transparent)"></span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px">
+        <figure>
+          <div style="aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 1px solid color-mix(in srgb, #f5f8fd 30%, transparent)"><img src="../assets/capture-1-status.png" alt="Status page" style="width: 100%; height: 100%; object-fit: cover"></div>
+          <figcaption style="color: var(--color-accent-300); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; margin-top: 8px">Status</figcaption>
+        </figure>
+        <figure>
+          <div style="aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 1px solid color-mix(in srgb, #f5f8fd 30%, transparent)"><img src="../assets/capture-3-charging.png" alt="Charging page" style="width: 100%; height: 100%; object-fit: cover"></div>
+          <figcaption style="color: var(--color-accent-300); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; margin-top: 8px">Charging</figcaption>
+        </figure>
+        <figure>
+          <div style="aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 1px solid color-mix(in srgb, #f5f8fd 30%, transparent)"><img src="../assets/capture-4-trip.png" alt="Trip page" style="width: 100%; height: 100%; object-fit: cover"></div>
+          <figcaption style="color: var(--color-accent-300); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; margin-top: 8px">Trip</figcaption>
+        </figure>
+        <figure>
+          <div style="aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 1px solid color-mix(in srgb, #f5f8fd 30%, transparent)"><img src="../assets/capture-5-warnings.png" alt="Warnings page" style="width: 100%; height: 100%; object-fit: cover"></div>
+          <figcaption style="color: var(--color-accent-300); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; margin-top: 8px">Warnings</figcaption>
+        </figure>
+        <figure>
+          <div style="aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 1px solid color-mix(in srgb, #f5f8fd 30%, transparent)"><img src="../assets/capture-6-menu.png" alt="Action menu" style="width: 100%; height: 100%; object-fit: cover"></div>
+          <figcaption style="color: var(--color-accent-300); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; margin-top: 8px">Action menu</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="setup" style="max-width: 1240px; margin: 0 auto; padding: 64px 32px">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px">
+      <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700)">03</span>
+      <h2 style="font-size: 40px; margin: 0">Setup</h2>
+      <span style="flex: 1; height: 1px; background: var(--color-divider)"></span>
+    </div>
+    <div style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: start">
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider)">
+        <li style="background: var(--color-bg); padding: 22px 26px; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; align-items: start">
+          <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-accent)">1</span>
+          <span>Install the app. First launch asks you to connect.</span>
+        </li>
+        <li style="background: var(--color-bg); padding: 22px 26px; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; align-items: start">
+          <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-accent)">2</span>
+          <span>Open the action menu (press select) → "Open connect page" — sends a notification to your phone. Or just open <a href="https://volvowatchapp.tallimedia.com/link">volvowatchapp.tallimedia.com/link</a> directly in any browser.</span>
+        </li>
+        <li style="background: var(--color-bg); padding: 22px 26px; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; align-items: start">
+          <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-accent)">3</span>
+          <span>Sign in with your Volvo ID. You sign in on Volvo's own page — this app never sees your password.</span>
+        </li>
+        <li style="background: var(--color-bg); padding: 22px 26px; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; align-items: start">
+          <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-accent)">4</span>
+          <span>You'll get a short pairing code. Enter it in Garmin Connect Mobile's app settings, or directly on the watch with the on-screen code wheels.</span>
+        </li>
+        <li style="background: var(--color-bg); padding: 22px 26px; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; align-items: start">
+          <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-accent)">5</span>
+          <span>The watch exchanges the code once for a private device token and starts showing your car.</span>
+        </li>
+      </ol>
+
+      <div>
+        <div class="blueprint" style="padding: 26px">
+          <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600); margin-bottom: 14px">Pairing page — /auth/callback</div>
+          <h3 style="font-size: 26px; margin: 0 0 8px">Almost done</h3>
+          <p style="margin: 0 0 6px; color: var(--color-neutral-800)">Connected to <code style="font-family: ui-monospace, monospace; background: var(--color-accent-100); padding: 1px 5px">XXXXXXXXXXXXXXXXX</code>.</p>
+          <p style="margin: 0 0 16px; color: var(--color-neutral-800)">Open the VolvoWatch settings in the Garmin Connect app and enter this pairing code:</p>
+          <div style="border: 1px solid var(--color-accent); background: var(--color-accent-100); padding: 20px; text-align: center; font-family: var(--font-heading); font-size: 40px; letter-spacing: 0.3em; font-weight: 700; color: var(--color-accent-900)">123456</div>
+          <p style="margin: 14px 0 0; font-size: 13px; color: var(--color-neutral-600)">The code is valid for 15 minutes and can be used once.</p>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+        <p style="margin-top: 14px; font-size: 13px; color: var(--color-neutral-600)">The app talks to a backend over HTTPS rather than to Volvo directly. It comes configured to use our own hosted backend, so most people never need to think about this — the backend is open source if you'd rather run your own.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="requirements" style="max-width: 1240px; margin: 0 auto; padding: 0 32px 64px">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px">
+      <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700)">04</span>
+      <h2 style="font-size: 40px; margin: 0">Requirements &amp; limits</h2>
+      <span style="flex: 1; height: 1px; background: var(--color-divider)"></span>
+    </div>
+    <table class="table" style="width: 100%">
+      <tbody>
+        <tr><th style="width: 30%; text-align: left">Car</th><td>A Volvo with connected services (Volvo On Call, ~2010–2024, or a Google built-in car from 2020 on) and a Volvo ID with the car linked.</td></tr>
+        <tr><th style="text-align: left">Connection</th><td>Your phone nearby, or the watch on WiFi — no LTE on this device, so it needs one of those to reach the backend.</td></tr>
+        <tr><th style="text-align: left">Devices</th><td>fēnix 6/7/8/9, epix 2, venu 2/3, vívoactive 5/6, forerunner 165–970, Marq, Descent — 115 device SKUs.</td></tr>
+        <tr><th style="text-align: left">Not yet</th><td>Level 2 actions (remote lock, unlock, flash the lights, honk) need a separate, more restricted approval from Volvo and aren't implemented yet.</td></tr>
+        <tr><th style="text-align: left">Freshness</th><td>Readings are as fresh as the car's last check-in — a parked car can go hours between updates, so the app always shows how old the data is.</td></tr>
+        <tr><th style="text-align: left">Privacy</th><td>No analytics, no third-party trackers.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 32px 64px">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px">
+      <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700)">05</span>
+      <h2 style="font-size: 40px; margin: 0">Marks</h2>
+      <span style="flex: 1; height: 1px; background: var(--color-divider)"></span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider)">
+      <div style="background: var(--color-bg); padding: 28px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start">
+        <svg width="96" height="96" viewBox="0 0 64 64" fill="none">
+          <rect x="8" y="8" width="48" height="48" stroke="var(--color-accent-400)" stroke-width="1"></rect>
+          <circle cx="32" cy="32" r="21" stroke="var(--color-accent-900)" stroke-width="3"></circle>
+          <path d="M11 32a21 21 0 0 1 42 0" stroke="var(--color-accent)" stroke-width="3"></path>
+          <path d="M32 12 V32 L46 40" stroke="var(--color-accent-900)" stroke-width="4" stroke-linecap="square"></path>
+        </svg>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">App mark</div>
+          <div style="font-family: var(--font-heading); font-size: 20px">Needle + arc</div>
+        </div>
+      </div>
+      <div style="background: var(--color-bg); padding: 28px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; justify-content: space-between">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+          <svg width="40" height="40" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="21" stroke="var(--color-accent-900)" stroke-width="4"></circle>
+            <path d="M11 32a21 21 0 0 1 42 0" stroke="var(--color-accent)" stroke-width="4"></path>
+            <path d="M32 14 V32 L45 39" stroke="var(--color-accent-900)" stroke-width="5" stroke-linecap="square"></path>
+          </svg>
+          <span style="font-family: var(--font-heading); font-weight: 700; font-size: 30px; letter-spacing: -0.01em">VolvoWatch</span>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Lockup</div>
+          <div style="font-family: var(--font-heading); font-size: 20px">Horizontal</div>
+        </div>
+      </div>
+      <div style="background: var(--color-bg); padding: 28px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; justify-content: space-between">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+          <svg width="56" height="56" viewBox="0 0 64 64" fill="none" stroke="var(--color-accent-900)" stroke-width="3">
+        <path d="M8 26 32 8l24 18"></path>
+        <path d="M13 26v30h38V26"></path>
+        <path d="M25 56V40h14v16" stroke="var(--color-accent)"></path>
+        <path d="M28 40v-5h8v5" stroke="var(--color-accent)"></path>
+      </svg>
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 20px; letter-spacing: 0.08em; text-transform: uppercase">Tallimedia</span>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Publisher</div>
+          <div style="font-family: var(--font-heading); font-size: 20px">Plate T</div>
+        </div>
+      </div>
+      <div style="background: var(--color-bg); padding: 28px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; justify-content: space-between">
+        <div style="display: flex; align-items: flex-end; gap: 14px">
+          <svg width="48" height="48" viewBox="0 0 64 64">
+            <rect width="64" height="64" fill="var(--color-accent-900)"></rect>
+            <circle cx="32" cy="32" r="20" fill="none" stroke="#f5f8fd" stroke-width="4"></circle>
+            <path d="M32 16 V32 L45 39" fill="none" stroke="#f5f8fd" stroke-width="4"></path>
+          </svg>
+          <svg width="32" height="32" viewBox="0 0 64 64">
+            <rect width="64" height="64" fill="var(--color-accent-900)"></rect>
+            <circle cx="32" cy="32" r="20" fill="none" stroke="#f5f8fd" stroke-width="6"></circle>
+            <path d="M32 17 V32 L44 39" fill="none" stroke="#f5f8fd" stroke-width="6"></path>
+          </svg>
+          <svg width="16" height="16" viewBox="0 0 64 64">
+            <rect width="64" height="64" fill="var(--color-accent-900)"></rect>
+            <circle cx="32" cy="32" r="19" fill="none" stroke="#f5f8fd" stroke-width="10"></circle>
+          </svg>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Favicon</div>
+          <div style="font-family: var(--font-heading); font-size: 20px">48 / 32 / 16</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 32px 72px">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px">
+      <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700)">06</span>
+      <h2 style="font-size: 40px; margin: 0">Header image — 1440 × 720</h2>
+      <span style="flex: 1; height: 1px; background: var(--color-divider)"></span>
+    </div>
+    <div class="blueprint" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr); align-items: center; gap: 40px; padding: 48px; aspect-ratio: 2 / 1; background: var(--color-accent-900); color: #f5f8fd; overflow: hidden">
+      <div>
+        <div style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 16px">Tallimedia · Connect IQ</div>
+        <div style="font-family: var(--font-heading); font-weight: 700; font-size: 64px; line-height: 0.95; letter-spacing: -0.02em">Your Volvo,<br>on your wrist.</div>
+        <div style="margin-top: 18px; font-size: 19px; color: var(--color-accent-200); max-width: 34ch">Range, fuel and battery at a glance — and start the heating from your wrist.</div>
+      </div>
+      <div style="position: relative; display: flex; justify-content: center; align-self: stretch; min-height: 0; height: 100%; overflow: hidden">
+        <div style="position: absolute; inset: -48px; background: repeating-linear-gradient(0deg, transparent 0 35px, color-mix(in srgb, #f5f8fd 10%, transparent) 35px 36px), repeating-linear-gradient(90deg, transparent 0 35px, color-mix(in srgb, #f5f8fd 10%, transparent) 35px 36px)"></div>
+        <img src="../assets/capture-1-status.png" alt="VolvoWatch status page" style="position: relative; height: 100%; width: auto; object-fit: contain; border-radius: 50%; border: 1px solid color-mix(in srgb, #f5f8fd 30%, transparent)">
+      </div>
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--color-divider); padding: 40px 32px">
+    <div style="max-width: 1240px; margin: 0 auto; display: flex; gap: 32px; flex-wrap: wrap; justify-content: space-between; align-items: flex-start">
+      <div style="max-width: 52ch">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px">
+          <svg width="20" height="20" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="5">
+        <path d="M8 27 32 9l24 18"></path>
+        <path d="M14 27v29h36V27"></path>
+        <path d="M32 56V41" stroke="var(--color-accent)"></path>
+      </svg>
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase">Tallimedia</span>
+        </div>
+        <p style="font-size: 13px; color: var(--color-neutral-600); margin: 0">The default backend runs on private infrastructure (Tallimedia), as-is with no service-level agreement — no guaranteed uptime, and we're not responsible for connectivity or hardware issues there.</p>
+      </div>
+      <div style="display: flex; gap: 40px; font-size: 14px">
+        <div style="display: grid; gap: 6px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">App</span>
+          <a href="#overview">Overview</a><a href="#setup">Setup</a><a href="#requirements">Requirements</a>
+        </div>
+        <div style="display: grid; gap: 6px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Legal</span>
+          <a href="/terms">Terms of Service</a><a href="/privacy">Privacy</a>
+        </div>
+        <div style="display: grid; gap: 6px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Source</span>
+          <a href="https://github.com/tallimedia/VolvoWatch">GitHub</a><a href="/link">Connect page</a><a href="mailto:iot@tallimedia.com">iot@tallimedia.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

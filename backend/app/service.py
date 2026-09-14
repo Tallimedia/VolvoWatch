@@ -105,18 +105,25 @@ async def ensure_access_token(session: Session, user: User) -> str:
             return token
 
         try:
-            new_token = await get_client().refresh(decrypt(user.refresh_token_enc))
+            refresh_token = decrypt(user.refresh_token_enc)
         except InvalidToken:
             # FERNET_KEY rotated (or the DB was restored from a backup taken
             # under an older key) — the stored refresh token can't be read at
             # all. Same recovery as a genuine Volvo-side refresh failure:
             # flag for re-consent rather than letting this reach the client
-            # as a bare 500.
+            # as a bare 500. Decrypted *before* get_client() deliberately —
+            # `get_client().refresh(decrypt(...))` would evaluate get_client()
+            # first (it has to, to resolve .refresh as a bound method), so a
+            # missing/misconfigured Volvo credential would mask this check
+            # entirely, even though the two failures are unrelated.
             user.needs_reconnect = True
             session.add(user)
             raise VolvoError(
                 "stored refresh token could not be decrypted", needs_reconnect=True
             ) from None
+
+        try:
+            new_token = await get_client().refresh(refresh_token)
         except VolvoError as exc:
             if exc.needs_reconnect:
                 user.needs_reconnect = True

@@ -52,3 +52,4 @@ watch/store/capture-*.png
 # ad-hoc verification screenshots (File -> Save Screen Capture), not store assets
 watch/store/pg*.png
 watch/store/pairing.png
+html/*.zip

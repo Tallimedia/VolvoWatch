@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tallimedia</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { margin: 0; }
+  a { color: var(--color-accent-700); }
+  a:hover { color: var(--color-accent-900); }
+</style>
+</head>
+<body>
+<div style="background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); font-size: 15px; line-height: 1.55">
+
+  <nav style="display: flex; align-items: center; gap: 24px; padding: 14px 32px; border-bottom: 1px solid var(--color-divider); position: sticky; top: 0; background: var(--color-bg); z-index: 5; flex-wrap: wrap">
+    <a href="#" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-text)">
+      <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="5">
+        <path d="M8 27 32 9l24 18"></path>
+        <path d="M14 27v29h36V27"></path>
+        <path d="M32 56V41" stroke="var(--color-accent)"></path>
+      </svg>
+      <span style="font-family: var(--font-heading); font-weight: 600; font-size: 17px; letter-spacing: 0.06em; text-transform: uppercase">Tallimedia</span>
+    </a>
+    <div style="flex: 1"></div>
+    <div style="display: flex; align-items: center; gap: 22px; font-family: var(--font-heading); font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em">
+      <a href="#apps" style="text-decoration: none; color: var(--color-neutral-700)">Apps</a>
+      <a href="#about" style="text-decoration: none; color: var(--color-neutral-700)">About</a>
+      <a href="#contact" style="text-decoration: none; color: var(--color-neutral-700)">Contact</a>
+    </div>
+  </nav>
+
+  <header style="max-width: 1240px; margin: 0 auto; padding: 0 32px">
+    <div style="padding: 88px 0 56px; border-bottom: 1px solid var(--color-divider); max-width: 24ch">
+      <h1 style="font-size: 84px; line-height: 0.92; letter-spacing: -0.025em; margin: 0 0 26px; text-transform: uppercase">Talli<br>media</h1>
+    </div>
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; padding: 40px 0 64px; border-bottom: 1px solid var(--color-divider)">
+      <p style="font-size: 22px; line-height: 1.4; margin: 0; text-wrap: pretty">Tallimedia is a private site for app development. I wanted to start using Claude Code to develop apps for my own use, and wanted to share them for anyone likeminded.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; justify-content: flex-end">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-divider); padding-bottom: 8px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Published</span>
+          <span style="font-family: var(--font-heading); font-size: 16px">1 app</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-divider); padding-bottom: 8px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Platform</span>
+          <span style="font-family: var(--font-heading); font-size: 16px">Garmin Connect IQ</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-divider); padding-bottom: 8px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Source</span>
+          <a href="https://github.com/tallimedia" style="font-family: var(--font-heading); font-size: 16px">github.com/tallimedia</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="apps" style="max-width: 1240px; margin: 0 auto; padding: 64px 32px">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px">
+      <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700)">01</span>
+      <h2 style="font-size: 40px; margin: 0">Apps</h2>
+      <span style="flex: 1; height: 1px; background: var(--color-divider)"></span>
+    </div>
+
+    <a class="blueprint" href="https://volvowatchapp.tallimedia.com/" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr); gap: 40px; align-items: center; padding: 36px; text-decoration: none; color: var(--color-text); margin-bottom: 28px">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="21" stroke="var(--color-accent-900)" stroke-width="4"></circle>
+            <path d="M11 32a21 21 0 0 1 42 0" stroke="var(--color-accent)" stroke-width="4"></path>
+            <path d="M32 14 V32 L45 39" stroke="var(--color-accent-900)" stroke-width="5" stroke-linecap="square"></path>
+          </svg>
+          <span style="font-family: var(--font-heading); font-weight: 700; font-size: 32px">VolvoWatch</span>
+          <span class="tag tag-accent">v1.0.0</span>
+        </div>
+        <p style="font-size: 18px; color: var(--color-neutral-800); margin: 0 0 18px; max-width: 52ch">Your Volvo's live status — range, battery, fuel, lock state, charging, trip data and active warnings — plus climate control, on a Garmin watch, without reaching for your phone.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px">
+          <span class="tag tag-outline">Connect IQ widget</span>
+          <span class="tag tag-outline">115 device SKUs</span>
+          <span class="tag tag-outline">Europe / EMEA</span>
+        </div>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700)">Open the app site →</span>
+      </div>
+      <figure style="margin: 0">
+        <img src="assets/screenshot-1-status.png" alt="VolvoWatch status page on a Garmin fēnix" style="width: 100%">
+      </figure>
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    </a>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px">
+      <div class="blueprint" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; justify-content: space-between; background: repeating-linear-gradient(0deg, transparent 0 27px, color-mix(in srgb, var(--color-text) 5%, transparent) 27px 28px), repeating-linear-gradient(90deg, transparent 0 27px, color-mix(in srgb, var(--color-text) 5%, transparent) 27px 28px)">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Slot 02</span>
+        <span style="font-family: var(--font-heading); font-size: 24px; color: var(--color-neutral-600)">Next app</span>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </div>
+      <div class="blueprint" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; justify-content: space-between; background: repeating-linear-gradient(0deg, transparent 0 27px, color-mix(in srgb, var(--color-text) 5%, transparent) 27px 28px), repeating-linear-gradient(90deg, transparent 0 27px, color-mix(in srgb, var(--color-text) 5%, transparent) 27px 28px)">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Slot 03</span>
+        <span style="font-family: var(--font-heading); font-size: 24px; color: var(--color-neutral-600)">Next app</span>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </div>
+      <div class="blueprint" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; justify-content: space-between; background: repeating-linear-gradient(0deg, transparent 0 27px, color-mix(in srgb, var(--color-text) 5%, transparent) 27px 28px), repeating-linear-gradient(90deg, transparent 0 27px, color-mix(in srgb, var(--color-text) 5%, transparent) 27px 28px)">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Slot 04</span>
+        <span style="font-family: var(--font-heading); font-size: 24px; color: var(--color-neutral-600)">Next app</span>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="background: var(--color-accent-900); color: #f5f8fd; padding: 64px 0">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 56px; align-items: start">
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-300)">02</span>
+          <h2 style="font-size: 40px; margin: 0; color: #f5f8fd">About</h2>
+        </div>
+        <p style="font-size: 20px; line-height: 1.45; color: #f5f8fd; margin: 0 0 18px">Tallimedia is a private site for app development. I wanted to start using Claude Code to develop apps for my own use, and wanted to share them for anyone likeminded.</p>
+        <p style="color: var(--color-accent-200); margin: 0">Everything published here is a personal project, run on a best-effort basis with no service-level agreement. Sources are open where the licence allows it.</p>
+      </div>
+      <div style="display: grid; gap: 1px; background: color-mix(in srgb, #f5f8fd 26%, transparent); border: 1px solid color-mix(in srgb, #f5f8fd 26%, transparent)">
+        <div style="background: var(--color-accent-900); padding: 22px 24px">
+          <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 6px">How it's built</div>
+          <div style="color: #f5f8fd">Monkey C on the watch, a small FastAPI backend, and Claude Code doing most of the typing.</div>
+        </div>
+        <div style="background: var(--color-accent-900); padding: 22px 24px">
+          <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 6px">Data</div>
+          <div style="color: #f5f8fd">No analytics, no third-party trackers on any app published here.</div>
+        </div>
+        <div style="background: var(--color-accent-900); padding: 22px 24px">
+          <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 6px">Licence</div>
+          <div style="color: #f5f8fd">PolyForm Noncommercial 1.0.0 — free for any noncommercial purpose.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="max-width: 1240px; margin: 0 auto; padding: 64px 32px">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px">
+      <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700)">03</span>
+      <h2 style="font-size: 40px; margin: 0">Contact</h2>
+      <span style="flex: 1; height: 1px; background: var(--color-divider)"></span>
+    </div>
+    <div style="display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: start">
+      <div>
+        <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600); margin-bottom: 8px">Email</div>
+        <a href="mailto:iot@tallimedia.com" style="font-family: var(--font-heading); font-size: 30px; text-decoration: none">iot@tallimedia.com</a>
+        <p style="margin: 20px 0 0; color: var(--color-neutral-800)">For bugs and feature requests, the repository's issues are the better route — they stay visible to everyone.</p>
+        <a class="btn btn-secondary" href="https://github.com/tallimedia/VolvoWatch/issues" style="margin-top: 14px; text-transform: uppercase; letter-spacing: 0.06em">Open an issue on GitHub</a>
+      </div>
+      <div class="blueprint" style="padding: 0; overflow: hidden">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; border-bottom: 1px solid var(--color-divider)">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Contact form — VolvoWatchApp</span>
+          <a href="https://forms.monday.com/forms/cc1320e6ed685d7e3e1a12d8be24f451?r=euc1" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase">Open in new tab</a>
+        </div>
+        <iframe src="https://forms.monday.com/forms/embed/cc1320e6ed685d7e3e1a12d8be24f451?r=euc1" title="VolvoWatchApp contact form" style="width: 100%; height: 520px; border: 0; display: block"></iframe>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--color-divider); padding: 40px 32px">
+    <div style="max-width: 1240px; margin: 0 auto; display: flex; gap: 32px; flex-wrap: wrap; justify-content: space-between; align-items: flex-start">
+      <div style="max-width: 52ch">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px">
+          <svg width="20" height="20" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="5">
+        <path d="M8 27 32 9l24 18"></path>
+        <path d="M14 27v29h36V27"></path>
+        <path d="M32 56V41" stroke="var(--color-accent)"></path>
+      </svg>
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase">Tallimedia</span>
+        </div>
+        <p style="font-size: 13px; color: var(--color-neutral-600); margin: 0">Apps published here are personal projects, provided as-is with no service-level agreement. VolvoWatch is an independent project, not affiliated with, endorsed by, or supported by Volvo Cars.</p>
+      </div>
+      <div style="display: flex; gap: 40px; font-size: 14px">
+        <div style="display: grid; gap: 6px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Apps</span>
+          <a href="https://volvowatchapp.tallimedia.com/">VolvoWatch</a>
+        </div>
+        <div style="display: grid; gap: 6px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Legal</span>
+          <a href="https://volvowatchapp.tallimedia.com/terms">Terms of Service</a><a href="https://volvowatchapp.tallimedia.com/privacy">Privacy</a>
+        </div>
+        <div style="display: grid; gap: 6px">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Contact</span>
+          <a href="mailto:iot@tallimedia.com">iot@tallimedia.com</a><a href="https://github.com/tallimedia">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
