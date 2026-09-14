@@ -58,3 +58,14 @@ async def volvo_status() -> dict:
         return await api_status()
     except Exception:  # noqa: BLE001 — unauthenticated endpoint, don't leak detail
         return {"ok": False, "error": "could not reach the Volvo status service"}
+
+
+# The static marketing landing page owns "/" — mounted last, after every other
+# route, since Starlette dispatches to the first matching route in
+# registration order and a root-prefix Mount matches any path. StaticFiles
+# only ever sees requests nothing above already claimed.
+app.mount(
+    "/",
+    StaticFiles(directory=Path(__file__).parent / "landing", html=True),
+    name="landing",
+)

@@ -25,7 +25,6 @@ router = APIRouter(tags=["auth"])
 _log = logging.getLogger(__name__)
 
 
-@router.get("/", response_class=HTMLResponse)
 @router.get("/link", response_class=HTMLResponse)
 async def link_landing() -> str:
     return _page(
