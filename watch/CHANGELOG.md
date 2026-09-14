@@ -4,6 +4,15 @@ Versions here match what's entered in the **Connect IQ Store upload form**
 (<https://apps-developer.garmin.com>). The store requires each upload to have a
 higher version than the last.
 
+## 1.2.0 — Warnings page: long rows no longer risk clipping
+
+- `WarningsView.mc`: each warning row now checks its own width against the
+  screen before drawing — if "Service due · N km" (or another long line like
+  "Tyre pressure warning") would run past ~86% of the display width on a
+  smaller round screen, that row drops to a smaller font instead of
+  potentially clipping at the bezel. Short rows ("Check doors") are
+  untouched. Reported by Nico after seeing it look tight in practice.
+
 ## 1.1.0 — pure-EV fix
 
 - Status page no longer shows a stray "Fuel –" on a pure EV. Volvo reports

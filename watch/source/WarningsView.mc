@@ -81,10 +81,20 @@ class WarningsView extends WatchUi.View {
         var y = (h - totalH) / 2;
         if (y < h * 0.08) { y = h * 0.08; }
 
+        // Round screens narrow toward top/bottom; a row wider than this on a
+        // small device (e.g. "Service due · 15000 km") would run past the
+        // bezel, so it drops to a smaller font rather than clipping.
+        var maxRowW = dc.getWidth() * 0.86;
+
         for (var i = 0; i < icons.size(); i++) {
             var bmp = icons[i];
             var text = texts[i];
-            var textW = dc.getTextWidthInPixels(text, valF);
+            var font = valF;
+            var textW = dc.getTextWidthInPixels(text, font);
+            if (bmp.getWidth() + gap + textW > maxRowW) {
+                font = Graphics.FONT_XTINY;
+                textW = dc.getTextWidthInPixels(text, font);
+            }
             var rowW = bmp.getWidth() + gap + textW;
             var rowCy = y + ROWH / 2;
 
@@ -95,7 +105,7 @@ class WarningsView extends WatchUi.View {
             dc.drawText(
                 (iconX + bmp.getWidth() + gap).toNumber(),
                 rowCy.toNumber(),
-                valF, text, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+                font, text, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
             y += ROWH;
         }
