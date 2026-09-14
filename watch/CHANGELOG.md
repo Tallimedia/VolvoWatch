@@ -4,6 +4,14 @@ Versions here match what's entered in the **Connect IQ Store upload form**
 (<https://apps-developer.garmin.com>). The store requires each upload to have a
 higher version than the last.
 
+## 1.0.1 — pure-EV fix
+
+- Status page no longer shows a stray "Fuel –" on a pure EV. Volvo reports
+  `fuelAmount: null` (not `0`) for cars with no tank, and the status page
+  drew the "Fuel" label unconditionally regardless — now it's only shown
+  alongside a real fuel reading, same as the glance card and Trip page
+  already did. Found via real feedback from the first pure-EV tester.
+
 ## 1.0.0 — first public release
 
 - Status page: combined petrol + electric range, lock state, doors/windows,

@@ -2,7 +2,7 @@
     <string id="AppName">Volvo</string>
     <!-- Bump this with every release — shown on the Warnings page footer so
          a tester can confirm which build is actually installed. -->
-    <string id="AppVersion">1.0.0</string>
+    <string id="AppVersion">1.0.1</string>
 
     <string id="SettingCarLabel">Car name</string>
     <string id="SettingCarLabelPrompt">Shown at the top, e.g. "My XC60"</string>

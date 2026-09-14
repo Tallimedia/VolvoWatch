@@ -196,21 +196,27 @@ class MainView extends WatchUi.View {
         dc.setColor(Theme.MUTED, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, h * 0.48, Graphics.FONT_XTINY, rangeLabel, vc);
 
-        // Battery / fuel — battery figure reddens when low.
+        // Battery / fuel — battery figure reddens when low. A pure EV has no
+        // fuel_pct at all (Volvo reports fuelAmount: null, not 0) — show just
+        // the battery figure, centred alone, rather than a stray "Fuel –".
         var battFont = Graphics.FONT_SMALL;
         var battTxt = "Bat " + Fmt.pct(s["battery_pct"]);
-        var fuelTxt = "Fuel " + Fmt.pct(s["fuel_pct"]);
-        var gap = "    ";
-        var battW = dc.getTextWidthInPixels(battTxt, battFont);
-        var fullW = dc.getTextWidthInPixels(battTxt + gap + fuelTxt, battFont);
-        var leftX = cx - fullW / 2;
         var y = h * 0.585;
         dc.setColor(Theme.batteryColour(Fmt.num(s["battery_pct"])), Graphics.COLOR_TRANSPARENT);
-        dc.drawText(leftX, y, battFont, battTxt,
-            Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.setColor(Theme.TEXT, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(leftX + battW + dc.getTextWidthInPixels(gap, battFont), y, battFont, fuelTxt,
-            Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        if (s["fuel_pct"] == null) {
+            dc.drawText(cx, y, battFont, battTxt, vc);
+        } else {
+            var fuelTxt = "Fuel " + Fmt.pct(s["fuel_pct"]);
+            var gap = "    ";
+            var battW = dc.getTextWidthInPixels(battTxt, battFont);
+            var fullW = dc.getTextWidthInPixels(battTxt + gap + fuelTxt, battFont);
+            var leftX = cx - fullW / 2;
+            dc.drawText(leftX, y, battFont, battTxt,
+                Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.setColor(Theme.TEXT, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(leftX + battW + dc.getTextWidthInPixels(gap, battFont), y, battFont, fuelTxt,
+                Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        }
 
         drawFlagIcons(dc, cx, (h * 0.695).toNumber(), s);
 
