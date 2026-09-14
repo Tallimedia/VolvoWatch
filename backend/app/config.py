@@ -23,7 +23,17 @@ class Settings(BaseSettings):
     fernet_key: str = ""
     device_token_pepper: str = ""
     status_cache_ttl: int = 60
-    extra_allowed_origins: str = ""
+    # www.tallimedia.com's feedback form POSTs here cross-origin.
+    extra_allowed_origins: str = "https://www.tallimedia.com"
+
+    # Feedback form (www.tallimedia.com's #contact section) — sent via SMTP,
+    # not stored. All optional; the endpoint 503s if smtp_host is unset.
+    smtp_host: str = ""
+    smtp_port: int = 587
+    smtp_username: str = ""
+    smtp_password: str = ""
+    smtp_from: str = ""
+    feedback_to_email: str = "iot@tallimedia.com"
 
     # Optional: usable tank size, to derive a fuel % (Volvo only reports litres).
     # XC60 PHEV ~= 60 L usable. Leave 0 to omit fuel_pct.

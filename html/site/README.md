@@ -1,6 +1,8 @@
 # Tallimedia static site
 
-Plain static HTML. No build step, no JS.
+Plain static HTML, no build step. The one exception is a small inline
+`<script>` in `index.html` for the `#contact` feedback form — everything
+else is markup/CSS only.
 
     site/
       index.html              design source for www.tallimedia.com
@@ -42,10 +44,14 @@ internal design-review content to real visitors) but kept here as reference:
 
 ## Other notes
 
-- The Monday.com contact-form iframe
-  (`forms.monday.com/forms/embed/cc1320e6ed685d7e3e1a12d8be24f451?r=euc1`)
-  lives on `volvowatch/index.html`'s own Contact section, not on the main
-  `index.html` — it's VolvoWatch-specific feedback, and the main site is
-  meant to host more than one app over time.
+- `index.html`'s `#contact` section has a small feedback form that POSTs
+  (via `fetch`, cross-origin) to `POST /feedback` on the VolvoWatch backend —
+  see `backend/app/feedback_routes.py`. It relays the message by email
+  (SMTP, configured via `SMTP_*` env vars) to `FEEDBACK_TO_EMAIL`
+  (`iot@tallimedia.com` by default); nothing is stored. That backend's
+  `EXTRA_ALLOWED_ORIGINS` must include `https://www.tallimedia.com` for the
+  CORS preflight to succeed — it does by default.
+  `volvowatch/index.html`'s own Contact section (GitHub issues + the same
+  email) is separate and doesn't have a form.
 - Cross-links between the two sites use full `https://` URLs (they're
   separate subdomains, not folders under one origin).

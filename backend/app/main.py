@@ -10,7 +10,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from . import auth_routes, legal_routes, watch_routes
+from . import auth_routes, feedback_routes, legal_routes, watch_routes
 from .config import get_settings
 from .db import init_db
 from .volvo import api_status
@@ -37,6 +37,7 @@ if _settings.allowed_origins:
 
 app.include_router(auth_routes.router)
 app.include_router(legal_routes.router)
+app.include_router(feedback_routes.router)
 app.include_router(watch_routes.router)
 
 # Shared design-system CSS + self-hosted fonts for the server-rendered pages

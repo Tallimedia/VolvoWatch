@@ -121,12 +121,73 @@
       <h2 style="font-size: 40px; margin: 0">Contact</h2>
       <span style="flex: 1; height: 1px; background: var(--color-divider)"></span>
     </div>
-    <div style="max-width: 62ch">
-      <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600); margin-bottom: 8px">Email</div>
-      <a href="mailto:iot@tallimedia.com" style="font-family: var(--font-heading); font-size: 30px; text-decoration: none">iot@tallimedia.com</a>
-      <p style="margin: 20px 0 0; color: var(--color-neutral-800)">General questions or ideas for a future app go here. For feedback on a specific app, use that app's own page — its contact form and issue tracker stay visible to everyone using it.</p>
+    <div style="display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: start">
+      <div>
+        <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600); margin-bottom: 8px">Email</div>
+        <a href="mailto:iot@tallimedia.com" style="font-family: var(--font-heading); font-size: 30px; text-decoration: none">iot@tallimedia.com</a>
+        <p style="margin: 20px 0 0; color: var(--color-neutral-800)">General questions or ideas for a future app go here. For feedback on a specific app, use that app's own page — its contact form and issue tracker stay visible to everyone using it.</p>
+      </div>
+      <form id="feedback-form" class="blueprint" style="padding: 24px; display: grid; gap: 14px" novalidate>
+        <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Quick feedback</div>
+        <div class="field">
+          <label for="fb-name">Name (optional)</label>
+          <input class="input" id="fb-name" name="name" type="text" maxlength="100" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="fb-email">Email (optional, if you want a reply)</label>
+          <input class="input" id="fb-email" name="email" type="email" maxlength="200" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="fb-message">Message</label>
+          <textarea class="input" id="fb-message" name="message" required maxlength="2000" placeholder="A quick note — bug, idea, question."></textarea>
+        </div>
+        <div aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden">
+          <label for="fb-hp">Leave this field empty</label>
+          <input id="fb-hp" name="hp" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn-primary" type="submit" style="text-transform: uppercase; letter-spacing: 0.06em; justify-self: start">Send</button>
+        <p id="feedback-status" role="status" style="margin: 0; font-size: 13px; color: var(--color-neutral-600)"></p>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </form>
     </div>
   </section>
+
+  <script>
+    (function () {
+      var form = document.getElementById('feedback-form');
+      var status = document.getElementById('feedback-status');
+      var endpoint = 'https://volvowatchapp.tallimedia.com/feedback';
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var button = form.querySelector('button[type="submit"]');
+        var body = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim() || null,
+          message: form.message.value.trim(),
+          hp: form.hp.value
+        };
+        if (!body.message) {
+          status.textContent = 'Say something first.';
+          return;
+        }
+        button.disabled = true;
+        status.textContent = 'Sending…';
+        fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        }).then(function (res) {
+          if (!res.ok) throw new Error('request failed');
+          status.textContent = 'Sent — thanks.';
+          form.reset();
+        }).catch(function () {
+          status.textContent = 'Could not send — email ' + 'iot@tallimedia.com' + ' instead.';
+        }).finally(function () {
+          button.disabled = false;
+        });
+      });
+    })();
+  </script>
 
   <footer style="border-top: 1px solid var(--color-divider); padding: 40px 32px">
     <div style="max-width: 1240px; margin: 0 auto; display: flex; gap: 32px; flex-wrap: wrap; justify-content: space-between; align-items: flex-start">
