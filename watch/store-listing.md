@@ -113,6 +113,14 @@ Source and setup docs: https://github.com/tallimedia/VolvoWatch
 
 ## What's new / release notes (≤4000 chars)
 
+### 1.1.0
+
+```
+Fixed a display bug on the status page: EV owners without a fuel tank were
+seeing a stray "Fuel" reading with no value. The battery figure now shows
+on its own when a car has no fuel data.
+```
+
 ### 1.0.0
 
 ```
@@ -140,7 +148,7 @@ built on a hosted backend, no setup beyond signing in with your Volvo ID.
   full description (setup + requirements + disclaimer), and the release notes
   ("what's new"). The release notes deliberately end by pointing at the
   description, so they are not interchangeable.
-- **Version:** `1.0.0`
+- **Version:** `1.1.0`
 - **Type:** Widget (detected from the manifest)
 - **Class / category:** Lifestyle (Finnish portal: *Elämäntyyli*; *Työkalut* =
   Tools, the fallback if Lifestyle isn't offered). The store's own bucket for
