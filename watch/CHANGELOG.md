@@ -21,6 +21,22 @@ higher version than the last.
   `_upstream_error()`); the watch shows "Car is asleep — try again shortly"
   instead (`Backend.mc`, `MainView.mc`). Confirmed live: a command really
   did fail this way, and a retry a few minutes later succeeded.
+- **"Stop climate" hidden from the action menu.** Volvo's public API
+  reports the command as `COMPLETED` but doesn't reliably stop the car —
+  confirmed on 3 real cars across 2 platforms (Nico's XC60 PHEV, a friend's
+  XC40 EV, Peter's car after a clean controlled test), and independently
+  reproduced by Home Assistant's official Volvo integration on a
+  completely separate codebase (`home-assistant/core#171889`, open,
+  unresolved), which rules out anything in our request/headers/command
+  mapping. Verified the car itself declares the command supported
+  (`GET /{vin}/commands` lists `CLIMATIZATION_STOP`, accessibility
+  `AVAILABLE`) — not an unsupported-command or car-asleep case, a genuine
+  unacknowledged Volvo API defect. Nothing to fix on our side, so the menu
+  item is commented out in `MainDelegate.mc` (not deleted — one line to
+  restore) rather than shipping a control that usually does nothing.
+  Filed with Volvo developer support; re-enable once they confirm a fix.
+  `store-listing.md`'s copy updated too — it previously (incorrectly)
+  claimed Volvo's own app has the same problem; it doesn't.
 
 ## 1.1.0 — pure-EV fix
 

@@ -29,8 +29,14 @@ class MainDelegate extends WatchUi.BehaviorDelegate {
         var menu = new WatchUi.Menu2({ :title => "Volvo" });
         menu.addItem(new WatchUi.MenuItem(
             WatchUi.loadResource(Rez.Strings.StartClimate) as String, null, :climateStart, null));
-        menu.addItem(new WatchUi.MenuItem(
-            WatchUi.loadResource(Rez.Strings.StopClimate) as String, null, :climateStop, null));
+        // "Stop climate" hidden as of 1.2.0 — Volvo's public API reports the
+        // command as COMPLETED but doesn't reliably stop the car (confirmed
+        // on 3 cars across 2 platforms; an independent implementation, Home
+        // Assistant's Volvo integration, hits the identical wall). Not
+        // fixable client-side. Re-add the addItem call below once Volvo
+        // fixes it upstream — ActionMenuDelegate still handles :climateStop.
+        // menu.addItem(new WatchUi.MenuItem(
+        //     WatchUi.loadResource(Rez.Strings.StopClimate) as String, null, :climateStop, null));
         menu.addItem(new WatchUi.MenuItem(
             WatchUi.loadResource(Rez.Strings.Refresh) as String, null, :refresh, null));
         if (PairEntry.supported()) {

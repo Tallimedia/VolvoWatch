@@ -47,9 +47,9 @@ service due (with the distance remaining), washer fluid, tyre pressure — or
 a plain "no active warnings" when everything's fine.
 
 CLIMATE CONTROL
-Start and stop climatisation from the watch, with a confirmation step so it
-can't be triggered by accident. The app reports what the car actually
-answered, not just that a command was sent.
+Start climatisation from the watch, with a confirmation step so it can't be
+triggered by accident. The app reports what the car actually answered, not
+just that a command was sent. (Stop is temporarily hidden — see below.)
 
 BUILT FOR PLUG-IN HYBRIDS FIRST
 Developed and tested against a PHEV. Everything above already works for any
@@ -92,11 +92,11 @@ GOOD TO KNOW
   always shows how old the data is.
 • The climate command only works while the car is reachable; Volvo refuses
   it while someone's driving, and the app says so.
-• Stopping climatisation is accepted by Volvo's API (it reports success),
-  but on many cars it doesn't actually stop — a known Volvo-side fault that
-  affects every app built on their public developer API, not just this one.
-  Volvo's own app uses a different, private interface and can stop it. If
-  stop doesn't take effect, use the Volvo app.
+• Stopping climatisation isn't offered from the watch right now. Volvo's
+  public developer API reports the stop command as successful even when it
+  doesn't actually stop the car — a known Volvo-side fault, not specific to
+  this app, so the option is hidden until Volvo fixes it rather than
+  shipping a button that usually does nothing. Use the Volvo app to stop it.
 • No analytics, no third-party trackers.
 
 ABOUT THE HOSTED SERVICE
@@ -198,7 +198,9 @@ built on a hosted backend, no setup beyond signing in with your Volvo ID.
   - `screenshot-4-trip.png` — Trip page (odometer, avg fuel, trip meter).
   - `screenshot-5-warnings.png` — Warnings page with active warnings.
   - `screenshot-6-menu.png` / `screenshot-7-menu2.png` — the action menu,
-    top and bottom half (start/stop climate, refresh, enter pairing code —
-    doesn't fit in one screen on a round display).
+    top and bottom half (refresh, enter pairing code — doesn't fit in one
+    screen on a round display). **STALE as of 1.2.0** — these still show
+    "Stop climate", which is now hidden (see CHANGELOG). Re-capture and
+    re-run `make_store_art.py` before uploading 1.2.0.
   - `screenshot-8-glance.png` — the glance-carousel card.
 - This is a normal public listing, not a Beta — anyone can find and install it.
