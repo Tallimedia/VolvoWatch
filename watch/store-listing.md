@@ -49,7 +49,7 @@ a plain "no active warnings" when everything's fine.
 CLIMATE CONTROL
 Start climatisation from the watch, with a confirmation step so it can't be
 triggered by accident. The app reports what the car actually answered, not
-just that a command was sent. (Stop is temporarily hidden — see below.)
+just that a command was sent.
 
 BUILT FOR PLUG-IN HYBRIDS FIRST
 Developed and tested against a PHEV. Everything above already works for any
@@ -60,8 +60,7 @@ WHAT THIS APP CAN AND CAN'T DO
 VolvoWatch uses Volvo's Level 1 data — vehicle status and the one climate
 command above. Level 2 actions (remote lock, unlock, flash the lights, honk)
 need a separate, more restricted approval from Volvo and aren't implemented
-yet. If you want remote lock/unlock today, it isn't there yet — planned for
-later.
+yet.
 
 SETUP
 1. Install the app. First launch asks you to connect.
@@ -92,11 +91,10 @@ GOOD TO KNOW
   always shows how old the data is.
 • The climate command only works while the car is reachable; Volvo refuses
   it while someone's driving, and the app says so.
-• Stopping climatisation isn't offered from the watch right now. Volvo's
-  public developer API reports the stop command as successful even when it
-  doesn't actually stop the car — a known Volvo-side fault, not specific to
-  this app, so the option is hidden until Volvo fixes it rather than
-  shipping a button that usually does nothing. Use the Volvo app to stop it.
+• Stopping climatisation isn't offered here — Volvo's public API reports
+  the stop command as successful without reliably stopping the car, a known
+  fault on Volvo's side. Use the Volvo app to stop it; we'll bring this
+  back once Volvo fixes it.
 • No analytics, no third-party trackers.
 
 ABOUT THE HOSTED SERVICE
