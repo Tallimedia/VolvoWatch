@@ -1,0 +1,48 @@
+<strings>
+    <string id="AppName">Volvo</string>
+    <!-- Bump this with every release — shown on the Warnings page footer so
+         a tester can confirm which build is actually installed. -->
+    <string id="AppVersion">1.0.0</string>
+
+    <string id="SettingCarLabel">Car name</string>
+    <string id="SettingCarLabelPrompt">Shown at the top, e.g. "My XC60"</string>
+    <string id="SettingBackendUrl">Backend URL</string>
+    <string id="SettingBackendUrlPrompt">e.g. https://volvowatchapp.tallimedia.com</string>
+    <string id="SettingPairingCode">Pairing code</string>
+    <string id="SettingPairingCodePrompt">6-digit code from the connect page</string>
+
+    <string id="Loading">Loading…</string>
+    <string id="NeedsPairing">Enter a pairing code in the app settings</string>
+    <string id="NeedsReconnect">Reconnect Volvo — open the connect page</string>
+    <string id="PhoneNotConnected">Phone not connected</string>
+    <string id="RateLimited">Busy — try again shortly</string>
+    <string id="CarUnreachable">Car is asleep</string>
+    <string id="Pairing">Pairing…</string>
+    <string id="PairFailed">Pairing failed — check the code</string>
+
+    <string id="Battery">Battery</string>
+    <string id="Fuel">Fuel</string>
+    <string id="Range">Range</string>
+    <string id="Odometer">Odometer</string>
+    <string id="Locked">Locked</string>
+    <string id="Unlocked">Unlocked</string>
+    <string id="Closed">All closed</string>
+    <string id="OpenWarn">Something open</string>
+    <string id="ServiceDue">Service due</string>
+    <string id="Charging">Charging</string>
+    <string id="Updated">Updated $1$</string>
+    <string id="JustNow">just now</string>
+    <string id="MinAgo">$1$m ago</string>
+    <string id="HrAgo">$1$h ago</string>
+
+    <string id="ActionsTitle">Volvo</string>
+    <string id="StartClimate">Start climate</string>
+    <string id="StopClimate">Stop climate</string>
+    <string id="Refresh">Refresh</string>
+    <string id="EnterCode">Enter pairing code</string>
+    <string id="OpenConnectPage">Open connect page</string>
+    <string id="ConfirmStartClimate">Start climatisation?</string>
+    <string id="ConfirmStopClimate">Stop climatisation?</string>
+    <string id="Sent">Sent</string>
+    <string id="CommandFailed">Command failed</string>
+</strings>

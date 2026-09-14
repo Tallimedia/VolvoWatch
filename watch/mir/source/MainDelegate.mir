@@ -1,0 +1,478 @@
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+//! Widget input: any select/menu press opens the action menu.
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 5; @symbol_classdef = [MainDelegate,5,6,18]; @symbol_extends<0> = [WatchUi,5,27,34]; @symbol_extends<1> = [BehaviorDelegate,5,35,51]; ]
+class MainDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 6; @position = 16; @symbol_vardef = [_view,6,16,21]; @symbol_type<0> = [MainView,6,25,33]; ]
+    private
+    var _view as MainView;
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; @symbol_param<0> = [view,8,24,28]; @symbol_param<0>_type<0> = [MainView,8,32,40]; ]
+    function initialize(view as MainView) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_8_42_11_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 9 8 ]
+        symbol [ BehaviorDelegate %tmp.2 9 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 9 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 10 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 10 16 20 ];
+        symbol [ _view ? 10 8 13 ];
+        putv self :_view %tmp.4;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_8_42_11_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 13; @symbol_functiondef = [onSelect,13,13,21]; @symbol_return<0> = [Boolean,13,27,34]; ]
+    function onSelect() as Boolean {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_13_35_16_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 14 8 ]
+        %tmp.1 = self;
+        symbol [ openMenu %tmp.2 14 8 16 ];
+        %tmp.2 = getv function %tmp.1 :openMenu;
+        invoke %tmp.1 %tmp.2();
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 15 8 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_13_35_16_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 18; @symbol_functiondef = [onMenu,18,13,19]; @symbol_return<0> = [Boolean,18,25,32]; ]
+    function onMenu() as Boolean {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_18_33_21_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 19 8 ]
+        %tmp.1 = self;
+        symbol [ openMenu %tmp.2 19 8 16 ];
+        %tmp.2 = getv function %tmp.1 :openMenu;
+        invoke %tmp.1 %tmp.2();
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 20 8 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_18_33_21_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 23; @symbol_functiondef = [openMenu,23,13,21]; ]
+    function openMenu() as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_23_32_32_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 24 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_23_32_32_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_23_32_32_4_stop" ]
+        %menu.1 = local;
+        symbol [ menu %menu.1 24 12 16 ];
+        symbol [ WatchUi %tmp.3 24 23 30 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ Menu2 %tmp.4 24 31 36 ];
+        %tmp.4 = getv function ? %tmp.3 :Menu2;
+        %tmp.5 = newd 1;
+        %tmp.7 = const :title;
+        symbol [ title %tmp.7 24 40 45 const ];
+        %tmp.8 = "Volvo";
+        %tmp.9 = dup %tmp.5;
+        %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+        %tmp.1 = newc %tmp.4 (%tmp.10);
+        lputv %menu.1 %tmp.1;
+        symbol [ menu %menu.1 24 12 16 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 25 8 ]
+        %tmp.11 = lgetv %menu.1;
+        symbol [ menu %tmp.11 25 8 12 ];
+        symbol [ addItem %tmp.12 25 13 20 ];
+        %tmp.12 = getv function %tmp.11 :addItem;
+        symbol [ WatchUi %tmp.15 25 25 32 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ MenuItem %tmp.16 25 33 41 ];
+        %tmp.16 = getv function ? %tmp.15 :MenuItem;
+        symbol [ WatchUi %tmp.17 26 12 19 ];
+        %tmp.17 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.18 26 20 32 ];
+        %tmp.18 = getv function %tmp.17 :loadResource;
+        symbol [ Rez %tmp.20 26 33 36 ];
+        %tmp.20 = getv ? :Rez;
+        symbol [ Strings %tmp.21 26 37 44 ];
+        %tmp.21 = getv %tmp.20 :Strings;
+        symbol [ StartClimate %tmp.22 26 45 57 ];
+        %tmp.22 = getv %tmp.21 :StartClimate;
+        %tmp.23 = invoke %tmp.17 %tmp.18(%tmp.22);
+        %tmp.24 = as %tmp.23 String;
+        symbol [ String %tmp.24 26 62 68 ];
+        %tmp.25 = null;
+        %tmp.27 = const :climateStart;
+        symbol [ climateStart %tmp.27 26 77 89 const ];
+        %tmp.28 = null;
+        %tmp.13 = newc %tmp.16 (%tmp.24, %tmp.25, %tmp.27, %tmp.28);
+        invoke %tmp.11 %tmp.12(%tmp.13);
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 27 8 ]
+        %tmp.29 = lgetv %menu.1;
+        symbol [ menu %tmp.29 27 8 12 ];
+        symbol [ addItem %tmp.30 27 13 20 ];
+        %tmp.30 = getv function %tmp.29 :addItem;
+        symbol [ WatchUi %tmp.33 27 25 32 ];
+        %tmp.33 = getm $.Toybox.WatchUi;
+        symbol [ MenuItem %tmp.34 27 33 41 ];
+        %tmp.34 = getv function ? %tmp.33 :MenuItem;
+        symbol [ WatchUi %tmp.35 28 12 19 ];
+        %tmp.35 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.36 28 20 32 ];
+        %tmp.36 = getv function %tmp.35 :loadResource;
+        symbol [ Rez %tmp.38 28 33 36 ];
+        %tmp.38 = getv ? :Rez;
+        symbol [ Strings %tmp.39 28 37 44 ];
+        %tmp.39 = getv %tmp.38 :Strings;
+        symbol [ StopClimate %tmp.40 28 45 56 ];
+        %tmp.40 = getv %tmp.39 :StopClimate;
+        %tmp.41 = invoke %tmp.35 %tmp.36(%tmp.40);
+        %tmp.42 = as %tmp.41 String;
+        symbol [ String %tmp.42 28 61 67 ];
+        %tmp.43 = null;
+        %tmp.45 = const :climateStop;
+        symbol [ climateStop %tmp.45 28 76 87 const ];
+        %tmp.46 = null;
+        %tmp.31 = newc %tmp.34 (%tmp.42, %tmp.43, %tmp.45, %tmp.46);
+        invoke %tmp.29 %tmp.30(%tmp.31);
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 29 8 ]
+        %tmp.47 = lgetv %menu.1;
+        symbol [ menu %tmp.47 29 8 12 ];
+        symbol [ addItem %tmp.48 29 13 20 ];
+        %tmp.48 = getv function %tmp.47 :addItem;
+        symbol [ WatchUi %tmp.51 29 25 32 ];
+        %tmp.51 = getm $.Toybox.WatchUi;
+        symbol [ MenuItem %tmp.52 29 33 41 ];
+        %tmp.52 = getv function ? %tmp.51 :MenuItem;
+        symbol [ WatchUi %tmp.53 30 12 19 ];
+        %tmp.53 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.54 30 20 32 ];
+        %tmp.54 = getv function %tmp.53 :loadResource;
+        symbol [ Rez %tmp.56 30 33 36 ];
+        %tmp.56 = getv ? :Rez;
+        symbol [ Strings %tmp.57 30 37 44 ];
+        %tmp.57 = getv %tmp.56 :Strings;
+        symbol [ Refresh %tmp.58 30 45 52 ];
+        %tmp.58 = getv %tmp.57 :Refresh;
+        %tmp.59 = invoke %tmp.53 %tmp.54(%tmp.58);
+        %tmp.60 = as %tmp.59 String;
+        symbol [ String %tmp.60 30 57 63 ];
+        %tmp.61 = null;
+        %tmp.63 = const :refresh;
+        symbol [ refresh %tmp.63 30 72 79 const ];
+        %tmp.64 = null;
+        %tmp.49 = newc %tmp.52 (%tmp.60, %tmp.61, %tmp.63, %tmp.64);
+        invoke %tmp.47 %tmp.48(%tmp.49);
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 31 8 ]
+        symbol [ WatchUi %tmp.65 31 8 15 ];
+        %tmp.65 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.66 31 16 24 ];
+        %tmp.66 = getv function %tmp.65 :pushView;
+        %tmp.67 = lgetv %menu.1;
+        symbol [ menu %tmp.67 31 25 29 ];
+        symbol [ ActionMenuDelegate %tmp.71 31 35 53 ];
+        %tmp.71 = getv ? :ActionMenuDelegate;
+        symbol [ _view %tmp.73 31 54 59 ];
+        %tmp.73 = getv ? :_view;
+        %tmp.68 = newc %tmp.71 (%tmp.73);
+        symbol [ WatchUi %tmp.74 31 62 69 ];
+        %tmp.74 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.75 31 70 78 ];
+        %tmp.75 = getv %tmp.74 :SLIDE_UP;
+        invoke %tmp.65 %tmp.66(%tmp.67, %tmp.68, %tmp.75);
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_23_32_32_4_stop:
+    }
+}
+//! Handles picks from the action menu.
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 36; @symbol_classdef = [ActionMenuDelegate,36,6,24]; @symbol_extends<0> = [WatchUi,36,33,40]; @symbol_extends<1> = [Menu2InputDelegate,36,41,59]; ]
+class ActionMenuDelegate extends WatchUi.Menu2InputDelegate {
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 36; ]
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 36; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 37; @position = 16; @symbol_vardef = [_view,37,16,21]; @symbol_type<0> = [MainView,37,25,33]; ]
+    private
+    var _view as MainView;
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 39; @symbol_functiondef = [initialize,39,13,23]; @symbol_param<0> = [view,39,24,28]; @symbol_param<0>_type<0> = [MainView,39,32,40]; ]
+    function initialize(view as MainView) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_39_42_42_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 40 8 ]
+        symbol [ Menu2InputDelegate %tmp.2 40 8 26 ];
+        %tmp.2 = getv ? :Menu2InputDelegate;
+        symbol [ initialize %tmp.3 40 27 37 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 41 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 41 16 20 ];
+        symbol [ _view ? 41 8 13 ];
+        putv self :_view %tmp.4;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_39_42_42_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 44; @symbol_functiondef = [onSelect,44,13,21]; @symbol_param<0> = [item,44,22,26]; @symbol_param<0>_type<0> = [WatchUi,44,30,37]; @symbol_param<0>_type<1> = [MenuItem,44,38,46]; ]
+    function onSelect(item as WatchUi.MenuItem) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_44_56_62_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 45 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_44_56_62_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_44_56_62_4_stop" ]
+        %id.1 = local;
+        symbol [ id %id.1 45 12 14 ];
+        %tmp.1 = lgetv %item;
+        symbol [ item %tmp.1 45 17 21 ];
+        symbol [ getId %tmp.2 45 22 27 ];
+        %tmp.2 = getv function %tmp.1 :getId;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %id.1 %tmp.3;
+        symbol [ id %id.1 45 12 14 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 46 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_46_8_50_8_if_stmt:
+        %tmp.4 = lgetv %id.1;
+        symbol [ id %tmp.4 46 12 14 ];
+        %tmp.6 = const :refresh;
+        symbol [ refresh %tmp.6 46 19 26 const ];
+        %tmp.7 = eq %tmp.4 %tmp.6;
+        bf %tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_46_8_50_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_46_8_50_8_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_46_28_50_8_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 47 12 ]
+        symbol [ WatchUi %tmp.8 47 12 19 ];
+        %tmp.8 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.9 47 20 27 ];
+        %tmp.9 = getv function %tmp.8 :popView;
+        symbol [ WatchUi %tmp.10 47 28 35 ];
+        %tmp.10 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.11 47 36 46 ];
+        %tmp.11 = getv %tmp.10 :SLIDE_DOWN;
+        invoke %tmp.8 %tmp.9(%tmp.11);
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 48 12 ]
+        symbol [ _view %tmp.13 48 12 17 ];
+        %tmp.13 = getv ? :_view;
+        symbol [ refresh %tmp.14 48 18 25 ];
+        %tmp.14 = getv function %tmp.13 :refresh;
+        invoke %tmp.13 %tmp.14();
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 49 12 ]
+        ret ?;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_46_28_50_8_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_46_8_50_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_46_8_50_8_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 52 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_44_56_62_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_44_56_62_4_stop" ]
+        %prompt.2 = local;
+        symbol [ prompt %prompt.2 52 12 18 ];
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_begin:
+        %tmp.15 = lgetv %id.1;
+        symbol [ id %tmp.15 52 22 24 ];
+        %tmp.17 = const :climateStart;
+        symbol [ climateStart %tmp.17 52 29 41 const ];
+        %tmp.18 = eq %tmp.15 %tmp.17;
+        bf %tmp.18 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_else_false;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_true:
+        symbol [ WatchUi %tmp.19 53 14 21 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.20 53 22 34 ];
+        %tmp.20 = getv function %tmp.19 :loadResource;
+        symbol [ Rez %tmp.22 53 35 38 ];
+        %tmp.22 = getv ? :Rez;
+        symbol [ Strings %tmp.23 53 39 46 ];
+        %tmp.23 = getv %tmp.22 :Strings;
+        symbol [ ConfirmStartClimate %tmp.24 53 47 66 ];
+        %tmp.24 = getv %tmp.23 :ConfirmStartClimate;
+        %tmp.25 = invoke %tmp.19 %tmp.20(%tmp.24);
+        %tmp.26 = as %tmp.25 String;
+        symbol [ String %tmp.26 53 71 77 ];
+        push %tmp.26;
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_else_false:
+        symbol [ WatchUi %tmp.27 54 14 21 ];
+        %tmp.27 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.28 54 22 34 ];
+        %tmp.28 = getv function %tmp.27 :loadResource;
+        symbol [ Rez %tmp.30 54 35 38 ];
+        %tmp.30 = getv ? :Rez;
+        symbol [ Strings %tmp.31 54 39 46 ];
+        %tmp.31 = getv %tmp.30 :Strings;
+        symbol [ ConfirmStopClimate %tmp.32 54 47 65 ];
+        %tmp.32 = getv %tmp.31 :ConfirmStopClimate;
+        %tmp.33 = invoke %tmp.27 %tmp.28(%tmp.32);
+        %tmp.34 = as %tmp.33 String;
+        symbol [ String %tmp.34 54 70 76 ];
+        push %tmp.34;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_end:
+        %tmp.35 = phi [%tmp.18 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_begin] [%tmp.26 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_true] [%tmp.34 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_else_false] [%tmp.35 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_52_21_54_70_end];
+        lputv %prompt.2 %tmp.35;
+        symbol [ prompt %prompt.2 52 12 18 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 55 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_44_56_62_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_44_56_62_4_stop" ]
+        %cmd.3 = local;
+        symbol [ cmd %cmd.3 55 12 15 ];
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_begin:
+        %tmp.36 = lgetv %id.1;
+        symbol [ id %tmp.36 55 19 21 ];
+        %tmp.38 = const :climateStart;
+        symbol [ climateStart %tmp.38 55 26 38 const ];
+        %tmp.39 = eq %tmp.36 %tmp.38;
+        bf %tmp.39 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_else_false;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_true:
+        %tmp.40 = "climate-start";
+        push %tmp.40;
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_else_false:
+        %tmp.41 = "climate-stop";
+        push %tmp.41;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_end:
+        %tmp.42 = phi [%tmp.39 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_begin] [%tmp.40 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_true] [%tmp.41 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_else_false] [%tmp.42 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_55_18_55_60_end];
+        lputv %cmd.3 %tmp.42;
+        symbol [ cmd %cmd.3 55 12 15 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 57 8 ]
+        symbol [ WatchUi %tmp.43 57 8 15 ];
+        %tmp.43 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.44 57 16 24 ];
+        %tmp.44 = getv function %tmp.43 :pushView;
+        symbol [ WatchUi %tmp.47 58 16 23 ];
+        %tmp.47 = getm $.Toybox.WatchUi;
+        symbol [ Confirmation %tmp.48 58 24 36 ];
+        %tmp.48 = getv function ? %tmp.47 :Confirmation;
+        %tmp.49 = lgetv %prompt.2;
+        symbol [ prompt %tmp.49 58 37 43 ];
+        %tmp.45 = newc %tmp.48 (%tmp.49);
+        symbol [ CommandConfirmDelegate %tmp.53 59 16 38 ];
+        %tmp.53 = getv ? :CommandConfirmDelegate;
+        symbol [ _view %tmp.55 59 39 44 ];
+        %tmp.55 = getv ? :_view;
+        %tmp.56 = lgetv %cmd.3;
+        symbol [ cmd %tmp.56 59 46 49 ];
+        %tmp.50 = newc %tmp.53 (%tmp.55, %tmp.56);
+        symbol [ WatchUi %tmp.57 60 12 19 ];
+        %tmp.57 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.58 60 20 28 ];
+        %tmp.58 = getv %tmp.57 :SLIDE_UP;
+        invoke %tmp.43 %tmp.44(%tmp.45, %tmp.50, %tmp.58);
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_44_56_62_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 64; @symbol_functiondef = [onBack,64,13,19]; ]
+    function onBack() as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_64_30_66_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 65 8 ]
+        symbol [ WatchUi %tmp.1 65 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 65 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 65 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.4 65 32 42 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_64_30_66_4_stop:
+    }
+}
+//! Fires the command on a Yes; pops back to the main view either way.
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 70; @symbol_classdef = [CommandConfirmDelegate,70,6,28]; @symbol_extends<0> = [WatchUi,70,37,44]; @symbol_extends<1> = [ConfirmationDelegate,70,45,65]; ]
+class CommandConfirmDelegate extends WatchUi.ConfirmationDelegate {
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 70; ]
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 70; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 71; @position = 16; @symbol_vardef = [_view,71,16,21]; @symbol_type<0> = [MainView,71,25,33]; ]
+    private
+    var _view as MainView;
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 72; @position = 16; @symbol_vardef = [_cmd,72,16,20]; @symbol_type<0> = [String,72,24,30]; ]
+    private
+    var _cmd as String;
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 74; @symbol_functiondef = [initialize,74,13,23]; @symbol_param<0> = [view,74,24,28]; @symbol_param<0>_type<0> = [MainView,74,32,40]; @symbol_param<1> = [cmd,74,42,45]; @symbol_param<1>_type<0> = [String,74,49,55]; ]
+    function initialize(view as MainView, cmd as String) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_74_57_78_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 75 8 ]
+        symbol [ ConfirmationDelegate %tmp.2 75 8 28 ];
+        %tmp.2 = getv ? :ConfirmationDelegate;
+        symbol [ initialize %tmp.3 75 29 39 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 76 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 76 16 20 ];
+        symbol [ _view ? 76 8 13 ];
+        putv self :_view %tmp.4;
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 77 8 ]
+        %tmp.5 = lgetv %cmd;
+        symbol [ cmd %tmp.5 77 15 18 ];
+        symbol [ _cmd ? 77 8 12 ];
+        putv self :_cmd %tmp.5;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_74_57_78_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 80; @symbol_functiondef = [onResponse,80,13,23]; @symbol_param<0> = [response,80,24,32]; @symbol_param<0>_type<0> = [WatchUi,80,36,43]; @symbol_param<0>_type<1> = [Confirm,80,44,51]; @symbol_return<0> = [Boolean,80,56,63]; ]
+    function onResponse(response as WatchUi.Confirm) as Boolean {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_80_64_88_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 81 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_81_8_83_8_if_stmt:
+        %tmp.1 = lgetv %response;
+        symbol [ response %tmp.1 81 12 20 ];
+        symbol [ WatchUi %tmp.2 81 24 31 ];
+        %tmp.2 = getm $.Toybox.WatchUi;
+        symbol [ CONFIRM_YES %tmp.3 81 32 43 ];
+        %tmp.3 = getv %tmp.2 :CONFIRM_YES;
+        %tmp.4 = eq %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_81_8_83_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_81_8_83_8_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_81_45_83_8_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 82 12 ]
+        symbol [ Backend %tmp.6 82 12 19 ];
+        %tmp.6 = getv ? :Backend;
+        symbol [ command %tmp.7 82 20 27 ];
+        %tmp.7 = getv function %tmp.6 :command;
+        symbol [ _cmd %tmp.9 82 28 32 ];
+        %tmp.9 = getv ? :_cmd;
+        %tmp.10 = self;
+        symbol [ method %tmp.11 82 34 40 ];
+        %tmp.11 = getv function %tmp.10 :method;
+        %tmp.13 = const :onCommand;
+        symbol [ onCommand %tmp.13 82 42 51 const ];
+        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
+        invoke %tmp.6 %tmp.7(%tmp.9, %tmp.14);
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_81_45_83_8_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_81_8_83_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_81_8_83_8_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 85 8 ]
+        symbol [ WatchUi %tmp.15 85 8 15 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.16 85 16 23 ];
+        %tmp.16 = getv function %tmp.15 :popView;
+        symbol [ WatchUi %tmp.17 85 24 31 ];
+        %tmp.17 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.18 85 32 42 ];
+        %tmp.18 = getv %tmp.17 :SLIDE_DOWN;
+        invoke %tmp.15 %tmp.16(%tmp.18);
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 86 8 ]
+        symbol [ WatchUi %tmp.19 86 8 15 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.20 86 16 23 ];
+        %tmp.20 = getv function %tmp.19 :popView;
+        symbol [ WatchUi %tmp.21 86 24 31 ];
+        %tmp.21 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.22 86 32 42 ];
+        %tmp.22 = getv %tmp.21 :SLIDE_DOWN;
+        invoke %tmp.19 %tmp.20(%tmp.22);
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 87 8 ]
+        %tmp.23 = true;
+        ret %tmp.23;
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_80_64_88_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 90; @symbol_functiondef = [onCommand,90,13,22]; @symbol_param<0> = [ok,90,23,25]; @symbol_param<0>_type<0> = [Boolean,90,29,36]; @symbol_param<1> = [payload,90,38,45]; @symbol_param<1>_type<0> = [Dictionary,90,49,59]; @symbol_param<1>_type<1> = [String,90,63,69]; ]
+    function onCommand(ok as Boolean, payload as Dictionary or String or Null) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_90_87_92_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc" 91 8 ]
+        symbol [ _view %tmp.2 91 8 13 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ showCommandResult %tmp.3 91 14 31 ];
+        %tmp.3 = getv function %tmp.2 :showCommandResult;
+        %tmp.4 = lgetv %ok;
+        symbol [ ok %tmp.4 91 32 34 ];
+        invoke %tmp.2 %tmp.3(%tmp.4);
+_Users_nico_claude_docs_VolvoWatch_watch_source_MainDelegate_mc_90_87_92_4_stop:
+    }
+}
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/MainDelegate.mc"; @line = 1; ]
+<init> {
+}

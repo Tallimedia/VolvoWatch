@@ -1,0 +1,115 @@
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+import Toybox.Application;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+//! VolvoWatch — glance + widget showing Volvo status and starting climatisation,
+//! talking to the self-hosted backend (see ../backend).
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 7; @symbol_classdef = [VolvoWatchApp,7,6,19]; @symbol_extends<0> = [Application,7,28,39]; @symbol_extends<1> = [AppBase,7,40,47]; ]
+class VolvoWatchApp extends Application.AppBase {
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; ]
+    function initialize() as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_9_26_11_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc" 10 8 ]
+        symbol [ AppBase %tmp.2 10 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 10 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_9_26_11_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 13; @symbol_functiondef = [onStart,13,13,20]; @symbol_param<0> = [state,13,21,26]; @symbol_param<0>_type<0> = [Dictionary,13,30,40]; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 16; @symbol_functiondef = [onStop,16,13,19]; @symbol_param<0> = [state,16,20,25]; @symbol_param<0>_type<0> = [Dictionary,16,29,39]; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    //! Full widget view.
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 20; @symbol_functiondef = [getInitialView,20,13,27]; @symbol_return<0> = [WatchUi,20,34,41]; @symbol_return<1> = [Views,20,42,47]; @symbol_return<2> = [WatchUi,20,53,60]; @symbol_return<3> = [Views,20,61,66]; @symbol_return<4> = [WatchUi,20,68,75]; @symbol_return<5> = [InputDelegates,20,76,90]; ]
+    function getInitialView() as [WatchUi.Views] or [WatchUi.Views, WatchUi.InputDelegates] {
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_20_92_23_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc" 21 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_20_92_23_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_20_92_23_4_stop" ]
+        %view.1 = local;
+        symbol [ view %view.1 21 12 16 ];
+        symbol [ MainView %tmp.4 21 23 31 ];
+        %tmp.4 = getv ? :MainView;
+        %tmp.1 = newc %tmp.4 ();
+        lputv %view.1 %tmp.1;
+        symbol [ view %view.1 21 12 16 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc" 22 8 ]
+        %tmp.5 = newa 2;
+        %tmp.6 = lgetv %view.1;
+        symbol [ view %tmp.6 22 16 20 ];
+        %tmp.7 = dup %tmp.5;
+        %tmp.8 = aputv %tmp.7 0 %tmp.6;
+        symbol [ MainDelegate %tmp.12 22 26 38 ];
+        %tmp.12 = getv ? :MainDelegate;
+        %tmp.13 = lgetv %view.1;
+        symbol [ view %tmp.13 22 39 43 ];
+        %tmp.9 = newc %tmp.12 (%tmp.13);
+        %tmp.14 = dup %tmp.8;
+        %tmp.15 = aputv %tmp.14 1 %tmp.9;
+        ret %tmp.15;
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_20_92_23_4_stop:
+    }
+    //! Small card in the glance loop.
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 26; @symbol_functiondef = [getGlanceView,26,13,26]; @symbol_return<0> = [WatchUi,26,33,40]; @symbol_return<1> = [GlanceView,26,41,51]; @symbol_return<2> = [WatchUi,26,57,64]; @symbol_return<3> = [GlanceView,26,65,75]; @symbol_return<4> = [WatchUi,26,77,84]; @symbol_return<5> = [GlanceViewDelegate,26,85,103]; ]
+    function getGlanceView() as [WatchUi.GlanceView] or [WatchUi.GlanceView, WatchUi.GlanceViewDelegate] or Null {
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_26_113_28_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc" 27 8 ]
+        %tmp.1 = newa 1;
+        symbol [ GlanceView %tmp.5 27 20 30 ];
+        %tmp.5 = getv ? :GlanceView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_26_113_28_4_stop:
+    }
+    //! Settings changed in Garmin Connect — drop the paired token if the URL
+    //! changed, and refresh.
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 32; @symbol_functiondef = [onSettingsChanged,32,13,30]; ]
+    function onSettingsChanged() as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_32_41_35_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc" 33 8 ]
+        symbol [ Store %tmp.2 33 8 13 ];
+        %tmp.2 = getv ? :Store;
+        symbol [ onSettingsChanged %tmp.3 33 14 31 ];
+        %tmp.3 = getv function %tmp.2 :onSettingsChanged;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc" 34 8 ]
+        symbol [ WatchUi %tmp.4 34 8 15 ];
+        %tmp.4 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.5 34 16 29 ];
+        %tmp.5 = getv function %tmp.4 :requestUpdate;
+        invoke %tmp.4 %tmp.5();
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_32_41_35_4_stop:
+    }
+}
+//! Global accessor.
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 39; @symbol_functiondef = [getApp,39,9,15]; @symbol_return<0> = [VolvoWatchApp,39,21,34]; ]
+function getApp() as VolvoWatchApp {
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_39_35_41_0_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc" 40 4 ]
+    symbol [ Application %tmp.1 40 11 22 ];
+    %tmp.1 = getm $.Toybox.Application;
+    symbol [ getApp %tmp.2 40 23 29 ];
+    %tmp.2 = getv function %tmp.1 :getApp;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    %tmp.4 = as %tmp.3 VolvoWatchApp;
+    symbol [ VolvoWatchApp %tmp.4 40 35 48 ];
+    ret %tmp.4;
+_Users_nico_claude_docs_VolvoWatch_watch_source_VolvoWatchApp_mc_39_35_41_0_stop:
+}
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/VolvoWatchApp.mc"; @line = 1; ]
+<init> {
+}

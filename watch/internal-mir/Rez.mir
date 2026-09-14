@@ -1,0 +1,1654 @@
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 12; @symbol_moduledef = [Strings,12,11,18]; ]
+    module Strings {
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [Unlocked,13,27,35]; @symbol_type<0> = [ResourceId,13,39,49]; ]
+        var Unlocked as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 14; @position = 27; initialized = true; @symbol_vardef = [ConfirmStopClimate,14,27,45]; @symbol_type<0> = [ResourceId,14,49,59]; ]
+        var ConfirmStopClimate as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 15; @position = 27; initialized = true; @symbol_vardef = [StopClimate,15,27,38]; @symbol_type<0> = [ResourceId,15,42,52]; ]
+        var StopClimate as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 16; @position = 27; initialized = true; @symbol_vardef = [AppName,16,27,34]; @symbol_type<0> = [ResourceId,16,38,48]; ]
+        var AppName as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 17; @position = 27; initialized = true; @symbol_vardef = [Refresh,17,27,34]; @symbol_type<0> = [ResourceId,17,38,48]; ]
+        var Refresh as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 18; @position = 27; initialized = true; @symbol_vardef = [Locked,18,27,33]; @symbol_type<0> = [ResourceId,18,37,47]; ]
+        var Locked as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 19; @position = 27; initialized = true; @symbol_vardef = [PhoneNotConnected,19,27,44]; @symbol_type<0> = [ResourceId,19,48,58]; ]
+        var PhoneNotConnected as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 20; @position = 27; initialized = true; @symbol_vardef = [JustNow,20,27,34]; @symbol_type<0> = [ResourceId,20,38,48]; ]
+        var JustNow as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 21; @position = 27; initialized = true; @symbol_vardef = [HrAgo,21,27,32]; @symbol_type<0> = [ResourceId,21,36,46]; ]
+        var HrAgo as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 22; @position = 27; initialized = true; @symbol_vardef = [Loading,22,27,34]; @symbol_type<0> = [ResourceId,22,38,48]; ]
+        var Loading as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 23; @position = 27; initialized = true; @symbol_vardef = [StartClimate,23,27,39]; @symbol_type<0> = [ResourceId,23,43,53]; ]
+        var StartClimate as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 24; @position = 27; initialized = true; @symbol_vardef = [Battery,24,27,34]; @symbol_type<0> = [ResourceId,24,38,48]; ]
+        var Battery as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 25; @position = 27; initialized = true; @symbol_vardef = [OpenWarn,25,27,35]; @symbol_type<0> = [ResourceId,25,39,49]; ]
+        var OpenWarn as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 26; @position = 27; initialized = true; @symbol_vardef = [CommandFailed,26,27,40]; @symbol_type<0> = [ResourceId,26,44,54]; ]
+        var CommandFailed as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 27; @position = 27; initialized = true; @symbol_vardef = [SettingBackendUrlPrompt,27,27,50]; @symbol_type<0> = [ResourceId,27,54,64]; ]
+        var SettingBackendUrlPrompt as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 28; @position = 27; initialized = true; @symbol_vardef = [RateLimited,28,27,38]; @symbol_type<0> = [ResourceId,28,42,52]; ]
+        var RateLimited as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 29; @position = 27; initialized = true; @symbol_vardef = [ServiceDue,29,27,37]; @symbol_type<0> = [ResourceId,29,41,51]; ]
+        var ServiceDue as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 30; @position = 27; initialized = true; @symbol_vardef = [Pairing,30,27,34]; @symbol_type<0> = [ResourceId,30,38,48]; ]
+        var Pairing as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 31; @position = 27; initialized = true; @symbol_vardef = [Sent,31,27,31]; @symbol_type<0> = [ResourceId,31,35,45]; ]
+        var Sent as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 32; @position = 27; initialized = true; @symbol_vardef = [SettingPairingCode,32,27,45]; @symbol_type<0> = [ResourceId,32,49,59]; ]
+        var SettingPairingCode as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 33; @position = 27; initialized = true; @symbol_vardef = [Charging,33,27,35]; @symbol_type<0> = [ResourceId,33,39,49]; ]
+        var Charging as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 34; @position = 27; initialized = true; @symbol_vardef = [Updated,34,27,34]; @symbol_type<0> = [ResourceId,34,38,48]; ]
+        var Updated as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 35; @position = 27; initialized = true; @symbol_vardef = [NeedsPairing,35,27,39]; @symbol_type<0> = [ResourceId,35,43,53]; ]
+        var NeedsPairing as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 36; @position = 27; initialized = true; @symbol_vardef = [MinAgo,36,27,33]; @symbol_type<0> = [ResourceId,36,37,47]; ]
+        var MinAgo as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 37; @position = 27; initialized = true; @symbol_vardef = [PairFailed,37,27,37]; @symbol_type<0> = [ResourceId,37,41,51]; ]
+        var PairFailed as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 38; @position = 27; initialized = true; @symbol_vardef = [Odometer,38,27,35]; @symbol_type<0> = [ResourceId,38,39,49]; ]
+        var Odometer as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 39; @position = 27; initialized = true; @symbol_vardef = [Range,39,27,32]; @symbol_type<0> = [ResourceId,39,36,46]; ]
+        var Range as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 40; @position = 27; initialized = true; @symbol_vardef = [SettingPairingCodePrompt,40,27,51]; @symbol_type<0> = [ResourceId,40,55,65]; ]
+        var SettingPairingCodePrompt as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 41; @position = 27; initialized = true; @symbol_vardef = [CarUnreachable,41,27,41]; @symbol_type<0> = [ResourceId,41,45,55]; ]
+        var CarUnreachable as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 42; @position = 27; initialized = true; @symbol_vardef = [SettingBackendUrl,42,27,44]; @symbol_type<0> = [ResourceId,42,48,58]; ]
+        var SettingBackendUrl as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 43; @position = 27; initialized = true; @symbol_vardef = [ConfirmStartClimate,43,27,46]; @symbol_type<0> = [ResourceId,43,50,60]; ]
+        var ConfirmStartClimate as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 44; @position = 27; initialized = true; @symbol_vardef = [Closed,44,27,33]; @symbol_type<0> = [ResourceId,44,37,47]; ]
+        var Closed as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 45; @position = 27; initialized = true; @symbol_vardef = [Fuel,45,27,31]; @symbol_type<0> = [ResourceId,45,35,45]; ]
+        var Fuel as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 46; @position = 27; initialized = true; @symbol_vardef = [ActionsTitle,46,27,39]; @symbol_type<0> = [ResourceId,46,43,53]; ]
+        var ActionsTitle as ResourceId;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 47; @position = 27; initialized = true; @symbol_vardef = [NeedsReconnect,47,27,41]; @symbol_type<0> = [ResourceId,47,45,55]; ]
+        var NeedsReconnect as ResourceId;
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 50; @symbol_moduledef = [Styles,50,11,17]; ]
+    module Styles {
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 50; ]
+        <init> {
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 51; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,51,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 51; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 52; @position = 18; @symbol_constdef = [exclude,52,18,25]; @symbol_type<0> = [Boolean,52,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 55; @symbol_moduledef = [system_size__menu_header,55,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 55; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 56; @position = 18; @symbol_constdef = [width,56,18,23]; @symbol_type<0> = [Number,56,27,33]; ]
+            const width as Number = 454;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 57; @position = 18; @symbol_constdef = [height,57,18,24]; @symbol_type<0> = [Number,57,28,34]; ]
+            const height as Number = 169;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 60; @symbol_moduledef = [system_loc__hint_button_left_bottom,60,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 60; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 61; @position = 18; @symbol_constdef = [x,61,18,19]; @symbol_type<0> = [Number,61,23,29]; ]
+            const x as Number = 15;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [y,62,18,19]; @symbol_type<0> = [Number,62,23,29]; ]
+            const y as Number = 291;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 65; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,65,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 65; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 66; @position = 18; @symbol_constdef = [exclude,66,18,25]; @symbol_type<0> = [Boolean,66,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 69; @symbol_moduledef = [prompt_loc__body_no_title,69,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 69; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 70; @position = 18; @symbol_constdef = [x,70,18,19]; @symbol_type<0> = [Number,70,23,29]; ]
+            const x as Number = 56;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 71; @position = 18; @symbol_constdef = [y,71,18,19]; @symbol_type<0> = [Number,71,23,29]; ]
+            const y as Number = 89;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 74; @symbol_moduledef = [system_icon_dark__about,74,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 75; @position = 18; @symbol_constdef = [filename,75,18,26]; @symbol_type<0> = [String,75,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__about.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 76; @position = 18; @symbol_constdef = [compress,76,18,26]; @symbol_type<0> = [String,76,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 77; @position = 18; @symbol_constdef = [dithering,77,18,27]; @symbol_type<0> = [String,77,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 78; @position = 18; @symbol_constdef = [automaticPalette,78,18,34]; @symbol_type<0> = [String,78,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [packingFormat,79,18,31]; @symbol_type<0> = [String,79,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 82; @symbol_moduledef = [system_icon_light__question,82,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 82; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [filename,83,18,26]; @symbol_type<0> = [String,83,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__question.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [compress,84,18,26]; @symbol_type<0> = [String,84,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 85; @position = 18; @symbol_constdef = [dithering,85,18,27]; @symbol_type<0> = [String,85,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 86; @position = 18; @symbol_constdef = [automaticPalette,86,18,34]; @symbol_type<0> = [String,86,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 87; @position = 18; @symbol_constdef = [packingFormat,87,18,31]; @symbol_type<0> = [String,87,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 90; @symbol_moduledef = [system_loc__hint_button_left_top,90,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 90; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 91; @position = 18; @symbol_constdef = [exclude,91,18,25]; @symbol_type<0> = [Boolean,91,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 94; @symbol_moduledef = [prompt_font__title,94,15,33]; ]
+        module prompt_font__title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 94; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 95 18 ]
+                symbol [ Graphics %tmp.1 95 34 42 ];
+                %tmp.1 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.2 95 43 62 ];
+                %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.3 95 63 71 ];
+                %tmp.3 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.4 95 72 92 ];
+                %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_VCENTER;
+                %tmp.5 = bitor %tmp.2 %tmp.4;
+                putv self :justification %tmp.5;
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 96 18 ]
+                symbol [ Graphics %tmp.6 96 25 33 ];
+                %tmp.6 = getm $.Toybox.Graphics;
+                symbol [ FONT_GLANCE_NUMBER %tmp.7 96 34 52 ];
+                %tmp.7 = getv %tmp.6 :FONT_GLANCE_NUMBER;
+                putv self :font %tmp.7;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 95; @position = 18; @symbol_constdef = [justification,95,18,31]; ]
+            const justification;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 96; @position = 18; @symbol_constdef = [font,96,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 99; @symbol_moduledef = [system_icon_dark__discard,99,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 99; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [filename,100,18,26]; @symbol_type<0> = [String,100,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__discard.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 101; @position = 18; @symbol_constdef = [compress,101,18,26]; @symbol_type<0> = [String,101,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 102; @position = 18; @symbol_constdef = [dithering,102,18,27]; @symbol_type<0> = [String,102,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 103; @position = 18; @symbol_constdef = [automaticPalette,103,18,34]; @symbol_type<0> = [String,103,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 104; @position = 18; @symbol_constdef = [packingFormat,104,18,31]; @symbol_type<0> = [String,104,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 107; @symbol_moduledef = [system_size__menu_item,107,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 107; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 108; @position = 18; @symbol_constdef = [width,108,18,23]; @symbol_type<0> = [Number,108,27,33]; ]
+            const width as Number = 454;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 109; @position = 18; @symbol_constdef = [height,109,18,24]; @symbol_type<0> = [Number,109,28,34]; ]
+            const height as Number = 116;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 112; @symbol_moduledef = [system_color_dark__text,112,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 112; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 114 18 ]
+                symbol [ Graphics %tmp.8 114 31 39 ];
+                %tmp.8 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.9 114 40 57 ];
+                %tmp.9 = getv %tmp.8 :COLOR_TRANSPARENT;
+                putv self :background %tmp.9;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 113; @position = 18; @symbol_constdef = [color,113,18,23]; @symbol_type<0> = [Number,113,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 114; @position = 18; @symbol_constdef = [background,114,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 117; @symbol_moduledef = [system_icon_destructive__discard,117,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 117; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 118; @position = 18; @symbol_constdef = [filename,118,18,26]; @symbol_type<0> = [String,118,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_destructive__discard.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 119; @position = 18; @symbol_constdef = [dithering,119,18,27]; @symbol_type<0> = [String,119,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 120; @position = 18; @symbol_constdef = [packingFormat,120,18,31]; @symbol_type<0> = [String,120,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 123; @symbol_moduledef = [system_icon_dark__hint_action_menu,123,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 123; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 124; @position = 18; @symbol_constdef = [filename,124,18,26]; @symbol_type<0> = [String,124,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [dithering,125,18,27]; @symbol_type<0> = [String,125,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 126; @position = 18; @symbol_constdef = [packingFormat,126,18,31]; @symbol_type<0> = [String,126,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 129; @symbol_moduledef = [prompt_size__title,129,15,33]; ]
+        module prompt_size__title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 129; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 130; @position = 18; @symbol_constdef = [width,130,18,23]; @symbol_type<0> = [Number,130,27,33]; ]
+            const width as Number = 360;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 131; @position = 18; @symbol_constdef = [height,131,18,24]; @symbol_type<0> = [Number,131,28,34]; ]
+            const height as Number = 48;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 134; @symbol_moduledef = [confirmation_font__body,134,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 134; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 135 18 ]
+                symbol [ Graphics %tmp.10 135 34 42 ];
+                %tmp.10 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.11 135 43 62 ];
+                %tmp.11 = getv %tmp.10 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.12 135 63 71 ];
+                %tmp.12 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.13 135 72 92 ];
+                %tmp.13 = getv %tmp.12 :TEXT_JUSTIFY_VCENTER;
+                %tmp.14 = bitor %tmp.11 %tmp.13;
+                putv self :justification %tmp.14;
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 136 18 ]
+                symbol [ Graphics %tmp.15 136 25 33 ];
+                %tmp.15 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.16 136 34 43 ];
+                %tmp.16 = getv %tmp.15 :FONT_TINY;
+                putv self :font %tmp.16;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 135; @position = 18; @symbol_constdef = [justification,135,18,31]; ]
+            const justification;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 136; @position = 18; @symbol_constdef = [font,136,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 139; @symbol_moduledef = [system_color_dark__background,139,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 139; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 140; @position = 18; @symbol_constdef = [color,140,18,23]; @symbol_type<0> = [Number,140,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 141; @position = 18; @symbol_constdef = [background,141,18,28]; @symbol_type<0> = [Number,141,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 144; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,144,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 144; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 145; @position = 18; @symbol_constdef = [filename,145,18,26]; @symbol_type<0> = [String,145,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_destructive__hint_button_left_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 146; @position = 18; @symbol_constdef = [dithering,146,18,27]; @symbol_type<0> = [String,146,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [packingFormat,147,18,31]; @symbol_type<0> = [String,147,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 150; @symbol_moduledef = [system_size__launch_icon,150,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 150; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 151; @position = 18; @symbol_constdef = [scaleX,151,18,24]; @symbol_type<0> = [Number,151,28,34]; ]
+            const scaleX as Number = 65;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 152; @position = 18; @symbol_constdef = [scaleY,152,18,24]; @symbol_type<0> = [Number,152,28,34]; ]
+            const scaleY as Number = 65;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 153; @position = 18; @symbol_constdef = [scaleRelativeTo,153,18,33]; @symbol_type<0> = [String,153,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 156; @symbol_moduledef = [confirmation_input__confirm,156,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 156; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 157 18 ]
+                symbol [ WatchUi %tmp.17 157 27 34 ];
+                %tmp.17 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.18 157 35 44 ];
+                %tmp.18 = getv %tmp.17 :KEY_ENTER;
+                putv self :button %tmp.18;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 157; @position = 18; @symbol_constdef = [button,157,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 160; @symbol_moduledef = [prompt_font__body_with_title,160,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 160; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 161 18 ]
+                symbol [ Graphics %tmp.19 161 34 42 ];
+                %tmp.19 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.20 161 43 62 ];
+                %tmp.20 = getv %tmp.19 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.20;
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 162 18 ]
+                symbol [ Graphics %tmp.21 162 25 33 ];
+                %tmp.21 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.22 162 34 44 ];
+                %tmp.22 = getv %tmp.21 :FONT_XTINY;
+                putv self :font %tmp.22;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 161; @position = 18; @symbol_constdef = [justification,161,18,31]; ]
+            const justification;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 162; @position = 18; @symbol_constdef = [font,162,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 165; @symbol_moduledef = [confirmation_loc__body,165,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 165; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 166; @position = 18; @symbol_constdef = [x,166,18,19]; @symbol_type<0> = [Number,166,23,29]; ]
+            const x as Number = 70;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 167; @position = 18; @symbol_constdef = [y,167,18,19]; @symbol_type<0> = [Number,167,23,29]; ]
+            const y as Number = 70;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 170; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,170,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 170; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 171; @position = 18; @symbol_constdef = [filename,171,18,26]; @symbol_type<0> = [String,171,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_destructive__hint_button_left_bottom.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 172; @position = 18; @symbol_constdef = [dithering,172,18,27]; @symbol_type<0> = [String,172,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 173; @position = 18; @symbol_constdef = [packingFormat,173,18,31]; @symbol_type<0> = [String,173,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 176; @symbol_moduledef = [prompt_color_dark__background,176,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 176; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 177; @position = 18; @symbol_constdef = [color,177,18,23]; @symbol_type<0> = [Number,177,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 178; @position = 18; @symbol_constdef = [background,178,18,28]; @symbol_type<0> = [Number,178,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 181; @symbol_moduledef = [system_icon_destructive__hint_action_menu,181,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 181; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 182; @position = 18; @symbol_constdef = [filename,182,18,26]; @symbol_type<0> = [String,182,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 183; @position = 18; @symbol_constdef = [dithering,183,18,27]; @symbol_type<0> = [String,183,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 184; @position = 18; @symbol_constdef = [packingFormat,184,18,31]; @symbol_type<0> = [String,184,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 187; @symbol_moduledef = [system_loc__hint_action_menu,187,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 187; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 188; @position = 18; @symbol_constdef = [x,188,18,19]; @symbol_type<0> = [Number,188,23,29]; ]
+            const x as Number = 353;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 189; @position = 18; @symbol_constdef = [y,189,18,19]; @symbol_type<0> = [Number,189,23,29]; ]
+            const y as Number = 77;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 192; @symbol_moduledef = [confirmation_icon__hint_confirm,192,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 192; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 193; @position = 18; @symbol_constdef = [filename,193,18,26]; @symbol_type<0> = [String,193,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 194; @position = 18; @symbol_constdef = [dithering,194,18,27]; @symbol_type<0> = [String,194,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 195; @position = 18; @symbol_constdef = [packingFormat,195,18,31]; @symbol_type<0> = [String,195,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 198; @symbol_moduledef = [system_loc__hint_button_left_middle,198,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 198; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 199; @position = 18; @symbol_constdef = [x,199,18,19]; @symbol_type<0> = [Number,199,23,29]; ]
+            const x as Number = 2;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 200; @position = 18; @symbol_constdef = [y,200,18,19]; @symbol_type<0> = [Number,200,23,29]; ]
+            const y as Number = 181;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 203; @symbol_moduledef = [prompt_size__body_no_title,203,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 203; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 204; @position = 18; @symbol_constdef = [width,204,18,23]; @symbol_type<0> = [Number,204,27,33]; ]
+            const width as Number = 342;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 205; @position = 18; @symbol_constdef = [height,205,18,24]; @symbol_type<0> = [Number,205,28,34]; ]
+            const height as Number = 275;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 208; @symbol_moduledef = [system_icon_light__hint_button_left_top,208,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 208; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 209; @position = 18; @symbol_constdef = [filename,209,18,26]; @symbol_type<0> = [String,209,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__hint_button_left_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 210; @position = 18; @symbol_constdef = [dithering,210,18,27]; @symbol_type<0> = [String,210,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [packingFormat,211,18,31]; @symbol_type<0> = [String,211,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 214; @symbol_moduledef = [prompt_color_light__background,214,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 214; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 215; @position = 18; @symbol_constdef = [color,215,18,23]; @symbol_type<0> = [Number,215,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 216; @position = 18; @symbol_constdef = [background,216,18,28]; @symbol_type<0> = [Number,216,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 219; @symbol_moduledef = [confirmation_input__delete,219,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 219; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 220 18 ]
+                symbol [ WatchUi %tmp.23 220 27 34 ];
+                %tmp.23 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.24 220 35 44 ];
+                %tmp.24 = getv %tmp.23 :KEY_ENTER;
+                putv self :button %tmp.24;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 220; @position = 18; @symbol_constdef = [button,220,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 223; @symbol_moduledef = [system_icon_dark__hint_button_left_top,223,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 223; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 224; @position = 18; @symbol_constdef = [filename,224,18,26]; @symbol_type<0> = [String,224,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__hint_button_left_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 225; @position = 18; @symbol_constdef = [dithering,225,18,27]; @symbol_type<0> = [String,225,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [packingFormat,226,18,31]; @symbol_type<0> = [String,226,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 229; @symbol_moduledef = [system_input__action_menu,229,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 229; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 230 18 ]
+                symbol [ WatchUi %tmp.25 230 27 34 ];
+                %tmp.25 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.26 230 35 44 ];
+                %tmp.26 = getv %tmp.25 :KEY_ENTER;
+                putv self :button %tmp.26;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 230; @position = 18; @symbol_constdef = [button,230,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 233; @symbol_moduledef = [system_icon_light__save,233,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 233; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 234; @position = 18; @symbol_constdef = [filename,234,18,26]; @symbol_type<0> = [String,234,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__save.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 235; @position = 18; @symbol_constdef = [compress,235,18,26]; @symbol_type<0> = [String,235,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 236; @position = 18; @symbol_constdef = [dithering,236,18,27]; @symbol_type<0> = [String,236,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 237; @position = 18; @symbol_constdef = [automaticPalette,237,18,34]; @symbol_type<0> = [String,237,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 238; @position = 18; @symbol_constdef = [packingFormat,238,18,31]; @symbol_type<0> = [String,238,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 241; @symbol_moduledef = [prompt_color_light__body,241,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 241; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 243 18 ]
+                symbol [ Graphics %tmp.27 243 31 39 ];
+                %tmp.27 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.28 243 40 57 ];
+                %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+                putv self :background %tmp.28;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 242; @position = 18; @symbol_constdef = [color,242,18,23]; @symbol_type<0> = [Number,242,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 243; @position = 18; @symbol_constdef = [background,243,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 246; @symbol_moduledef = [system_loc__subwindow,246,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 246; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 247; @position = 18; @symbol_constdef = [exclude,247,18,25]; @symbol_type<0> = [Boolean,247,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 250; @symbol_moduledef = [system_icon_light__warning,250,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 250; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 251; @position = 18; @symbol_constdef = [filename,251,18,26]; @symbol_type<0> = [String,251,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__warning.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 252; @position = 18; @symbol_constdef = [compress,252,18,26]; @symbol_type<0> = [String,252,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 253; @position = 18; @symbol_constdef = [dithering,253,18,27]; @symbol_type<0> = [String,253,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 254; @position = 18; @symbol_constdef = [automaticPalette,254,18,34]; @symbol_type<0> = [String,254,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 255; @position = 18; @symbol_constdef = [packingFormat,255,18,31]; @symbol_type<0> = [String,255,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 258; @symbol_moduledef = [confirmation_color_light__body,258,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 258; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 260 18 ]
+                symbol [ Graphics %tmp.29 260 31 39 ];
+                %tmp.29 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.30 260 40 57 ];
+                %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+                putv self :background %tmp.30;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 259; @position = 18; @symbol_constdef = [color,259,18,23]; @symbol_type<0> = [Number,259,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 260; @position = 18; @symbol_constdef = [background,260,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 263; @symbol_moduledef = [confirmation_icon_light__hint_keep,263,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 263; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 264; @position = 18; @symbol_constdef = [filename,264,18,26]; @symbol_type<0> = [String,264,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 265; @position = 18; @symbol_constdef = [dithering,265,18,27]; @symbol_type<0> = [String,265,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 266; @position = 18; @symbol_constdef = [packingFormat,266,18,31]; @symbol_type<0> = [String,266,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 269; @symbol_moduledef = [activity_color_light__background,269,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 269; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 270; @position = 18; @symbol_constdef = [color,270,18,23]; @symbol_type<0> = [Number,270,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 271; @position = 18; @symbol_constdef = [background,271,18,28]; @symbol_type<0> = [Number,271,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 274; @symbol_moduledef = [system_icon_positive__hint_button_right_top,274,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 274; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [filename,275,18,26]; @symbol_type<0> = [String,275,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_positive__hint_button_right_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 276; @position = 18; @symbol_constdef = [dithering,276,18,27]; @symbol_type<0> = [String,276,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 277; @position = 18; @symbol_constdef = [packingFormat,277,18,31]; @symbol_type<0> = [String,277,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 280; @symbol_moduledef = [system_size__screen,280,15,34]; ]
+        module system_size__screen {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 280; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 281; @position = 18; @symbol_constdef = [width,281,18,23]; @symbol_type<0> = [Number,281,27,33]; ]
+            const width as Number = 454;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 282; @position = 18; @symbol_constdef = [height,282,18,24]; @symbol_type<0> = [Number,282,28,34]; ]
+            const height as Number = 454;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 285; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,285,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 285; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 286; @position = 18; @symbol_constdef = [filename,286,18,26]; @symbol_type<0> = [String,286,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 287; @position = 18; @symbol_constdef = [dithering,287,18,27]; @symbol_type<0> = [String,287,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 288; @position = 18; @symbol_constdef = [packingFormat,288,18,31]; @symbol_type<0> = [String,288,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 291; @symbol_moduledef = [system_color_light__background,291,15,45]; ]
+        module system_color_light__background {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 291; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 292; @position = 18; @symbol_constdef = [color,292,18,23]; @symbol_type<0> = [Number,292,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 293; @position = 18; @symbol_constdef = [background,293,18,28]; @symbol_type<0> = [Number,293,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 296; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,296,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 296; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 297; @position = 18; @symbol_constdef = [filename,297,18,26]; @symbol_type<0> = [String,297,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 298; @position = 18; @symbol_constdef = [dithering,298,18,27]; @symbol_type<0> = [String,298,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [packingFormat,299,18,31]; @symbol_type<0> = [String,299,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 302; @symbol_moduledef = [confirmation_loc__hint_confirm,302,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 302; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 303; @position = 18; @symbol_constdef = [x,303,18,19]; @symbol_type<0> = [Number,303,23,29]; ]
+            const x as Number = 353;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 304; @position = 18; @symbol_constdef = [y,304,18,19]; @symbol_type<0> = [Number,304,23,29]; ]
+            const y as Number = 77;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 307; @symbol_moduledef = [activity_color_dark__text,307,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 307; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 309 18 ]
+                symbol [ Graphics %tmp.31 309 31 39 ];
+                %tmp.31 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.32 309 40 57 ];
+                %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+                putv self :background %tmp.32;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 308; @position = 18; @symbol_constdef = [color,308,18,23]; @symbol_type<0> = [Number,308,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 309; @position = 18; @symbol_constdef = [background,309,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 312; @symbol_moduledef = [confirmation_input__keep,312,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 312; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 313 18 ]
+                symbol [ WatchUi %tmp.33 313 27 34 ];
+                %tmp.33 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.34 313 35 43 ];
+                %tmp.34 = getv %tmp.33 :KEY_DOWN;
+                putv self :button %tmp.34;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 313; @position = 18; @symbol_constdef = [button,313,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 316; @symbol_moduledef = [prompt_loc__body_with_title,316,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 316; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 317; @position = 18; @symbol_constdef = [x,317,18,19]; @symbol_type<0> = [Number,317,23,29]; ]
+            const x as Number = 58;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [y,318,18,19]; @symbol_type<0> = [Number,318,23,29]; ]
+            const y as Number = 203;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 321; @symbol_moduledef = [system_icon_dark__search,321,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 321; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 322; @position = 18; @symbol_constdef = [filename,322,18,26]; @symbol_type<0> = [String,322,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__search.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 323; @position = 18; @symbol_constdef = [compress,323,18,26]; @symbol_type<0> = [String,323,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 324; @position = 18; @symbol_constdef = [dithering,324,18,27]; @symbol_type<0> = [String,324,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 325; @position = 18; @symbol_constdef = [automaticPalette,325,18,34]; @symbol_type<0> = [String,325,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 326; @position = 18; @symbol_constdef = [packingFormat,326,18,31]; @symbol_type<0> = [String,326,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 329; @symbol_moduledef = [activity_color_light__text,329,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 329; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 331 18 ]
+                symbol [ Graphics %tmp.35 331 31 39 ];
+                %tmp.35 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.36 331 40 57 ];
+                %tmp.36 = getv %tmp.35 :COLOR_TRANSPARENT;
+                putv self :background %tmp.36;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 330; @position = 18; @symbol_constdef = [color,330,18,23]; @symbol_type<0> = [Number,330,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 331; @position = 18; @symbol_constdef = [background,331,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 334; @symbol_moduledef = [confirmation_icon__hint_keep,334,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 334; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 335; @position = 18; @symbol_constdef = [filename,335,18,26]; @symbol_type<0> = [String,335,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 336; @position = 18; @symbol_constdef = [dithering,336,18,27]; @symbol_type<0> = [String,336,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 337; @position = 18; @symbol_constdef = [packingFormat,337,18,31]; @symbol_type<0> = [String,337,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 340; @symbol_moduledef = [system_icon_dark__save,340,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 340; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 341; @position = 18; @symbol_constdef = [filename,341,18,26]; @symbol_type<0> = [String,341,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__save.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 342; @position = 18; @symbol_constdef = [compress,342,18,26]; @symbol_type<0> = [String,342,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 343; @position = 18; @symbol_constdef = [dithering,343,18,27]; @symbol_type<0> = [String,343,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 344; @position = 18; @symbol_constdef = [automaticPalette,344,18,34]; @symbol_type<0> = [String,344,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 345; @position = 18; @symbol_constdef = [packingFormat,345,18,31]; @symbol_type<0> = [String,345,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 348; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,348,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 348; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [filename,349,18,26]; @symbol_type<0> = [String,349,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_destructive__hint_button_left_middle.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 350; @position = 18; @symbol_constdef = [dithering,350,18,27]; @symbol_type<0> = [String,350,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 351; @position = 18; @symbol_constdef = [packingFormat,351,18,31]; @symbol_type<0> = [String,351,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 354; @symbol_moduledef = [system_icon_light__search,354,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 354; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 355; @position = 18; @symbol_constdef = [filename,355,18,26]; @symbol_type<0> = [String,355,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__search.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 356; @position = 18; @symbol_constdef = [compress,356,18,26]; @symbol_type<0> = [String,356,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 357; @position = 18; @symbol_constdef = [dithering,357,18,27]; @symbol_type<0> = [String,357,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 358; @position = 18; @symbol_constdef = [automaticPalette,358,18,34]; @symbol_type<0> = [String,358,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 359; @position = 18; @symbol_constdef = [packingFormat,359,18,31]; @symbol_type<0> = [String,359,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 362; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,362,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 362; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 363; @position = 18; @symbol_constdef = [filename,363,18,26]; @symbol_type<0> = [String,363,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 364; @position = 18; @symbol_constdef = [dithering,364,18,27]; @symbol_type<0> = [String,364,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 365; @position = 18; @symbol_constdef = [packingFormat,365,18,31]; @symbol_type<0> = [String,365,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 368; @symbol_moduledef = [system_icon_positive__hint_button_left_top,368,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 368; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 369; @position = 18; @symbol_constdef = [filename,369,18,26]; @symbol_type<0> = [String,369,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_positive__hint_button_left_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 370; @position = 18; @symbol_constdef = [dithering,370,18,27]; @symbol_type<0> = [String,370,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 371; @position = 18; @symbol_constdef = [packingFormat,371,18,31]; @symbol_type<0> = [String,371,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 374; @symbol_moduledef = [system_loc__hint_button_right_bottom,374,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 374; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 375; @position = 18; @symbol_constdef = [x,375,18,19]; @symbol_type<0> = [Number,375,23,29]; ]
+            const x as Number = 353;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 376; @position = 18; @symbol_constdef = [y,376,18,19]; @symbol_type<0> = [Number,376,23,29]; ]
+            const y as Number = 291;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 379; @symbol_moduledef = [confirmation_icon_dark__hint_reject,379,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 379; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 380; @position = 18; @symbol_constdef = [filename,380,18,26]; @symbol_type<0> = [String,380,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 381; @position = 18; @symbol_constdef = [dithering,381,18,27]; @symbol_type<0> = [String,381,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 382; @position = 18; @symbol_constdef = [packingFormat,382,18,31]; @symbol_type<0> = [String,382,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 385; @symbol_moduledef = [confirmation_color_dark__body,385,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 385; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 387 18 ]
+                symbol [ Graphics %tmp.37 387 31 39 ];
+                %tmp.37 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.38 387 40 57 ];
+                %tmp.38 = getv %tmp.37 :COLOR_TRANSPARENT;
+                putv self :background %tmp.38;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 386; @position = 18; @symbol_constdef = [color,386,18,23]; @symbol_type<0> = [Number,386,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 387; @position = 18; @symbol_constdef = [background,387,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 390; @symbol_moduledef = [confirmation_icon_light__hint_confirm,390,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 390; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 391; @position = 18; @symbol_constdef = [filename,391,18,26]; @symbol_type<0> = [String,391,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 392; @position = 18; @symbol_constdef = [dithering,392,18,27]; @symbol_type<0> = [String,392,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [packingFormat,393,18,31]; @symbol_type<0> = [String,393,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 396; @symbol_moduledef = [prompt_color_dark__title,396,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 396; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 398 18 ]
+                symbol [ Graphics %tmp.39 398 31 39 ];
+                %tmp.39 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.40 398 40 57 ];
+                %tmp.40 = getv %tmp.39 :COLOR_TRANSPARENT;
+                putv self :background %tmp.40;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 397; @position = 18; @symbol_constdef = [color,397,18,23]; @symbol_type<0> = [Number,397,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [background,398,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 401; @symbol_moduledef = [system_icon_destructive__cancel,401,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 401; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 402; @position = 18; @symbol_constdef = [filename,402,18,26]; @symbol_type<0> = [String,402,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 403; @position = 18; @symbol_constdef = [dithering,403,18,27]; @symbol_type<0> = [String,403,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 404; @position = 18; @symbol_constdef = [packingFormat,404,18,31]; @symbol_type<0> = [String,404,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 407; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,407,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 407; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 408; @position = 18; @symbol_constdef = [filename,408,18,26]; @symbol_type<0> = [String,408,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 409; @position = 18; @symbol_constdef = [dithering,409,18,27]; @symbol_type<0> = [String,409,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 410; @position = 18; @symbol_constdef = [packingFormat,410,18,31]; @symbol_type<0> = [String,410,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 413; @symbol_moduledef = [prompt_loc__title,413,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 413; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 414; @position = 18; @symbol_constdef = [x,414,18,19]; @symbol_type<0> = [Number,414,23,29]; ]
+            const x as Number = 47;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 415; @position = 18; @symbol_constdef = [y,415,18,19]; @symbol_type<0> = [Number,415,23,29]; ]
+            const y as Number = 101;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 418; @symbol_moduledef = [confirmation_font_enhanced_readability__body,418,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 418; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 419; @position = 18; @symbol_constdef = [exclude,419,18,25]; @symbol_type<0> = [Boolean,419,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 422; @symbol_moduledef = [prompt_color_light__title,422,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 422; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 424 18 ]
+                symbol [ Graphics %tmp.41 424 31 39 ];
+                %tmp.41 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.42 424 40 57 ];
+                %tmp.42 = getv %tmp.41 :COLOR_TRANSPARENT;
+                putv self :background %tmp.42;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 423; @position = 18; @symbol_constdef = [color,423,18,23]; @symbol_type<0> = [Number,423,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 424; @position = 18; @symbol_constdef = [background,424,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 427; @symbol_moduledef = [system_icon_dark__hint_button_right_top,427,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 427; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 428; @position = 18; @symbol_constdef = [filename,428,18,26]; @symbol_type<0> = [String,428,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 429; @position = 18; @symbol_constdef = [dithering,429,18,27]; @symbol_type<0> = [String,429,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 430; @position = 18; @symbol_constdef = [packingFormat,430,18,31]; @symbol_type<0> = [String,430,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 433; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,433,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 433; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 434; @position = 18; @symbol_constdef = [filename,434,18,26]; @symbol_type<0> = [String,434,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 435; @position = 18; @symbol_constdef = [dithering,435,18,27]; @symbol_type<0> = [String,435,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 436; @position = 18; @symbol_constdef = [packingFormat,436,18,31]; @symbol_type<0> = [String,436,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 439; @symbol_moduledef = [confirmation_icon_dark__hint_keep,439,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 439; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 440; @position = 18; @symbol_constdef = [filename,440,18,26]; @symbol_type<0> = [String,440,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 441; @position = 18; @symbol_constdef = [dithering,441,18,27]; @symbol_type<0> = [String,441,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 442; @position = 18; @symbol_constdef = [packingFormat,442,18,31]; @symbol_type<0> = [String,442,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 445; @symbol_moduledef = [system_icon_light__cancel,445,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 445; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 446; @position = 18; @symbol_constdef = [filename,446,18,26]; @symbol_type<0> = [String,446,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__cancel.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 447; @position = 18; @symbol_constdef = [compress,447,18,26]; @symbol_type<0> = [String,447,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [dithering,448,18,27]; @symbol_type<0> = [String,448,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 449; @position = 18; @symbol_constdef = [automaticPalette,449,18,34]; @symbol_type<0> = [String,449,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 450; @position = 18; @symbol_constdef = [packingFormat,450,18,31]; @symbol_type<0> = [String,450,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 453; @symbol_moduledef = [confirmation_icon_light__hint_reject,453,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 453; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 454; @position = 18; @symbol_constdef = [filename,454,18,26]; @symbol_type<0> = [String,454,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 455; @position = 18; @symbol_constdef = [dithering,455,18,27]; @symbol_type<0> = [String,455,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 456; @position = 18; @symbol_constdef = [packingFormat,456,18,31]; @symbol_type<0> = [String,456,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 459; @symbol_moduledef = [system_icon_light__about,459,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 459; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 460; @position = 18; @symbol_constdef = [filename,460,18,26]; @symbol_type<0> = [String,460,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__about.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 461; @position = 18; @symbol_constdef = [compress,461,18,26]; @symbol_type<0> = [String,461,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 462; @position = 18; @symbol_constdef = [dithering,462,18,27]; @symbol_type<0> = [String,462,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 463; @position = 18; @symbol_constdef = [automaticPalette,463,18,34]; @symbol_type<0> = [String,463,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 464; @position = 18; @symbol_constdef = [packingFormat,464,18,31]; @symbol_type<0> = [String,464,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 467; @symbol_moduledef = [system_size__toast_icon,467,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 467; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 468; @position = 18; @symbol_constdef = [scaleX,468,18,24]; @symbol_type<0> = [Number,468,28,34]; ]
+            const scaleX as Number = 59;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 469; @position = 18; @symbol_constdef = [scaleY,469,18,24]; @symbol_type<0> = [Number,469,28,34]; ]
+            const scaleY as Number = 59;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 470; @position = 18; @symbol_constdef = [scaleRelativeTo,470,18,33]; @symbol_type<0> = [String,470,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 473; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,473,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 473; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 474; @position = 18; @symbol_constdef = [exclude,474,18,25]; @symbol_type<0> = [Boolean,474,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 477; @symbol_moduledef = [confirmation_icon__hint_reject,477,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 477; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 478; @position = 18; @symbol_constdef = [filename,478,18,26]; @symbol_type<0> = [String,478,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 479; @position = 18; @symbol_constdef = [dithering,479,18,27]; @symbol_type<0> = [String,479,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 480; @position = 18; @symbol_constdef = [packingFormat,480,18,31]; @symbol_type<0> = [String,480,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 483; @symbol_moduledef = [system_icon_light__hint_action_menu,483,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 483; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 484; @position = 18; @symbol_constdef = [filename,484,18,26]; @symbol_type<0> = [String,484,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 485; @position = 18; @symbol_constdef = [dithering,485,18,27]; @symbol_type<0> = [String,485,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 486; @position = 18; @symbol_constdef = [packingFormat,486,18,31]; @symbol_type<0> = [String,486,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 489; @symbol_moduledef = [system_icon_light__hint_button_right_middle,489,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 489; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 490; @position = 18; @symbol_constdef = [exclude,490,18,25]; @symbol_type<0> = [Boolean,490,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 493; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,493,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 493; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 494; @position = 18; @symbol_constdef = [exclude,494,18,25]; @symbol_type<0> = [Boolean,494,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 497; @symbol_moduledef = [confirmation_loc__hint_reject,497,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 497; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 498; @position = 18; @symbol_constdef = [x,498,18,19]; @symbol_type<0> = [Number,498,23,29]; ]
+            const x as Number = 15;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 499; @position = 18; @symbol_constdef = [y,499,18,19]; @symbol_type<0> = [Number,499,23,29]; ]
+            const y as Number = 291;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 502; @symbol_moduledef = [confirmation_icon_dark__hint_delete,502,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 502; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 503; @position = 18; @symbol_constdef = [filename,503,18,26]; @symbol_type<0> = [String,503,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [dithering,504,18,27]; @symbol_type<0> = [String,504,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 505; @position = 18; @symbol_constdef = [packingFormat,505,18,31]; @symbol_type<0> = [String,505,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 508; @symbol_moduledef = [activity_color_dark__background,508,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 508; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [color,509,18,23]; @symbol_type<0> = [Number,509,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 510; @position = 18; @symbol_constdef = [background,510,18,28]; @symbol_type<0> = [Number,510,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 513; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,513,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 513; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 514; @position = 18; @symbol_constdef = [filename,514,18,26]; @symbol_type<0> = [String,514,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__hint_button_left_bottom.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [dithering,515,18,27]; @symbol_type<0> = [String,515,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 516; @position = 18; @symbol_constdef = [packingFormat,516,18,31]; @symbol_type<0> = [String,516,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 519; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,519,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 519; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [filename,520,18,26]; @symbol_type<0> = [String,520,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_positive__hint_button_left_middle.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 521; @position = 18; @symbol_constdef = [dithering,521,18,27]; @symbol_type<0> = [String,521,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 522; @position = 18; @symbol_constdef = [packingFormat,522,18,31]; @symbol_type<0> = [String,522,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 525; @symbol_moduledef = [system_size__menu_icon,525,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 525; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 526; @position = 18; @symbol_constdef = [scaleX,526,18,24]; @symbol_type<0> = [Number,526,28,34]; ]
+            const scaleX as Number = 74;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [scaleY,527,18,24]; @symbol_type<0> = [Number,527,28,34]; ]
+            const scaleY as Number = 114;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 528; @position = 18; @symbol_constdef = [scaleRelativeTo,528,18,33]; @symbol_type<0> = [String,528,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 531; @symbol_moduledef = [system_icon_destructive__warning,531,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 531; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [filename,532,18,26]; @symbol_type<0> = [String,532,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_destructive__warning.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [dithering,533,18,27]; @symbol_type<0> = [String,533,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 534; @position = 18; @symbol_constdef = [packingFormat,534,18,31]; @symbol_type<0> = [String,534,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 537; @symbol_moduledef = [system_loc__hint_button_right_middle,537,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 537; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 538; @position = 18; @symbol_constdef = [exclude,538,18,25]; @symbol_type<0> = [Boolean,538,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 541; @symbol_moduledef = [system_icon_dark__cancel,541,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 541; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 542; @position = 18; @symbol_constdef = [filename,542,18,26]; @symbol_type<0> = [String,542,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__cancel.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [compress,543,18,26]; @symbol_type<0> = [String,543,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [dithering,544,18,27]; @symbol_type<0> = [String,544,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [automaticPalette,545,18,34]; @symbol_type<0> = [String,545,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 546; @position = 18; @symbol_constdef = [packingFormat,546,18,31]; @symbol_type<0> = [String,546,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 549; @symbol_moduledef = [prompt_size__body_with_title,549,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 549; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 550; @position = 18; @symbol_constdef = [width,550,18,23]; @symbol_type<0> = [Number,550,27,33]; ]
+            const width as Number = 338;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 551; @position = 18; @symbol_constdef = [height,551,18,24]; @symbol_type<0> = [Number,551,28,34]; ]
+            const height as Number = 173;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 554; @symbol_moduledef = [system_loc__hint_button_right_top,554,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 554; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 555; @position = 18; @symbol_constdef = [x,555,18,19]; @symbol_type<0> = [Number,555,23,29]; ]
+            const x as Number = 353;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [y,556,18,19]; @symbol_type<0> = [Number,556,23,29]; ]
+            const y as Number = 77;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 559; @symbol_moduledef = [system_color_light__text,559,15,39]; ]
+        module system_color_light__text {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 559; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 561 18 ]
+                symbol [ Graphics %tmp.43 561 31 39 ];
+                %tmp.43 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.44 561 40 57 ];
+                %tmp.44 = getv %tmp.43 :COLOR_TRANSPARENT;
+                putv self :background %tmp.44;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 560; @position = 18; @symbol_constdef = [color,560,18,23]; @symbol_type<0> = [Number,560,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 561; @position = 18; @symbol_constdef = [background,561,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 564; @symbol_moduledef = [system_icon_light__check,564,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 564; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 565; @position = 18; @symbol_constdef = [filename,565,18,26]; @symbol_type<0> = [String,565,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__check.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 566; @position = 18; @symbol_constdef = [compress,566,18,26]; @symbol_type<0> = [String,566,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 567; @position = 18; @symbol_constdef = [dithering,567,18,27]; @symbol_type<0> = [String,567,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [automaticPalette,568,18,34]; @symbol_type<0> = [String,568,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 569; @position = 18; @symbol_constdef = [packingFormat,569,18,31]; @symbol_type<0> = [String,569,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 572; @symbol_moduledef = [confirmation_input__reject,572,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 572; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 573 18 ]
+                symbol [ WatchUi %tmp.45 573 27 34 ];
+                %tmp.45 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.46 573 35 43 ];
+                %tmp.46 = getv %tmp.45 :KEY_DOWN;
+                putv self :button %tmp.46;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 573; @position = 18; @symbol_constdef = [button,573,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 576; @symbol_moduledef = [system_icon_light__revert,576,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 576; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 577; @position = 18; @symbol_constdef = [filename,577,18,26]; @symbol_type<0> = [String,577,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__revert.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 578; @position = 18; @symbol_constdef = [compress,578,18,26]; @symbol_type<0> = [String,578,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 579; @position = 18; @symbol_constdef = [dithering,579,18,27]; @symbol_type<0> = [String,579,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [automaticPalette,580,18,34]; @symbol_type<0> = [String,580,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 581; @position = 18; @symbol_constdef = [packingFormat,581,18,31]; @symbol_type<0> = [String,581,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 584; @symbol_moduledef = [system_size__subwindow,584,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 584; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 585; @position = 18; @symbol_constdef = [exclude,585,18,25]; @symbol_type<0> = [Boolean,585,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 588; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,588,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 588; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 589; @position = 18; @symbol_constdef = [filename,589,18,26]; @symbol_type<0> = [String,589,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_positive__hint_button_left_bottom.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 590; @position = 18; @symbol_constdef = [dithering,590,18,27]; @symbol_type<0> = [String,590,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [packingFormat,591,18,31]; @symbol_type<0> = [String,591,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 594; @symbol_moduledef = [system_icon_dark__check,594,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 594; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 595; @position = 18; @symbol_constdef = [filename,595,18,26]; @symbol_type<0> = [String,595,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__check.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [compress,596,18,26]; @symbol_type<0> = [String,596,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 597; @position = 18; @symbol_constdef = [dithering,597,18,27]; @symbol_type<0> = [String,597,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 598; @position = 18; @symbol_constdef = [automaticPalette,598,18,34]; @symbol_type<0> = [String,598,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 599; @position = 18; @symbol_constdef = [packingFormat,599,18,31]; @symbol_type<0> = [String,599,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 602; @symbol_moduledef = [confirmation_loc__hint_keep,602,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 602; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 603; @position = 18; @symbol_constdef = [x,603,18,19]; @symbol_type<0> = [Number,603,23,29]; ]
+            const x as Number = 15;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 604; @position = 18; @symbol_constdef = [y,604,18,19]; @symbol_type<0> = [Number,604,23,29]; ]
+            const y as Number = 291;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 607; @symbol_moduledef = [confirmation_loc__hint_delete,607,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 607; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 608; @position = 18; @symbol_constdef = [x,608,18,19]; @symbol_type<0> = [Number,608,23,29]; ]
+            const x as Number = 353;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 609; @position = 18; @symbol_constdef = [y,609,18,19]; @symbol_type<0> = [Number,609,23,29]; ]
+            const y as Number = 77;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 612; @symbol_moduledef = [system_icon_positive__hint_action_menu,612,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 612; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [filename,613,18,26]; @symbol_type<0> = [String,613,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_positive__hint_button_right_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [dithering,614,18,27]; @symbol_type<0> = [String,614,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 615; @position = 18; @symbol_constdef = [packingFormat,615,18,31]; @symbol_type<0> = [String,615,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 618; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,618,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 618; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [exclude,619,18,25]; @symbol_type<0> = [Boolean,619,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 622; @symbol_moduledef = [system_icon_light__hint_button_left_middle,622,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 622; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 623; @position = 18; @symbol_constdef = [filename,623,18,26]; @symbol_type<0> = [String,623,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__hint_button_left_middle.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 624; @position = 18; @symbol_constdef = [dithering,624,18,27]; @symbol_type<0> = [String,624,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 625; @position = 18; @symbol_constdef = [packingFormat,625,18,31]; @symbol_type<0> = [String,625,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 628; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,628,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 628; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 629; @position = 18; @symbol_constdef = [filename,629,18,26]; @symbol_type<0> = [String,629,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 630; @position = 18; @symbol_constdef = [dithering,630,18,27]; @symbol_type<0> = [String,630,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 631; @position = 18; @symbol_constdef = [packingFormat,631,18,31]; @symbol_type<0> = [String,631,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 634; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,634,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 634; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [filename,635,18,26]; @symbol_type<0> = [String,635,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [dithering,636,18,27]; @symbol_type<0> = [String,636,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 637; @position = 18; @symbol_constdef = [packingFormat,637,18,31]; @symbol_type<0> = [String,637,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 640; @symbol_moduledef = [system_icon_dark__revert,640,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 640; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 641; @position = 18; @symbol_constdef = [filename,641,18,26]; @symbol_type<0> = [String,641,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__revert.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 642; @position = 18; @symbol_constdef = [compress,642,18,26]; @symbol_type<0> = [String,642,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 643; @position = 18; @symbol_constdef = [dithering,643,18,27]; @symbol_type<0> = [String,643,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 644; @position = 18; @symbol_constdef = [automaticPalette,644,18,34]; @symbol_type<0> = [String,644,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 645; @position = 18; @symbol_constdef = [packingFormat,645,18,31]; @symbol_type<0> = [String,645,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 648; @symbol_moduledef = [confirmation_icon_light__hint_delete,648,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 648; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 649; @position = 18; @symbol_constdef = [filename,649,18,26]; @symbol_type<0> = [String,649,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [dithering,650,18,27]; @symbol_type<0> = [String,650,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 651; @position = 18; @symbol_constdef = [packingFormat,651,18,31]; @symbol_type<0> = [String,651,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 654; @symbol_moduledef = [system_icon_dark__question,654,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 654; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 655; @position = 18; @symbol_constdef = [filename,655,18,26]; @symbol_type<0> = [String,655,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__question.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 656; @position = 18; @symbol_constdef = [compress,656,18,26]; @symbol_type<0> = [String,656,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 657; @position = 18; @symbol_constdef = [dithering,657,18,27]; @symbol_type<0> = [String,657,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 658; @position = 18; @symbol_constdef = [automaticPalette,658,18,34]; @symbol_type<0> = [String,658,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 659; @position = 18; @symbol_constdef = [packingFormat,659,18,31]; @symbol_type<0> = [String,659,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 662; @symbol_moduledef = [system_icon_light__discard,662,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 662; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 663; @position = 18; @symbol_constdef = [filename,663,18,26]; @symbol_type<0> = [String,663,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__discard.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 664; @position = 18; @symbol_constdef = [compress,664,18,26]; @symbol_type<0> = [String,664,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 665; @position = 18; @symbol_constdef = [dithering,665,18,27]; @symbol_type<0> = [String,665,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 666; @position = 18; @symbol_constdef = [automaticPalette,666,18,34]; @symbol_type<0> = [String,666,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 667; @position = 18; @symbol_constdef = [packingFormat,667,18,31]; @symbol_type<0> = [String,667,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 670; @symbol_moduledef = [device_info,670,15,26]; ]
+        module device_info {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 670; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 672 18 ]
+                symbol [ Toybox %tmp.48 672 32 38 ];
+                %tmp.48 = getv ? :Toybox;
+                symbol [ System %tmp.49 672 39 45 ];
+                %tmp.49 = getv %tmp.48 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.50 672 46 64 ];
+                %tmp.50 = getv %tmp.49 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.50;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 671; @position = 18; @symbol_constdef = [screenWidth,671,18,29]; @symbol_type<0> = [Number,671,33,39]; ]
+            const screenWidth as Number = 454;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 672; @position = 18; @symbol_constdef = [screenShape,672,18,29]; ]
+            const screenShape;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 673; @position = 18; @symbol_constdef = [hasNightMode,673,18,30]; @symbol_type<0> = [Boolean,673,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 674; @position = 18; @symbol_constdef = [hasGpu,674,18,24]; @symbol_type<0> = [Boolean,674,28,35]; ]
+            const hasGpu as Boolean = true;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 675; @position = 18; @symbol_constdef = [screenHeight,675,18,30]; @symbol_type<0> = [Number,675,34,40]; ]
+            const screenHeight as Number = 454;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 676; @position = 18; @symbol_constdef = [hasTouchScreen,676,18,32]; @symbol_type<0> = [Boolean,676,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 677; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,677,18,44]; @symbol_type<0> = [Boolean,677,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 680; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,680,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 680; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 681; @position = 18; @symbol_constdef = [filename,681,18,26]; @symbol_type<0> = [String,681,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 682; @position = 18; @symbol_constdef = [dithering,682,18,27]; @symbol_type<0> = [String,682,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 683; @position = 18; @symbol_constdef = [packingFormat,683,18,31]; @symbol_type<0> = [String,683,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 686; @symbol_moduledef = [prompt_font__body_no_title,686,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 686; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 687 18 ]
+                symbol [ Graphics %tmp.51 687 34 42 ];
+                %tmp.51 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.52 687 43 62 ];
+                %tmp.52 = getv %tmp.51 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.53 687 63 71 ];
+                %tmp.53 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.54 687 72 92 ];
+                %tmp.54 = getv %tmp.53 :TEXT_JUSTIFY_VCENTER;
+                %tmp.55 = bitor %tmp.52 %tmp.54;
+                putv self :justification %tmp.55;
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 688 18 ]
+                symbol [ Graphics %tmp.56 688 25 33 ];
+                %tmp.56 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.57 688 34 44 ];
+                %tmp.57 = getv %tmp.56 :FONT_XTINY;
+                putv self :font %tmp.57;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 687; @position = 18; @symbol_constdef = [justification,687,18,31]; ]
+            const justification;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 688; @position = 18; @symbol_constdef = [font,688,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 691; @symbol_moduledef = [prompt_size__title_icon,691,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 691; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 692; @position = 18; @symbol_constdef = [scaleX,692,18,24]; @symbol_type<0> = [Float,692,28,33]; ]
+            const scaleX as Float = 0.15;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 693; @position = 18; @symbol_constdef = [scaleRelativeTo,693,18,33]; @symbol_type<0> = [String,693,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 696; @symbol_moduledef = [system_icon_dark__warning,696,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 696; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 697; @position = 18; @symbol_constdef = [filename,697,18,26]; @symbol_type<0> = [String,697,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_dark__warning.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 698; @position = 18; @symbol_constdef = [compress,698,18,26]; @symbol_type<0> = [String,698,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 699; @position = 18; @symbol_constdef = [dithering,699,18,27]; @symbol_type<0> = [String,699,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 700; @position = 18; @symbol_constdef = [automaticPalette,700,18,34]; @symbol_type<0> = [String,700,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 701; @position = 18; @symbol_constdef = [packingFormat,701,18,31]; @symbol_type<0> = [String,701,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 704; @symbol_moduledef = [prompt_loc__title_icon,704,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 704; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 705; @position = 18; @symbol_constdef = [x,705,18,19]; @symbol_type<0> = [Number,705,23,29]; ]
+            const x as Number = 227;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 706; @position = 18; @symbol_constdef = [y,706,18,19]; @symbol_type<0> = [Number,706,23,29]; ]
+            const y as Number = 148;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 707; @position = 18; @symbol_constdef = [horizontalJustification,707,18,41]; @symbol_type<0> = [String,707,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 708; @position = 18; @symbol_constdef = [verticalJustification,708,18,39]; @symbol_type<0> = [String,708,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 711; @symbol_moduledef = [prompt_font_enhanced_readability__title,711,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 711; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 712; @position = 18; @symbol_constdef = [exclude,712,18,25]; @symbol_type<0> = [Boolean,712,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 715; @symbol_moduledef = [prompt_color_dark__body,715,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 715; ]
+            <init> {
+[ "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen" 717 18 ]
+                symbol [ Graphics %tmp.58 717 31 39 ];
+                %tmp.58 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.59 717 40 57 ];
+                %tmp.59 = getv %tmp.58 :COLOR_TRANSPARENT;
+                putv self :background %tmp.59;
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 716; @position = 18; @symbol_constdef = [color,716,18,23]; @symbol_type<0> = [Number,716,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 717; @position = 18; @symbol_constdef = [background,717,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 720; @symbol_moduledef = [confirmation_icon__hint_delete,720,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 720; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 721; @position = 18; @symbol_constdef = [filename,721,18,26]; @symbol_type<0> = [String,721,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 722; @position = 18; @symbol_constdef = [dithering,722,18,27]; @symbol_type<0> = [String,722,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 723; @position = 18; @symbol_constdef = [packingFormat,723,18,31]; @symbol_type<0> = [String,723,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 726; @symbol_moduledef = [system_icon_light__hint_button_right_top,726,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 726; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 727; @position = 18; @symbol_constdef = [filename,727,18,26]; @symbol_type<0> = [String,727,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 728; @position = 18; @symbol_constdef = [dithering,728,18,27]; @symbol_type<0> = [String,728,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 729; @position = 18; @symbol_constdef = [packingFormat,729,18,31]; @symbol_type<0> = [String,729,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 732; @symbol_moduledef = [confirmation_size__body,732,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 732; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 733; @position = 18; @symbol_constdef = [width,733,18,23]; @symbol_type<0> = [Number,733,27,33]; ]
+            const width as Number = 313;
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 734; @position = 18; @symbol_constdef = [height,734,18,24]; @symbol_type<0> = [Number,734,28,34]; ]
+            const height as Number = 313;
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 737; @symbol_moduledef = [system_icon_positive__check,737,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 737; ]
+            <init> {
+            }
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 738; @position = 18; @symbol_constdef = [filename,738,18,26]; @symbol_type<0> = [String,738,30,36]; ]
+            const filename as String = "/Users/nico/Library/Application Support/Garmin/ConnectIQ/Devices/fenix847mm/system_icon_positive__check.svg";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 739; @position = 18; @symbol_constdef = [dithering,739,18,27]; @symbol_type<0> = [String,739,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 740; @position = 18; @symbol_constdef = [packingFormat,740,18,31]; @symbol_type<0> = [String,740,35,41]; ]
+            const packingFormat as String = "png";
+        }
+    }
+}
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/gen/006-B4536-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

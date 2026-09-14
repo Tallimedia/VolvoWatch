@@ -1,0 +1,54 @@
+# claude-docs owns these — keep them out of this repo's status
+RESEARCH.md
+SPEC.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local config / data / secrets
+.env
+.env.*
+!.env.example
+data/
+*.sqlite
+*.sqlite-journal
+*.db
+.refresh_token
+/tokens
+/tallimedia_api_values
+*.secret
+*_response.json
+probe_output*.txt
+# never commit captured tokens/credentials
+**/access_token*
+**/refresh_token*
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/*
+!watch/.vscode/settings.json
+!watch/.vscode/launch.json
+
+# Connect IQ build output
+watch/bin/
+*.iq
+*.prg
+*.prg.debug.xml
+
+# per-person sideload builds — contain live car credentials, never commit
+/dist/
+
+# raw sim captures — framed into store/screenshot-*.png by make_store_art.py
+watch/store/capture-*.png
+
+# ad-hoc verification screenshots (File -> Save Screen Capture), not store assets
+watch/store/pg*.png
+watch/store/pairing.png

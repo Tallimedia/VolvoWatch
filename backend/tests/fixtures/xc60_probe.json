@@ -1,0 +1,71 @@
+{
+  "_note": "Real responses from a 2024 XC60 PHEV, 2026-09-03. VIN redacted. Used by test_assemble_status.",
+  "fuel": {
+    "data": {
+      "batteryChargeLevel": {"timestamp": "2026-09-03T19:30:29.313915Z", "unit": "%", "value": 5.0},
+      "fuelAmount": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "l", "value": 32.4}
+    }
+  },
+  "energy": {
+    "batteryChargeLevel": {"status": "OK", "unit": "percentage", "updatedAt": "2026-09-03T19:30:29Z", "value": 5.0},
+    "chargerConnectionStatus": {"status": "OK", "updatedAt": "2026-09-03T19:30:29Z", "value": "DISCONNECTED"},
+    "chargerPowerStatus": {"status": "OK", "updatedAt": "2026-09-03T19:30:29Z", "value": "NO_POWER_AVAILABLE"},
+    "chargingCurrentLimit": {"code": "PROPERTY_NOT_SUPPORTED", "message": "Property is not supported for this vehicle", "status": "ERROR"},
+    "chargingPower": {"code": "PROPERTY_NOT_FOUND", "message": "No valid value could be found for the requested resource", "status": "ERROR"},
+    "chargingStatus": {"status": "OK", "updatedAt": "2026-09-03T19:30:29Z", "value": "IDLE"},
+    "chargingType": {"status": "OK", "updatedAt": "2026-09-03T19:30:29Z", "value": "NONE"},
+    "electricRange": {"status": "OK", "unit": "km", "updatedAt": "2026-09-03T19:30:29Z", "value": 2.0},
+    "estimatedChargingTimeToTargetBatteryChargeLevel": {"status": "OK", "unit": "minutes", "updatedAt": "2026-09-03T19:30:29Z", "value": 0},
+    "targetBatteryChargeLevel": {"status": "OK", "unit": "percentage", "updatedAt": "2026-09-03T19:30:37Z", "value": 100}
+  },
+  "statistics": {
+    "data": {
+      "averageEnergyConsumption": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "kWh/100km", "value": 0.1},
+      "averageFuelConsumption": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "l/100km", "value": 10.5},
+      "averageSpeed": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "km/h", "value": 42},
+      "distanceToEmptyBattery": {"timestamp": "2026-09-03T19:30:29.313915Z", "unit": "km", "value": 2},
+      "distanceToEmptyTank": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "km", "value": 270},
+      "tripMeterAutomatic": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "km", "value": 18.4},
+      "tripMeterManual": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "km", "value": 317.6}
+    }
+  },
+  "odometer": {
+    "data": {"odometer": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "km", "value": 82299}}
+  },
+  "doors": {
+    "data": {
+      "centralLock": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "LOCKED"},
+      "frontLeftDoor": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "frontRightDoor": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "hood": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "rearLeftDoor": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "rearRightDoor": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "tailgate": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "tankLid": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"}
+    }
+  },
+  "windows": {
+    "data": {
+      "frontLeftWindow": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "frontRightWindow": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "rearLeftWindow": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "rearRightWindow": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"},
+      "sunroof": {"timestamp": "2026-09-03T19:22:11.019620Z", "unit": null, "value": "CLOSED"}
+    }
+  },
+  "diagnostics": {
+    "data": {
+      "distanceToService": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "km", "value": 0},
+      "engineHoursToService": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "h", "value": 48},
+      "serviceTrigger": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": null, "value": "DISTANCE"},
+      "serviceWarning": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": null, "value": "DISTANCE_DRIVEN_TIME_FOR_SERVICE"},
+      "timeToService": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": "months", "value": 1},
+      "washerFluidLevelWarning": {"timestamp": "2026-09-03T19:21:23.645712Z", "unit": null, "value": "NO_WARNING"}
+    }
+  },
+  "command_accessibility": {
+    "data": {
+      "availabilityStatus": {"timestamp": "2026-09-03T19:21:23.447975Z", "unavailableReason": "CAR_IN_USE", "value": "UNAVAILABLE"}
+    }
+  }
+}

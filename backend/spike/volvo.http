@@ -1,0 +1,105 @@
+# Phase 0 manual spike — VS Code REST Client / IntelliJ HTTP client / `httpie`.
+# Goal: prove we can read tank + battery and start climatisation on Nico's own
+# car, and measure token lifetimes. See ../../RESEARCH.md "Phase 0".
+#
+# Fill these after creating the Volvo app + doing one browser OAuth by hand.
+
+@apiKey = PUT_VCC_API_KEY_HERE
+@accessToken = PUT_ACCESS_TOKEN_HERE
+@vin = PUT_VIN_HERE
+@base = https://api.volvocars.com
+
+### API backend status (no auth)
+GET https://public-developer-portal-bff.weu-prod.ecpaz.volvocars.biz/api/v1/backend-status
+
+### List vehicles on the consented Volvo ID
+GET {{base}}/connected-vehicle/v2/vehicles
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+### Fuel  (tank % / litres + distance to empty)
+GET {{base}}/connected-vehicle/v2/vehicles/{{vin}}/fuel
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+### Energy state  (battery %, charging, electric range, time-to-full)
+GET {{base}}/energy/v2/vehicles/{{vin}}/state
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+### Statistics  (distanceToEmptyTank / distanceToEmptyBattery, trip meters)
+GET {{base}}/connected-vehicle/v2/vehicles/{{vin}}/statistics
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+### Odometer
+GET {{base}}/connected-vehicle/v2/vehicles/{{vin}}/odometer
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+### Doors (+ carLocked) / Windows / Diagnostics
+GET {{base}}/connected-vehicle/v2/vehicles/{{vin}}/doors
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+###
+GET {{base}}/connected-vehicle/v2/vehicles/{{vin}}/windows
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+###
+GET {{base}}/connected-vehicle/v2/vehicles/{{vin}}/diagnostics
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+### Which commands does this VIN support / is it reachable now
+GET {{base}}/connected-vehicle/v2/vehicles/{{vin}}/commands
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+###
+GET {{base}}/connected-vehicle/v2/vehicles/{{vin}}/command-accessibility
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Accept: application/json
+
+### >>> RELEASE 1 COMMAND: start climatisation (default scope) <<<
+POST {{base}}/connected-vehicle/v2/vehicles/{{vin}}/commands/climatization-start
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Content-Type: application/json
+
+{}
+
+### stop climatisation
+POST {{base}}/connected-vehicle/v2/vehicles/{{vin}}/commands/climatization-stop
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Content-Type: application/json
+
+{}
+
+### RESTRICTED SCOPE probe — does the test env allow these without a separate request?
+POST {{base}}/connected-vehicle/v2/vehicles/{{vin}}/commands/flash
+Authorization: Bearer {{accessToken}}
+vcc-api-key: {{apiKey}}
+Content-Type: application/json
+
+{}
+
+### Refresh token — run repeatedly over days to learn the real refresh-token lifetime
+# @clientId / @clientSecret basic-auth; body is form-encoded
+POST https://volvoid.eu.volvocars.com/as/token.oauth2
+Authorization: Basic {{clientId}} {{clientSecret}}
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&refresh_token=PUT_REFRESH_TOKEN_HERE

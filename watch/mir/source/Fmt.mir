@@ -1,0 +1,446 @@
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Math,2,14,18]; ]
+import Toybox.Math;
+//! Small formatting helpers. All tolerate Null / Number / Float / String input
+//! (values come straight from parsed JSON).
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 6; @symbol_moduledef = [Fmt,6,7,10]; ]
+module Fmt {
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 8; @position = 10; @symbol_constdef = [DASH,8,10,14]; ]
+    const DASH = "–";
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 10; @symbol_functiondef = [num,10,13,16]; @symbol_param<0> = [v,10,17,18]; @symbol_param<0>_type<0> = [Object,10,22,28]; @symbol_return<0> = [Float,10,34,39]; ]
+    function num(v as Object or Null) as Float or Null {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_10_41_18_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 11 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_11_8_11_53_if_stmt:
+        %tmp.1 = lgetv %v;
+        symbol [ v %tmp.1 11 12 13 ];
+        symbol [ Float %tmp.3 11 25 30 ];
+        %tmp.3 = getv ? :Float;
+        %tmp.4 = isa %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_11_8_11_53_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_11_8_11_53_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_11_32_11_53_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 11 34 ]
+        %tmp.5 = lgetv %v;
+        symbol [ v %tmp.5 11 41 42 ];
+        %tmp.6 = as %tmp.5 { (Float) };
+        %tmp.7 = as %tmp.6 Float;
+        symbol [ Float %tmp.7 11 46 51 ];
+        ret %tmp.7;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_11_32_11_53_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_11_8_11_53_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_11_8_11_53_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 12 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_12_8_12_67_if_stmt:
+        %tmp.8 = lgetv %v;
+        symbol [ v %tmp.8 12 12 13 ];
+        symbol [ Number %tmp.10 12 25 31 ];
+        %tmp.10 = getv ? :Number;
+        %tmp.11 = isa %tmp.8 %tmp.10;
+        bf %tmp.11 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_12_8_12_67_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_12_8_12_67_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_12_33_12_67_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 12 35 ]
+        %tmp.12 = lgetv %v;
+        symbol [ v %tmp.12 12 43 44 ];
+        %tmp.13 = as %tmp.12 { (Number) };
+        %tmp.14 = as %tmp.13 Number;
+        symbol [ Number %tmp.14 12 48 54 ];
+        symbol [ toFloat %tmp.15 12 56 63 ];
+        %tmp.15 = getv function %tmp.14 :toFloat;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        ret %tmp.16;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_12_33_12_67_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_12_8_12_67_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_12_8_12_67_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 13 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_13_8_16_8_if_stmt:
+        %tmp.17 = lgetv %v;
+        symbol [ v %tmp.17 13 12 13 ];
+        symbol [ String %tmp.19 13 25 31 ];
+        %tmp.19 = getv ? :String;
+        %tmp.20 = isa %tmp.17 %tmp.19;
+        bf %tmp.20 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_13_8_16_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_13_8_16_8_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_13_33_16_8_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 14 12 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_13_33_16_8_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_13_33_16_8_stop" ]
+        %s.1 = local;
+        symbol [ s %s.1 14 16 17 ];
+        %tmp.21 = lgetv %v;
+        symbol [ v %tmp.21 14 20 21 ];
+        %tmp.22 = as %tmp.21 { (String) };
+        %tmp.23 = as %tmp.22 String;
+        symbol [ String %tmp.23 14 25 31 ];
+        lputv %s.1 %tmp.23;
+        symbol [ s %s.1 14 16 17 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 15 12 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_15_12_15_54_if_stmt:
+        %tmp.24 = lgetv %s.1;
+        symbol [ s %tmp.24 15 16 17 ];
+        symbol [ length %tmp.25 15 18 24 ];
+        %tmp.25 = getv function %tmp.24 :length;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        %tmp.27 = 0;
+        %tmp.28 = gt %tmp.26 %tmp.27;
+        bf %tmp.28 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_15_12_15_54_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_15_12_15_54_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_15_32_15_54_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 15 34 ]
+        %tmp.29 = lgetv %s.1;
+        symbol [ s %tmp.29 15 41 42 ];
+        symbol [ toFloat %tmp.30 15 43 50 ];
+        %tmp.30 = getv function %tmp.29 :toFloat;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        ret %tmp.31;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_15_32_15_54_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_15_12_15_54_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_15_12_15_54_if_end:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_13_33_16_8_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_13_8_16_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_13_8_16_8_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 17 8 ]
+        %tmp.32 = null;
+        ret %tmp.32;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_10_41_18_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 20; @symbol_functiondef = [pct,20,13,16]; @symbol_param<0> = [v,20,17,18]; @symbol_param<0>_type<0> = [Object,20,22,28]; @symbol_return<0> = [String,20,34,40]; ]
+    function pct(v as Object or Null) as String {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_20_41_24_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 21 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_20_41_24_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_20_41_24_4_stop" ]
+        %n.1 = local;
+        symbol [ n %n.1 21 12 13 ];
+        %tmp.1 = self;
+        symbol [ num %tmp.2 21 16 19 ];
+        %tmp.2 = getv function %tmp.1 :num;
+        %tmp.3 = lgetv %v;
+        symbol [ v %tmp.3 21 20 21 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %n.1 %tmp.4;
+        symbol [ n %n.1 21 12 13 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 22 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_22_8_22_38_if_stmt:
+        %tmp.5 = lgetv %n.1;
+        symbol [ n %tmp.5 22 12 13 ];
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_22_8_22_38_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_22_8_22_38_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_22_23_22_38_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 22 25 ]
+        symbol [ DASH %tmp.9 22 32 36 ];
+        %tmp.9 = getv ? :DASH;
+        ret %tmp.9;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_22_23_22_38_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_22_8_22_38_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_22_8_22_38_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 23 8 ]
+        symbol [ Math %tmp.10 23 15 19 ];
+        %tmp.10 = getm $.Toybox.Math;
+        symbol [ round %tmp.11 23 20 25 ];
+        %tmp.11 = getv function %tmp.10 :round;
+        %tmp.12 = lgetv %n.1;
+        symbol [ n %tmp.12 23 26 27 ];
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        symbol [ format %tmp.14 23 29 35 ];
+        %tmp.14 = getv function %tmp.13 :format;
+        %tmp.15 = "%d";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        %tmp.17 = "%";
+        %tmp.18 = add %tmp.16 %tmp.17;
+        ret %tmp.18;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_20_41_24_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 26; @symbol_functiondef = [km,26,13,15]; @symbol_param<0> = [v,26,16,17]; @symbol_param<0>_type<0> = [Object,26,21,27]; @symbol_return<0> = [String,26,33,39]; ]
+    function km(v as Object or Null) as String {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_26_40_30_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 27 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_26_40_30_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_26_40_30_4_stop" ]
+        %n.1 = local;
+        symbol [ n %n.1 27 12 13 ];
+        %tmp.1 = self;
+        symbol [ num %tmp.2 27 16 19 ];
+        %tmp.2 = getv function %tmp.1 :num;
+        %tmp.3 = lgetv %v;
+        symbol [ v %tmp.3 27 20 21 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %n.1 %tmp.4;
+        symbol [ n %n.1 27 12 13 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 28 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_28_8_28_38_if_stmt:
+        %tmp.5 = lgetv %n.1;
+        symbol [ n %tmp.5 28 12 13 ];
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_28_8_28_38_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_28_8_28_38_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_28_23_28_38_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 28 25 ]
+        symbol [ DASH %tmp.9 28 32 36 ];
+        %tmp.9 = getv ? :DASH;
+        ret %tmp.9;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_28_23_28_38_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_28_8_28_38_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_28_8_28_38_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 29 8 ]
+        symbol [ Math %tmp.10 29 15 19 ];
+        %tmp.10 = getm $.Toybox.Math;
+        symbol [ round %tmp.11 29 20 25 ];
+        %tmp.11 = getv function %tmp.10 :round;
+        %tmp.12 = lgetv %n.1;
+        symbol [ n %tmp.12 29 26 27 ];
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        symbol [ format %tmp.14 29 29 35 ];
+        %tmp.14 = getv function %tmp.13 :format;
+        %tmp.15 = "%d";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        %tmp.17 = " km";
+        %tmp.18 = add %tmp.16 %tmp.17;
+        ret %tmp.18;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_26_40_30_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 32; @symbol_functiondef = [litres,32,13,19]; @symbol_param<0> = [v,32,20,21]; @symbol_param<0>_type<0> = [Object,32,25,31]; @symbol_return<0> = [String,32,37,43]; ]
+    function litres(v as Object or Null) as String {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_32_44_36_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 33 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_32_44_36_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_32_44_36_4_stop" ]
+        %n.1 = local;
+        symbol [ n %n.1 33 12 13 ];
+        %tmp.1 = self;
+        symbol [ num %tmp.2 33 16 19 ];
+        %tmp.2 = getv function %tmp.1 :num;
+        %tmp.3 = lgetv %v;
+        symbol [ v %tmp.3 33 20 21 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %n.1 %tmp.4;
+        symbol [ n %n.1 33 12 13 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 34 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_34_8_34_38_if_stmt:
+        %tmp.5 = lgetv %n.1;
+        symbol [ n %tmp.5 34 12 13 ];
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_34_8_34_38_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_34_8_34_38_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_34_23_34_38_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 34 25 ]
+        symbol [ DASH %tmp.9 34 32 36 ];
+        %tmp.9 = getv ? :DASH;
+        ret %tmp.9;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_34_23_34_38_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_34_8_34_38_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_34_8_34_38_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 35 8 ]
+        %tmp.10 = lgetv %n.1;
+        symbol [ n %tmp.10 35 15 16 ];
+        symbol [ format %tmp.11 35 17 23 ];
+        %tmp.11 = getv function %tmp.10 :format;
+        %tmp.12 = "%.1f";
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        %tmp.14 = " L";
+        %tmp.15 = add %tmp.13 %tmp.14;
+        ret %tmp.15;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_32_44_36_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 38; @symbol_functiondef = [boolText,38,13,21]; @symbol_param<0> = [v,38,22,23]; @symbol_param<0>_type<0> = [Object,38,27,33]; @symbol_param<1> = [yes,38,36,39]; @symbol_param<1>_type<0> = [String,38,43,49]; @symbol_param<2> = [no,38,51,53]; @symbol_param<2>_type<0> = [String,38,57,63]; @symbol_return<0> = [String,38,68,74]; ]
+    function boolText(v as Object or Null, yes as String, no as String) as String {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_38_75_43_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 39 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_39_8_41_8_if_stmt:
+        %tmp.1 = lgetv %v;
+        symbol [ v %tmp.1 39 12 13 ];
+        symbol [ Boolean %tmp.3 39 25 32 ];
+        %tmp.3 = getv ? :Boolean;
+        %tmp.4 = isa %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_39_8_41_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_39_8_41_8_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_39_34_41_8_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 40 12 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_begin:
+        %tmp.5 = lgetv %v;
+        symbol [ v %tmp.5 40 20 21 ];
+        %tmp.6 = as %tmp.5 { (Boolean) };
+        %tmp.7 = as %tmp.6 Boolean;
+        symbol [ Boolean %tmp.7 40 25 32 ];
+        bf %tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_else_false;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_true:
+        %tmp.8 = lgetv %yes;
+        symbol [ yes %tmp.8 40 36 39 ];
+        push %tmp.8;
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_else_false:
+        %tmp.9 = lgetv %no;
+        symbol [ no %tmp.9 40 42 44 ];
+        push %tmp.9;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_end:
+        %tmp.10 = phi [%tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_begin] [%tmp.8 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_true] [%tmp.9 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_else_false] [%tmp.10 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_40_19_40_42_end];
+        ret %tmp.10;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_39_34_41_8_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_39_8_41_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_39_8_41_8_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 42 8 ]
+        symbol [ DASH %tmp.12 42 15 19 ];
+        %tmp.12 = getv ? :DASH;
+        ret %tmp.12;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_38_75_43_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 45; @symbol_functiondef = [join,45,13,17]; @symbol_param<0> = [parts,45,18,23]; @symbol_param<0>_type<0> = [Array,45,27,32]; @symbol_param<0>_type<1> = [String,45,33,39]; @symbol_param<1> = [sep,45,42,45]; @symbol_param<1>_type<0> = [String,45,49,55]; @symbol_return<0> = [String,45,60,66]; ]
+    function join(parts as Array<String>, sep as String) as String {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_45_67_52_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 46 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_45_67_52_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_45_67_52_4_stop" ]
+        %out.1 = local;
+        symbol [ out %out.1 46 12 15 ];
+        %tmp.1 = "";
+        lputv %out.1 %tmp.1;
+        symbol [ out %out.1 46 12 15 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 47 8 ]
+        for @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_test @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_incr @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_init:
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_begin" "_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 47 17 18 ];
+        %tmp.2 = 0;
+        lputv %i.2 %tmp.2;
+        symbol [ i %i.2 47 17 18 ];
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_test:
+        %tmp.3 = lgetv %i.2;
+        symbol [ i %tmp.3 47 24 25 ];
+        %tmp.4 = lgetv %parts;
+        symbol [ parts %tmp.4 47 28 33 ];
+        symbol [ size %tmp.5 47 34 38 ];
+        %tmp.5 = getv function %tmp.4 :size;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = lt %tmp.3 %tmp.6;
+        bf %tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_begin:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_47_50_8_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 48 12 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_48_12_48_37_if_stmt:
+        %tmp.8 = lgetv %i.2;
+        symbol [ i %tmp.8 48 16 17 ];
+        %tmp.9 = 0;
+        %tmp.10 = gt %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_48_12_48_37_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_48_12_48_37_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_48_23_48_37_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 48 25 ]
+        %tmp.11 = lgetv %out.1;
+        symbol [ out %tmp.11 48 25 28 ];
+        %tmp.12 = lgetv %sep;
+        symbol [ sep %tmp.12 48 32 35 ];
+        %tmp.13 = add %tmp.11 %tmp.12;
+        lputv %out.1 %tmp.13;
+        symbol [ out %out.1 48 25 28 ];
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_48_23_48_37_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_48_12_48_37_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_48_12_48_37_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 49 12 ]
+        %tmp.14 = lgetv %out.1;
+        symbol [ out %tmp.14 49 12 15 ];
+        %tmp.15 = lgetv %parts;
+        symbol [ parts %tmp.15 49 19 24 ];
+        %tmp.16 = lgetv %i.2;
+        symbol [ i %tmp.16 49 25 26 ];
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        %tmp.18 = add %tmp.14 %tmp.17;
+        lputv %out.1 %tmp.18;
+        symbol [ out %out.1 49 12 15 ];
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_47_50_8_stop:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_incr:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 47 ]
+        %tmp.21 = lgetv %i.2;
+        symbol [ i %tmp.21 47 42 43 ];
+        %tmp.22 = add %tmp.21 1;
+        lputv %i.2 %tmp.22;
+        symbol [ i %i.2 47 42 43 ];
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_test;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_47_8_50_8_for_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 51 8 ]
+        %tmp.23 = lgetv %out.1;
+        symbol [ out %tmp.23 51 15 18 ];
+        ret %tmp.23;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_45_67_52_4_stop:
+    }
+    //! Seconds -> "just now" / "3m ago" / "2h ago".
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 55; @symbol_functiondef = [ago,55,13,16]; @symbol_param<0> = [seconds,55,17,24]; @symbol_param<0>_type<0> = [Number,55,28,34]; @symbol_return<0> = [String,55,40,46]; ]
+    function ago(seconds as Number or Null) as String {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_55_47_60_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 56 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_56_8_56_44_if_stmt:
+        %tmp.1 = lgetv %seconds;
+        symbol [ seconds %tmp.1 56 12 19 ];
+        %tmp.2 = null;
+        %tmp.3 = eq %tmp.1 %tmp.2;
+        bf %tmp.3 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_56_8_56_44_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_56_8_56_44_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_56_29_56_44_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 56 31 ]
+        symbol [ DASH %tmp.5 56 38 42 ];
+        %tmp.5 = getv ? :DASH;
+        ret %tmp.5;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_56_29_56_44_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_56_8_56_44_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_56_8_56_44_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 57 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_57_8_57_47_if_stmt:
+        %tmp.6 = lgetv %seconds;
+        symbol [ seconds %tmp.6 57 12 19 ];
+        %tmp.7 = 90;
+        %tmp.8 = lt %tmp.6 %tmp.7;
+        bf %tmp.8 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_57_8_57_47_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_57_8_57_47_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_57_26_57_47_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 57 28 ]
+        %tmp.9 = "just now";
+        ret %tmp.9;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_57_26_57_47_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_57_8_57_47_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_57_8_57_47_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 58 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_58_8_58_76_if_stmt:
+        %tmp.10 = lgetv %seconds;
+        symbol [ seconds %tmp.10 58 12 19 ];
+        %tmp.11 = 3600;
+        %tmp.12 = lt %tmp.10 %tmp.11;
+        bf %tmp.12 @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_58_8_58_76_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_58_8_58_76_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_58_28_58_76_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 58 30 ]
+        %tmp.13 = lgetv %seconds;
+        symbol [ seconds %tmp.13 58 38 45 ];
+        %tmp.14 = 60;
+        %tmp.15 = div %tmp.13 %tmp.14;
+        symbol [ format %tmp.16 58 52 58 ];
+        %tmp.16 = getv function %tmp.15 :format;
+        %tmp.17 = "%d";
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        %tmp.19 = "m ago";
+        %tmp.20 = add %tmp.18 %tmp.19;
+        ret %tmp.20;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_58_28_58_76_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_58_8_58_76_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_58_8_58_76_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc" 59 8 ]
+        %tmp.21 = lgetv %seconds;
+        symbol [ seconds %tmp.21 59 16 23 ];
+        %tmp.22 = 3600;
+        %tmp.23 = div %tmp.21 %tmp.22;
+        symbol [ format %tmp.24 59 32 38 ];
+        %tmp.24 = getv function %tmp.23 :format;
+        %tmp.25 = "%d";
+        %tmp.26 = invoke %tmp.23 %tmp.24(%tmp.25);
+        %tmp.27 = "h ago";
+        %tmp.28 = add %tmp.26 %tmp.27;
+        ret %tmp.28;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Fmt_mc_55_47_60_4_stop:
+    }
+}
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Fmt.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,550 @@
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Communications,1,14,28]; ]
+import Toybox.Communications;
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+//! Thin wrapper over the VolvoWatch backend REST API.
+//!
+//! Every callback receives (ok as Boolean, payload as Dictionary or String or Null):
+//!   ok == true  -> payload is the parsed JSON body (Dictionary)
+//!   ok == false -> payload is a short error key (String), one of:
+//!       "phone", "auth", "rate", "reconnect", "http:<code>", "net"
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 10; @symbol_moduledef = [Backend,10,7,14]; ]
+module Backend {
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 10; ]
+    <init> {
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 12; @symbol_typedef = [Cb,12,12,14]; @symbol_type<0> = [ok,12,25,27]; @symbol_type<1> = [Boolean,12,31,38]; @symbol_type<2> = [payload,12,40,47]; @symbol_type<3> = [Dictionary,12,51,61]; @symbol_type<4> = [String,12,65,71]; ]
+    type Cb as (callback(ok as Boolean, payload as Dictionary or String or Null) as Void);
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 14; @symbol_functiondef = [status,14,13,19]; @symbol_param<0> = [cb,14,20,22]; @symbol_param<0>_type<0> = [Cb,14,26,28]; ]
+    function status(cb as Cb) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_14_38_21_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 15 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_14_38_21_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_14_38_21_4_stop" ]
+        %token.1 = local;
+        symbol [ token %token.1 15 12 17 ];
+        symbol [ Store %tmp.2 15 20 25 ];
+        %tmp.2 = getv ? :Store;
+        symbol [ deviceToken %tmp.3 15 26 37 ];
+        %tmp.3 = getv function %tmp.2 :deviceToken;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %token.1 %tmp.4;
+        symbol [ token %token.1 15 12 17 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 16 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_16_8_19_8_if_stmt:
+        %tmp.5 = lgetv %token.1;
+        symbol [ token %tmp.5 16 12 17 ];
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_16_8_19_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_16_8_19_8_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_16_27_19_8_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 17 12 ]
+        %tmp.8 = lgetv %cb;
+        symbol [ cb %tmp.8 17 12 14 ];
+        symbol [ invoke %tmp.9 17 15 21 ];
+        %tmp.9 = getv function %tmp.8 :invoke;
+        %tmp.10 = false;
+        %tmp.11 = "auth";
+        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.11);
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 18 12 ]
+        ret ?;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_16_27_19_8_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_16_8_19_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_16_8_19_8_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 20 8 ]
+        %tmp.12 = self;
+        symbol [ _get %tmp.13 20 8 12 ];
+        %tmp.13 = getv function %tmp.12 :_get;
+        %tmp.14 = "/v1/status";
+        %tmp.15 = lgetv %token.1;
+        symbol [ token %tmp.15 20 27 32 ];
+        %tmp.16 = lgetv %cb;
+        symbol [ cb %tmp.16 20 34 36 ];
+        invoke %tmp.12 %tmp.13(%tmp.14, %tmp.15, %tmp.16);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_14_38_21_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 23; @symbol_functiondef = [pair,23,13,17]; @symbol_param<0> = [code,23,18,22]; @symbol_param<0>_type<0> = [String,23,26,32]; @symbol_param<1> = [cb,23,34,36]; @symbol_param<1>_type<0> = [Cb,23,40,42]; ]
+    function pair(code as String, cb as Cb) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_23_52_35_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 24 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_23_52_35_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_23_52_35_4_stop" ]
+        %options.1 = local;
+        symbol [ options %options.1 24 12 19 ];
+        %tmp.1 = newd 3;
+        %tmp.3 = const :method;
+        symbol [ method %tmp.3 25 13 19 const ];
+        symbol [ Communications %tmp.4 25 23 37 ];
+        %tmp.4 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_POST %tmp.5 25 38 62 ];
+        %tmp.5 = getv %tmp.4 :HTTP_REQUEST_METHOD_POST;
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 %tmp.3 %tmp.5;
+        %tmp.9 = const :responseType;
+        symbol [ responseType %tmp.9 26 13 25 const ];
+        symbol [ Communications %tmp.10 26 29 43 ];
+        %tmp.10 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.11 26 44 75 ];
+        %tmp.11 = getv %tmp.10 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.12 = dup %tmp.7;
+        %tmp.13 = aputv %tmp.12 %tmp.9 %tmp.11;
+        %tmp.15 = const :headers;
+        symbol [ headers %tmp.15 27 13 20 const ];
+        %tmp.16 = newd 1;
+        %tmp.17 = "Content-Type";
+        symbol [ Communications %tmp.18 27 44 58 ];
+        %tmp.18 = getm $.Toybox.Communications;
+        symbol [ REQUEST_CONTENT_TYPE_JSON %tmp.19 27 59 84 ];
+        %tmp.19 = getv %tmp.18 :REQUEST_CONTENT_TYPE_JSON;
+        %tmp.20 = dup %tmp.16;
+        %tmp.21 = aputv %tmp.20 %tmp.17 %tmp.19;
+        %tmp.22 = dup %tmp.13;
+        %tmp.23 = aputv %tmp.22 %tmp.15 %tmp.21;
+        lputv %options.1 %tmp.23;
+        symbol [ options %options.1 24 12 19 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 29 8 ]
+        symbol [ Communications %tmp.24 29 8 22 ];
+        %tmp.24 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.25 29 23 37 ];
+        %tmp.25 = getv function %tmp.24 :makeWebRequest;
+        symbol [ Store %tmp.27 30 12 17 ];
+        %tmp.27 = getv ? :Store;
+        symbol [ backendUrl %tmp.28 30 18 28 ];
+        %tmp.28 = getv function %tmp.27 :backendUrl;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        %tmp.30 = "/v1/pair";
+        %tmp.31 = add %tmp.29 %tmp.30;
+        %tmp.32 = newd 1;
+        %tmp.33 = "code";
+        %tmp.34 = lgetv %code;
+        symbol [ code %tmp.34 31 24 28 ];
+        %tmp.35 = dup %tmp.32;
+        %tmp.36 = aputv %tmp.35 %tmp.33 %tmp.34;
+        %tmp.37 = lgetv %options.1;
+        symbol [ options %tmp.37 32 12 19 ];
+        symbol [ Responder %tmp.41 33 16 25 ];
+        %tmp.41 = getv ? :Responder;
+        %tmp.42 = lgetv %cb;
+        symbol [ cb %tmp.42 33 26 28 ];
+        %tmp.38 = newc %tmp.41 (%tmp.42);
+        symbol [ method %tmp.43 33 30 36 ];
+        %tmp.43 = getv function %tmp.38 :method;
+        %tmp.45 = const :onResponse;
+        symbol [ onResponse %tmp.45 33 38 48 const ];
+        %tmp.46 = invoke %tmp.38 %tmp.43(%tmp.45);
+        invoke %tmp.24 %tmp.25(%tmp.31, %tmp.36, %tmp.37, %tmp.46);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_23_52_35_4_stop:
+    }
+    //! name: "climate-start" | "climate-stop"
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 38; @symbol_functiondef = [command,38,13,20]; @symbol_param<0> = [name,38,21,25]; @symbol_param<0>_type<0> = [String,38,29,35]; @symbol_param<1> = [cb,38,37,39]; @symbol_param<1>_type<0> = [Cb,38,43,45]; ]
+    function command(name as String, cb as Cb) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_38_55_58_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 39 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_38_55_58_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_38_55_58_4_stop" ]
+        %token.1 = local;
+        symbol [ token %token.1 39 12 17 ];
+        symbol [ Store %tmp.2 39 20 25 ];
+        %tmp.2 = getv ? :Store;
+        symbol [ deviceToken %tmp.3 39 26 37 ];
+        %tmp.3 = getv function %tmp.2 :deviceToken;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %token.1 %tmp.4;
+        symbol [ token %token.1 39 12 17 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 40 8 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_40_8_43_8_if_stmt:
+        %tmp.5 = lgetv %token.1;
+        symbol [ token %tmp.5 40 12 17 ];
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_40_8_43_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_40_8_43_8_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_40_27_43_8_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 41 12 ]
+        %tmp.8 = lgetv %cb;
+        symbol [ cb %tmp.8 41 12 14 ];
+        symbol [ invoke %tmp.9 41 15 21 ];
+        %tmp.9 = getv function %tmp.8 :invoke;
+        %tmp.10 = false;
+        %tmp.11 = "auth";
+        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.11);
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 42 12 ]
+        ret ?;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_40_27_43_8_stop:
+        goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_40_8_43_8_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_40_8_43_8_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 44 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_38_55_58_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_38_55_58_4_stop" ]
+        %options.2 = local;
+        symbol [ options %options.2 44 12 19 ];
+        %tmp.12 = newd 3;
+        %tmp.14 = const :method;
+        symbol [ method %tmp.14 45 13 19 const ];
+        symbol [ Communications %tmp.15 45 23 37 ];
+        %tmp.15 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_POST %tmp.16 45 38 62 ];
+        %tmp.16 = getv %tmp.15 :HTTP_REQUEST_METHOD_POST;
+        %tmp.17 = dup %tmp.12;
+        %tmp.18 = aputv %tmp.17 %tmp.14 %tmp.16;
+        %tmp.20 = const :responseType;
+        symbol [ responseType %tmp.20 46 13 25 const ];
+        symbol [ Communications %tmp.21 46 29 43 ];
+        %tmp.21 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.22 46 44 75 ];
+        %tmp.22 = getv %tmp.21 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.23 = dup %tmp.18;
+        %tmp.24 = aputv %tmp.23 %tmp.20 %tmp.22;
+        %tmp.26 = const :headers;
+        symbol [ headers %tmp.26 47 13 20 const ];
+        %tmp.27 = newd 2;
+        %tmp.28 = "Content-Type";
+        symbol [ Communications %tmp.29 48 34 48 ];
+        %tmp.29 = getm $.Toybox.Communications;
+        symbol [ REQUEST_CONTENT_TYPE_JSON %tmp.30 48 49 74 ];
+        %tmp.30 = getv %tmp.29 :REQUEST_CONTENT_TYPE_JSON;
+        %tmp.31 = dup %tmp.27;
+        %tmp.32 = aputv %tmp.31 %tmp.28 %tmp.30;
+        %tmp.33 = "Authorization";
+        %tmp.34 = "Bearer ";
+        %tmp.35 = lgetv %token.1;
+        symbol [ token %tmp.35 49 47 52 ];
+        %tmp.36 = add %tmp.34 %tmp.35;
+        %tmp.37 = dup %tmp.32;
+        %tmp.38 = aputv %tmp.37 %tmp.33 %tmp.36;
+        %tmp.39 = dup %tmp.24;
+        %tmp.40 = aputv %tmp.39 %tmp.26 %tmp.38;
+        lputv %options.2 %tmp.40;
+        symbol [ options %options.2 44 12 19 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 52 8 ]
+        symbol [ Communications %tmp.41 52 8 22 ];
+        %tmp.41 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.42 52 23 37 ];
+        %tmp.42 = getv function %tmp.41 :makeWebRequest;
+        symbol [ Store %tmp.44 53 12 17 ];
+        %tmp.44 = getv ? :Store;
+        symbol [ backendUrl %tmp.45 53 18 28 ];
+        %tmp.45 = getv function %tmp.44 :backendUrl;
+        %tmp.46 = invoke %tmp.44 %tmp.45();
+        %tmp.47 = "/v1/command/";
+        %tmp.48 = add %tmp.46 %tmp.47;
+        %tmp.49 = lgetv %name;
+        symbol [ name %tmp.49 53 50 54 ];
+        %tmp.50 = add %tmp.48 %tmp.49;
+        %tmp.51 = newd 0;
+        %tmp.52 = lgetv %options.2;
+        symbol [ options %tmp.52 55 12 19 ];
+        symbol [ Responder %tmp.56 56 16 25 ];
+        %tmp.56 = getv ? :Responder;
+        %tmp.57 = lgetv %cb;
+        symbol [ cb %tmp.57 56 26 28 ];
+        %tmp.53 = newc %tmp.56 (%tmp.57);
+        symbol [ method %tmp.58 56 30 36 ];
+        %tmp.58 = getv function %tmp.53 :method;
+        %tmp.60 = const :onResponse;
+        symbol [ onResponse %tmp.60 56 38 48 const ];
+        %tmp.61 = invoke %tmp.53 %tmp.58(%tmp.60);
+        invoke %tmp.41 %tmp.42(%tmp.50, %tmp.51, %tmp.52, %tmp.61);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_38_55_58_4_stop:
+    }
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 60; @symbol_functiondef = [_get,60,13,17]; @symbol_param<0> = [path,60,18,22]; @symbol_param<0>_type<0> = [String,60,26,32]; @symbol_param<1> = [token,60,34,39]; @symbol_param<1>_type<0> = [String,60,43,49]; @symbol_param<2> = [cb,60,51,53]; @symbol_param<2>_type<0> = [Cb,60,57,59]; ]
+    function _get(path as String, token as String, cb as Cb) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_60_69_72_4_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 61 8 ]
+        [ "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_60_69_72_4_start" "_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_60_69_72_4_stop" ]
+        %options.1 = local;
+        symbol [ options %options.1 61 12 19 ];
+        %tmp.1 = newd 3;
+        %tmp.3 = const :method;
+        symbol [ method %tmp.3 62 13 19 const ];
+        symbol [ Communications %tmp.4 62 23 37 ];
+        %tmp.4 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_GET %tmp.5 62 38 61 ];
+        %tmp.5 = getv %tmp.4 :HTTP_REQUEST_METHOD_GET;
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 %tmp.3 %tmp.5;
+        %tmp.9 = const :responseType;
+        symbol [ responseType %tmp.9 63 13 25 const ];
+        symbol [ Communications %tmp.10 63 29 43 ];
+        %tmp.10 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.11 63 44 75 ];
+        %tmp.11 = getv %tmp.10 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.12 = dup %tmp.7;
+        %tmp.13 = aputv %tmp.12 %tmp.9 %tmp.11;
+        %tmp.15 = const :headers;
+        symbol [ headers %tmp.15 64 13 20 const ];
+        %tmp.16 = newd 1;
+        %tmp.17 = "Authorization";
+        %tmp.18 = "Bearer ";
+        %tmp.19 = lgetv %token;
+        symbol [ token %tmp.19 64 57 62 ];
+        %tmp.20 = add %tmp.18 %tmp.19;
+        %tmp.21 = dup %tmp.16;
+        %tmp.22 = aputv %tmp.21 %tmp.17 %tmp.20;
+        %tmp.23 = dup %tmp.13;
+        %tmp.24 = aputv %tmp.23 %tmp.15 %tmp.22;
+        lputv %options.1 %tmp.24;
+        symbol [ options %options.1 61 12 19 ];
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 66 8 ]
+        symbol [ Communications %tmp.25 66 8 22 ];
+        %tmp.25 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.26 66 23 37 ];
+        %tmp.26 = getv function %tmp.25 :makeWebRequest;
+        symbol [ Store %tmp.28 67 12 17 ];
+        %tmp.28 = getv ? :Store;
+        symbol [ backendUrl %tmp.29 67 18 28 ];
+        %tmp.29 = getv function %tmp.28 :backendUrl;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = lgetv %path;
+        symbol [ path %tmp.31 67 33 37 ];
+        %tmp.32 = add %tmp.30 %tmp.31;
+        %tmp.33 = null;
+        %tmp.34 = lgetv %options.1;
+        symbol [ options %tmp.34 69 12 19 ];
+        symbol [ Responder %tmp.38 70 16 25 ];
+        %tmp.38 = getv ? :Responder;
+        %tmp.39 = lgetv %cb;
+        symbol [ cb %tmp.39 70 26 28 ];
+        %tmp.35 = newc %tmp.38 (%tmp.39);
+        symbol [ method %tmp.40 70 30 36 ];
+        %tmp.40 = getv function %tmp.35 :method;
+        %tmp.42 = const :onResponse;
+        symbol [ onResponse %tmp.42 70 38 48 const ];
+        %tmp.43 = invoke %tmp.35 %tmp.40(%tmp.42);
+        invoke %tmp.25 %tmp.26(%tmp.32, %tmp.33, %tmp.34, %tmp.43);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_60_69_72_4_stop:
+    }
+    //! Holds the caller's callback across the async request.
+    [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 75; @symbol_classdef = [Responder,75,10,19]; ]
+    class Responder {
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 75; ]
+        <init> {
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 75; ]
+        static
+        <init> {
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 76; @position = 20; @symbol_vardef = [_cb,76,20,23]; @symbol_type<0> = [Cb,76,27,29]; ]
+        private
+        var _cb as Cb;
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 78; @symbol_functiondef = [initialize,78,17,27]; @symbol_param<0> = [cb,78,28,30]; @symbol_param<0>_type<0> = [Cb,78,34,36]; ]
+        function initialize(cb as Cb) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_78_38_80_8_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 79 12 ]
+            %tmp.1 = lgetv %cb;
+            symbol [ cb %tmp.1 79 18 20 ];
+            symbol [ _cb ? 79 12 15 ];
+            putv self :_cb %tmp.1;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_78_38_80_8_stop:
+        }
+        [ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 82; @symbol_functiondef = [onResponse,82,17,27]; @symbol_param<0> = [code,82,28,32]; @symbol_param<0>_type<0> = [Number,82,36,42]; @symbol_param<1> = [data,82,44,48]; @symbol_param<1>_type<0> = [Dictionary,82,52,62]; @symbol_param<1>_type<1> = [String,82,66,72]; ]
+        function onResponse(code as Number, data as Dictionary or String or Null) as Void {
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_82_90_106_8_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 83 12 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_83_12_90_12_if_stmt:
+            %tmp.1 = lgetv %code;
+            symbol [ code %tmp.1 83 16 20 ];
+            %tmp.2 = 200;
+            %tmp.3 = eq %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_83_12_90_12_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_83_12_90_12_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_83_29_90_12_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 84 16 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_84_16_88_16_if_stmt:
+            %tmp.4 = lgetv %data;
+            symbol [ data %tmp.4 84 20 24 ];
+            symbol [ Dictionary %tmp.6 84 36 46 ];
+            %tmp.6 = getv ? :Dictionary;
+            %tmp.7 = isa %tmp.4 %tmp.6;
+            bf %tmp.7 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_84_16_88_16_if_else_false;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_84_16_88_16_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_84_48_86_16_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 85 20 ]
+            symbol [ _cb %tmp.9 85 20 23 ];
+            %tmp.9 = getv ? :_cb;
+            symbol [ invoke %tmp.10 85 24 30 ];
+            %tmp.10 = getv function %tmp.9 :invoke;
+            %tmp.11 = true;
+            %tmp.12 = lgetv %data;
+            symbol [ data %tmp.12 85 37 41 ];
+            %tmp.13 = as %tmp.12 { (Dictionary) };
+            invoke %tmp.9 %tmp.10(%tmp.11, %tmp.13);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_84_48_86_16_stop:
+            goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_84_16_88_16_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_84_16_88_16_if_else_false:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_86_23_88_16_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 87 20 ]
+            symbol [ _cb %tmp.15 87 20 23 ];
+            %tmp.15 = getv ? :_cb;
+            symbol [ invoke %tmp.16 87 24 30 ];
+            %tmp.16 = getv function %tmp.15 :invoke;
+            %tmp.17 = false;
+            %tmp.18 = "net";
+            invoke %tmp.15 %tmp.16(%tmp.17, %tmp.18);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_86_23_88_16_stop:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_84_16_88_16_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 89 16 ]
+            ret ?;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_83_29_90_12_stop:
+            goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_83_12_90_12_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_83_12_90_12_if_end:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 91 12 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_91_12_105_12_if_stmt:
+            %tmp.19 = lgetv %code;
+            symbol [ code %tmp.19 91 16 20 ];
+            %tmp.20 = 401;
+            %tmp.21 = eq %tmp.19 %tmp.20;
+            bf %tmp.21 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_91_12_105_12_if_false;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_91_12_105_12_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_91_29_93_12_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 92 16 ]
+            symbol [ _cb %tmp.23 92 16 19 ];
+            %tmp.23 = getv ? :_cb;
+            symbol [ invoke %tmp.24 92 20 26 ];
+            %tmp.24 = getv function %tmp.23 :invoke;
+            %tmp.25 = false;
+            %tmp.26 = "auth";
+            invoke %tmp.23 %tmp.24(%tmp.25, %tmp.26);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_91_29_93_12_stop:
+            goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_91_12_105_12_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_91_12_105_12_if_false:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 93 19 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_93_19_105_12_if_stmt:
+            %tmp.27 = lgetv %code;
+            symbol [ code %tmp.27 93 23 27 ];
+            %tmp.28 = 429;
+            %tmp.29 = eq %tmp.27 %tmp.28;
+            bf %tmp.29 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_93_19_105_12_if_false;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_93_19_105_12_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_93_36_95_12_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 94 16 ]
+            symbol [ _cb %tmp.31 94 16 19 ];
+            %tmp.31 = getv ? :_cb;
+            symbol [ invoke %tmp.32 94 20 26 ];
+            %tmp.32 = getv function %tmp.31 :invoke;
+            %tmp.33 = false;
+            %tmp.34 = "rate";
+            invoke %tmp.31 %tmp.32(%tmp.33, %tmp.34);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_93_36_95_12_stop:
+            goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_93_19_105_12_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_93_19_105_12_if_false:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 95 19 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_19_105_12_if_stmt:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_23_95_46_begin:
+            %tmp.35 = lgetv %code;
+            symbol [ code %tmp.35 95 23 27 ];
+            %tmp.36 = 502;
+            %tmp.37 = eq %tmp.35 %tmp.36;
+            bt %tmp.37 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_19_105_12_if_true;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_38_95_46_false:
+            %tmp.38 = lgetv %code;
+            symbol [ code %tmp.38 95 38 42 ];
+            %tmp.39 = 503;
+            %tmp.40 = eq %tmp.38 %tmp.39;
+            push %tmp.40;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_38_95_46_end:
+            %tmp.41 = phi [%tmp.37 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_23_95_46_begin] [%tmp.40 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_38_95_46_false] [%tmp.41 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_38_95_46_end];
+            bf %tmp.41 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_19_105_12_if_false;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_19_105_12_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_51_97_12_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 96 16 ]
+            symbol [ _cb %tmp.43 96 16 19 ];
+            %tmp.43 = getv ? :_cb;
+            symbol [ invoke %tmp.44 96 20 26 ];
+            %tmp.44 = getv function %tmp.43 :invoke;
+            %tmp.45 = false;
+            %tmp.46 = "reconnect";
+            invoke %tmp.43 %tmp.44(%tmp.45, %tmp.46);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_51_97_12_stop:
+            goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_19_105_12_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_19_105_12_if_false:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 97 19 ]
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_stmt:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_23_101_31_begin:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_23_100_32_begin:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_23_99_32_begin:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_23_98_46_begin:
+            %tmp.47 = lgetv %code;
+            symbol [ code %tmp.47 97 23 27 ];
+            symbol [ Communications %tmp.48 97 31 45 ];
+            %tmp.48 = getm $.Toybox.Communications;
+            symbol [ BLE_CONNECTION_UNAVAILABLE %tmp.49 97 46 72 ];
+            %tmp.49 = getv %tmp.48 :BLE_CONNECTION_UNAVAILABLE;
+            %tmp.50 = eq %tmp.47 %tmp.49;
+            bt %tmp.50 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_true;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_98_23_98_46_false:
+            %tmp.51 = lgetv %code;
+            symbol [ code %tmp.51 98 23 27 ];
+            symbol [ Communications %tmp.52 98 31 45 ];
+            %tmp.52 = getm $.Toybox.Communications;
+            symbol [ BLE_HOST_TIMEOUT %tmp.53 98 46 62 ];
+            %tmp.53 = getv %tmp.52 :BLE_HOST_TIMEOUT;
+            %tmp.54 = eq %tmp.51 %tmp.53;
+            push %tmp.54;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_98_23_98_46_end:
+            %tmp.55 = phi [%tmp.50 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_23_98_46_begin] [%tmp.54 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_98_23_98_46_false] [%tmp.55 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_98_23_98_46_end];
+            bt %tmp.55 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_true;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_99_23_99_32_false:
+            %tmp.56 = lgetv %code;
+            symbol [ code %tmp.56 99 23 27 ];
+            %tmp.57 = -104;
+            %tmp.58 = eq %tmp.56 %tmp.57;
+            push %tmp.58;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_99_23_99_32_end:
+            %tmp.59 = phi [%tmp.55 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_23_99_32_begin] [%tmp.58 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_99_23_99_32_false] [%tmp.59 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_99_23_99_32_end];
+            bt %tmp.59 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_true;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_100_23_100_32_false:
+            %tmp.60 = lgetv %code;
+            symbol [ code %tmp.60 100 23 27 ];
+            %tmp.61 = -1001;
+            %tmp.62 = eq %tmp.60 %tmp.61;
+            push %tmp.62;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_100_23_100_32_end:
+            %tmp.63 = phi [%tmp.59 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_23_100_32_begin] [%tmp.62 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_100_23_100_32_false] [%tmp.63 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_100_23_100_32_end];
+            bt %tmp.63 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_true;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_101_23_101_31_false:
+            %tmp.64 = lgetv %code;
+            symbol [ code %tmp.64 101 23 27 ];
+            %tmp.65 = 0;
+            %tmp.66 = eq %tmp.64 %tmp.65;
+            push %tmp.66;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_101_23_101_31_end:
+            %tmp.67 = phi [%tmp.63 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_23_101_31_begin] [%tmp.66 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_101_23_101_31_false] [%tmp.67 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_101_23_101_31_end];
+            bf %tmp.67 @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_else_false;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_true:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_101_34_103_12_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 102 16 ]
+            symbol [ _cb %tmp.69 102 16 19 ];
+            %tmp.69 = getv ? :_cb;
+            symbol [ invoke %tmp.70 102 20 26 ];
+            %tmp.70 = getv function %tmp.69 :invoke;
+            %tmp.71 = false;
+            %tmp.72 = "phone";
+            invoke %tmp.69 %tmp.70(%tmp.71, %tmp.72);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_101_34_103_12_stop:
+            goto @_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_end;
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_else_false:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_103_19_105_12_start:
+[ "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc" 104 16 ]
+            symbol [ _cb %tmp.74 104 16 19 ];
+            %tmp.74 = getv ? :_cb;
+            symbol [ invoke %tmp.75 104 20 26 ];
+            %tmp.75 = getv function %tmp.74 :invoke;
+            %tmp.76 = false;
+            %tmp.77 = "http:";
+            %tmp.78 = lgetv %code;
+            symbol [ code %tmp.78 104 44 48 ];
+            symbol [ toString %tmp.79 104 49 57 ];
+            %tmp.79 = getv function %tmp.78 :toString;
+            %tmp.80 = invoke %tmp.78 %tmp.79();
+            %tmp.81 = add %tmp.77 %tmp.80;
+            invoke %tmp.74 %tmp.75(%tmp.76, %tmp.81);
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_103_19_105_12_stop:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_97_19_105_12_if_end:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_95_19_105_12_if_end:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_93_19_105_12_if_end:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_91_12_105_12_if_end:
+_Users_nico_claude_docs_VolvoWatch_watch_source_Backend_mc_82_90_106_8_stop:
+        }
+    }
+}
+[ @file = "/Users/nico/claude-docs/VolvoWatch/watch/source/Backend.mc"; @line = 1; ]
+<init> {
+}

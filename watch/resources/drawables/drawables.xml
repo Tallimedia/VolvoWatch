@@ -1,0 +1,12 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png"/>
+    <bitmap id="IconLockClosed" filename="icon_lock_closed.png"/>
+    <bitmap id="IconLockOpen" filename="icon_lock_open.png"/>
+    <bitmap id="IconService" filename="icon_service.png"/>
+    <bitmap id="IconWasher" filename="icon_washer.png"/>
+    <bitmap id="IconTyre" filename="icon_tyre.png"/>
+    <bitmap id="IconFault" filename="icon_fault.png"/>
+    <bitmap id="IconInUse" filename="icon_in_use.png"/>
+    <bitmap id="IconBoltGreen" filename="icon_bolt_green.png"/>
+    <bitmap id="IconBoltRed" filename="icon_bolt_red.png"/>
+</drawables>

@@ -1,0 +1,10 @@
+{
+    "monkeyC.jungleFiles": "monkey.jungle",
+    "monkeyC.developerKeyPath": "/Users/nico/.garmin-ciq/developer_key.der",
+    "monkeyC.typeCheckLevel": "Gradual",
+    "monkeyC.warnings": true,
+    "terminal.integrated.env.osx": {
+        "JAVA_HOME": "/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home",
+        "PATH": "/opt/homebrew/opt/openjdk@21/bin:${env:PATH}"
+    }
+}

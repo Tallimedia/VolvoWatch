@@ -1,0 +1,21 @@
+# Deploy target: alpine-docker (10.10.20.136).
+# Public hostname volvowatch.kavaleff.com is fronted by Traefik + the Cloudflare
+# Tunnel on TrueNAS (file-provider route -> http://10.10.20.136:8756), NOT behind
+# Authentik — Volvo's OAuth callback and the watch can't pass an SSO login.
+
+services:
+  backend:
+    build: .
+    image: volvowatch-backend:latest
+    container_name: volvowatch-backend
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8756:8000"          # host 8756 -> Traefik upstream
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/healthz')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
