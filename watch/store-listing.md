@@ -92,9 +92,11 @@ GOOD TO KNOW
   always shows how old the data is.
 • The climate command only works while the car is reachable; Volvo refuses
   it while someone's driving, and the app says so.
-• Stopping climatisation is accepted, but the car generally finishes its
-  pre-conditioning cycle anyway — the car's behaviour, not a bug. The Volvo
-  app's own stop button does the same.
+• Stopping climatisation is accepted by Volvo's API (it reports success),
+  but on many cars it doesn't actually stop — a known Volvo-side fault that
+  affects every app built on their public developer API, not just this one.
+  Volvo's own app uses a different, private interface and can stop it. If
+  stop doesn't take effect, use the Volvo app.
 • No analytics, no third-party trackers.
 
 ABOUT THE HOSTED SERVICE
