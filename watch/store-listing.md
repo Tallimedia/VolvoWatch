@@ -119,7 +119,11 @@ Source and setup docs: https://github.com/tallimedia/VolvoWatch
 
 ```
 Fixed the Warnings page so a long line (like "Service due" with distance
-remaining) can't run past the edge of the screen on smaller watches.
+remaining) can't run past the edge of the screen on smaller watches. A
+clearer message when the car is asleep and can't be reached right now.
+Removed "Stop climate" from the menu — Volvo's API doesn't reliably
+execute it, so we've pulled it rather than ship a button that often does
+nothing; it'll return once that's fixed on Volvo's side.
 ```
 
 ### 1.1.0

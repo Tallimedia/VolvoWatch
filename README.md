@@ -23,8 +23,9 @@ public [Volvo Cars Developer API](https://developer.volvocars.com/).
 - **Trip** — a large odometer, average fuel consumption, both trip meters.
 - **Warnings** — doors/windows called out separately, service due, washer
   fluid, tyre pressure, or a plain "no active warnings."
-- **Climate control** — start/stop climatisation from the watch, with a
-  confirmation step, reporting what the car actually answered.
+- **Climate control** — start climatisation from the watch, with a
+  confirmation step, reporting what the car actually answered. (Stop is
+  temporarily hidden — see the changelog.)
 - **Glance card** — battery, fuel, range at a glance from the widget carousel.
 
 Currently uses Volvo's default-scope ("Level 1") API — vehicle status and

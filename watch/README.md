@@ -17,9 +17,11 @@ Talks to the backend at `https://volvowatchapp.tallimedia.com` by default (see
 - **Warnings page:** doors/windows called out separately, service due, washer
   fluid, tyre pressure, or "No active warnings" — plus the app version in the
   footer, so you can confirm which build is actually installed.
-- **Action menu** (press select/menu): Start climate / Stop climate (with a
-  confirmation) / Refresh / Enter pairing code / **Open connect page** — the
-  last one sends a phone notification that opens the backend's `/link` page
+- **Action menu** (press select/menu): Start climate (with a confirmation) /
+  Refresh / Enter pairing code / **Open connect page** — the last one sends
+  a phone notification that opens the backend's `/link` page. (Stop climate
+  is temporarily hidden as of 1.2.0 — Volvo's API doesn't reliably execute
+  it; see `CHANGELOG.md`.)
   in your browser, since the watch has no browser of its own.
 - **Pairing:** enter the 6-char code from `…/link` either in the widget
   settings in Garmin Connect Mobile, or directly on the watch via the
