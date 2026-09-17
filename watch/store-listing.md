@@ -28,6 +28,23 @@ VolvoWatch puts your car's live status in the glance carousel and gives you a
 status page, a charging page, a trip page and a warnings page — plus climate
 control — without reaching for your phone.
 
+SETUP
+1. Install the app. First launch asks you to connect.
+2. Open the action menu (press select) → "Open connect page" — sends a
+   notification to your phone. Or just open
+   https://volvowatchapp.tallimedia.com/link directly in any browser.
+3. Sign in with your Volvo ID. You sign in on Volvo's own page — this app
+   never sees your password.
+4. You'll get a short pairing code. Enter it in Garmin Connect Mobile's app
+   settings, or directly on the watch with the on-screen code wheels.
+5. The watch exchanges the code once for a private device token and starts
+   showing your car.
+
+The app talks to a backend over HTTPS rather than to Volvo directly (Volvo's
+API credentials can't safely live inside a watch app). It comes configured
+to use our own hosted backend, so most people never need to think about
+this — the backend is open source if you'd rather run your own; see the repo.
+
 STATUS AT A GLANCE
 Combined petrol and electric range as a single number — labelled "km tot
 range" on a plug-in hybrid, so it's clear the figure is both. Lock state,
@@ -61,23 +78,6 @@ VolvoWatch uses Volvo's Level 1 data — vehicle status and the one climate
 command above. Level 2 actions (remote lock, unlock, flash the lights, honk)
 need a separate, more restricted approval from Volvo and aren't implemented
 yet.
-
-SETUP
-1. Install the app. First launch asks you to connect.
-2. Open the action menu (press select) → "Open connect page" — sends a
-   notification to your phone. Or just open
-   https://volvowatchapp.tallimedia.com/link directly in any browser.
-3. Sign in with your Volvo ID. You sign in on Volvo's own page — this app
-   never sees your password.
-4. You'll get a short pairing code. Enter it in Garmin Connect Mobile's app
-   settings, or directly on the watch with the on-screen code wheels.
-5. The watch exchanges the code once for a private device token and starts
-   showing your car.
-
-The app talks to a backend over HTTPS rather than to Volvo directly (Volvo's
-API credentials can't safely live inside a watch app). It comes configured
-to use our own hosted backend, so most people never need to think about
-this — the backend is open source if you'd rather run your own; see the repo.
 
 REQUIREMENTS
 • A Volvo with connected services (Volvo On Call, ~2010-2024, or a Google
