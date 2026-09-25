@@ -60,6 +60,11 @@ module Store {
         return "Volvo";
     }
 
+    //! true = miles / UK gallons / mpg, false (default) = km / litres.
+    function imperial() as Boolean {
+        return Application.Properties.getValue("unitsImperial") == true;
+    }
+
     function pairingCode() as String? {
         var c = Application.Properties.getValue("pairingCode");
         if (c instanceof String && (c as String).length() > 0) {

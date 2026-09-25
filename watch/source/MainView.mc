@@ -186,13 +186,13 @@ class MainView extends WatchUi.View {
         // Hero: combined range — colour by how far it can still go.
         var rangeKm = Fmt.num(s["range_km"]);
         dc.setColor(Theme.rangeColour(rangeKm), Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, h * 0.34, Graphics.FONT_NUMBER_MEDIUM, Fmt.intStr(s["range_km"]), vc);
+        dc.drawText(cx, h * 0.34, Graphics.FONT_NUMBER_MEDIUM, Fmt.intStr(Fmt.convKm(s["range_km"])), vc);
         // PHEV: when both a fuel and an electric range come back, the hero is
         // their sum — say so.
         var fr = Fmt.num(s["fuel_range_km"]);
         var br = Fmt.num(s["battery_range_km"]);
         var rangeLabel = (fr != null && fr > 0 && br != null && br > 0)
-            ? "km tot range" : "km range";
+            ? Fmt.distUnit() + " tot range" : Fmt.distUnit() + " range";
         dc.setColor(Theme.MUTED, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, h * 0.48, Graphics.FONT_XTINY, rangeLabel, vc);
 

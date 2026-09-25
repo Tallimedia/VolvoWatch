@@ -4,6 +4,31 @@ Versions here match what's entered in the **Connect IQ Store upload form**
 (<https://apps-developer.garmin.com>). The store requires each upload to have a
 higher version than the last.
 
+## 1.3.0 — imperial units
+
+Real user feedback: a UK/Ireland user with a Volvo already in miles/gallons
+found the app locked to km/litres, with no way to change it. Missed at
+launch — this app is Europe-only (per the Volvo API's own EMEA restriction),
+and UK/Ireland uses miles despite being metric everywhere else.
+
+- New settings toggle (Garmin Connect Mobile, not on-watch — this is a
+  set-once-per-region preference, not something you'd change from the
+  wrist): "Imperial units", off by default. On switches every distance
+  display to miles, average fuel consumption to **UK mpg** (not US — this
+  is a Europe-only app, and UK/Ireland is the one imperial market it
+  serves), and litres to UK gallons where shown.
+- `Fmt.mc` gained `convKm()`/`distUnit()` (shared conversion + unit-label
+  helpers) and `fuelConsumption()` (L/100km ↔ UK mpg, replacing an inline
+  format in `TripView.mc`). `Fmt.km()` and `Fmt.odometer()` now convert
+  automatically, so `WarningsView.mc`'s "Service due · N km" and
+  `GlanceView.mc`'s range needed no code changes at all — they already
+  went through those functions.
+- Conversion factors: 1 km = 0.621371 mi; UK mpg = 282.481 ÷ (L/100km); 1 L
+  = 1 ÷ 4.54609 UK gal. The colour threshold on the hero range figure
+  (`Theme.rangeColour`) deliberately still uses the raw km value — only the
+  displayed number and label change, not the "how worried should I be"
+  logic.
+
 ## 1.2.0 — Warnings page fix + a clearer "car's asleep" message
 
 - `WarningsView.mc`: each warning row now checks its own width against the

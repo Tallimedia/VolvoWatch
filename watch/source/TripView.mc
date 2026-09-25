@@ -37,17 +37,17 @@ class TripView extends WatchUi.View {
         }
 
         var rows = [] as Array<Array<String>>;
-        var avg = Fmt.num(s["avg_fuel_l_100"]);
-        if (avg != null) {
-            rows.add(["AVG FUEL", avg.format("%.1f") + " l/100"]);
+        var avgTxt = Fmt.fuelConsumption(s["avg_fuel_l_100"]);
+        if (!avgTxt.equals(Fmt.DASH)) {
+            rows.add(["AVG FUEL", avgTxt]);
         }
-        var trip = Fmt.num(s["trip_km"]);
+        var trip = Fmt.convKm(s["trip_km"]);
         if (trip != null) {
-            rows.add(["TRIP", trip.format("%.1f") + " km"]);
+            rows.add(["TRIP", trip.format("%.1f") + " " + Fmt.distUnit()]);
         }
-        var tripAuto = Fmt.num(s["trip_auto_km"]);
+        var tripAuto = Fmt.convKm(s["trip_auto_km"]);
         if (tripAuto != null) {
-            rows.add(["TRIP (AUTO)", tripAuto.format("%.1f") + " km"]);
+            rows.add(["TRIP (AUTO)", tripAuto.format("%.1f") + " " + Fmt.distUnit()]);
         }
 
         // Lay out top-justified, advancing by the real font heights so nothing
@@ -65,10 +65,10 @@ class TripView extends WatchUi.View {
         if (y < h * 0.06) { y = h * 0.06; }
 
         dc.setColor(Theme.MUTED, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, y, labelF, "ODOMETER  ·  KM", hc);
+        dc.drawText(cx, y, labelF, "ODOMETER  ·  " + Fmt.distUnit().toUpper(), hc);
         y += lh + 2;
         dc.setColor(Theme.TEXT, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, y, heroF, Fmt.grouped(s["odometer_km"]), hc);
+        dc.drawText(cx, y, heroF, Fmt.grouped(Fmt.convKm(s["odometer_km"])), hc);
         y += hh;
 
         for (var i = 0; i < rows.size(); i++) {
