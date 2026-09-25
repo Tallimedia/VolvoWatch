@@ -69,9 +69,9 @@ triggered by accident. The app reports what the car actually answered, not
 just that a command was sent.
 
 BUILT FOR PLUG-IN HYBRIDS FIRST
-Developed and tested against a PHEV. Everything above already works for any
-Volvo with connected services, but pure-EV-specific detail (like charging-
-curve data) is on the roadmap, not in this release.
+Developed and tested against a PHEV; works for any Volvo with connected
+services, but pure-EV-specific detail (like charging-curve data) is on the
+roadmap, not in this release.
 
 WHAT THIS APP CAN AND CAN'T DO
 VolvoWatch uses Volvo's Level 1 data — vehicle status and the one climate
@@ -92,9 +92,10 @@ GOOD TO KNOW
 • The climate command only works while the car is reachable; Volvo refuses
   it while someone's driving, and the app says so.
 • Stopping climatisation isn't offered here — Volvo's public API reports
-  the stop command as successful without reliably stopping the car, a known
-  fault on Volvo's side. Use the Volvo app to stop it; we'll bring this
-  back once Volvo fixes it.
+  success without reliably stopping the car, a known fault on Volvo's side.
+  Use the Volvo app to stop it.
+• Metric by default. UK/Ireland drivers can switch to miles, UK mpg and UK
+  gallons in Garmin Connect Mobile's settings for this watch app.
 • No analytics, no third-party trackers.
 
 ABOUT THE HOSTED SERVICE
