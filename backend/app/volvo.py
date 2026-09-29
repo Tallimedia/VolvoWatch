@@ -257,6 +257,9 @@ class VolvoClient:
     async def tyres(self, access_token: str, vin: str) -> dict[str, Any]:
         return await self._get(access_token, f"{CONNECTED}/{vin}/tyres")
 
+    async def warnings(self, access_token: str, vin: str) -> dict[str, Any]:
+        return await self._get(access_token, f"{CONNECTED}/{vin}/warnings")
+
     async def command_accessibility(self, access_token: str, vin: str) -> dict[str, Any]:
         return await self._get(access_token, f"{CONNECTED}/{vin}/command-accessibility")
 

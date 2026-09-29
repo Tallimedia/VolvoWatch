@@ -44,6 +44,8 @@ class VehicleStatus(BaseModel):
     service_in_months: int | None = None
     washer_fluid_low: bool | None = None
     tyre_warning: bool | None = None       # any corner reporting low; None if no data
+    bulb_warning: bool | None = None       # any of 23 bulb checks reporting a fault
+    target_charge_pct: float | None = None  # eco charge-limit, if the owner set one
     car_reachable: bool | None = None      # from command-accessibility
     unreachable_reason: str | None = None  # e.g. CAR_IN_USE
     updated_at: str                        # ISO 8601, when the backend fetched this

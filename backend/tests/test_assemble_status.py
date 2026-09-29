@@ -136,6 +136,42 @@ def test_open_door_breaks_all_closed_but_not_windows():
     assert s.windows_closed is True
 
 
+def test_target_charge_pct(status):
+    assert status.target_charge_pct == 100
+
+
+def test_bulb_warning_none_when_no_data(status):
+    # The recorded fixture predates the /warnings call — no "warnings" key
+    # at all, same "no data" case as tyre_warning with no tyres payload.
+    assert status.bulb_warning is None
+
+
+def test_bulb_warning_true_when_a_bulb_is_out():
+    data = json.loads(json.dumps(FIXTURE))
+    data["warnings"] = {
+        "data": {
+            "brakeLightLeftWarning": {"value": "NO_WARNING"},
+            "reverseLightsWarning": {"value": "UNSPECIFIED"},
+            "fogLightFrontWarning": {"value": "FAILURE"},
+        }
+    }
+    s = assemble_status("V", data)
+    assert s.bulb_warning is True
+
+
+def test_bulb_warning_false_when_all_clear_or_unspecified():
+    data = json.loads(json.dumps(FIXTURE))
+    data["warnings"] = {
+        "data": {
+            "brakeLightLeftWarning": {"value": "NO_WARNING"},
+            "reverseLightsWarning": {"value": "UNSPECIFIED"},
+            "hazardLightsWarning": {"value": "UNSPECIFIED"},
+        }
+    }
+    s = assemble_status("V", data)
+    assert s.bulb_warning is False
+
+
 def test_missing_payloads_are_safe():
     s = assemble_status("V", {})
     assert s.vin == "V"

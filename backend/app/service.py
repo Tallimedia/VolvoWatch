@@ -185,7 +185,7 @@ async def build_status(session: Session, user: User) -> VehicleStatus:
     # per /v1/status fetch.
     keys = (
         "fuel", "energy", "statistics", "odometer", "doors",
-        "windows", "diagnostics", "tyres", "command_accessibility",
+        "windows", "diagnostics", "tyres", "command_accessibility", "warnings",
     )
     calls = (
         client.fuel(access_token, vin),
@@ -197,6 +197,7 @@ async def build_status(session: Session, user: User) -> VehicleStatus:
         client.diagnostics(access_token, vin),
         client.tyres(access_token, vin),
         client.command_accessibility(access_token, vin),
+        client.warnings(access_token, vin),
     )
     results = await asyncio.gather(*(safe(c) for c in calls))
     payloads = dict(zip(keys, results))
@@ -243,6 +244,7 @@ def assemble_status(
     windows_d = unwrap("windows")
     diag_d = unwrap("diagnostics")
     tyres_d = unwrap("tyres")
+    warnings_d = unwrap("warnings")
     access_d = unwrap("command_accessibility")
 
     fuel_range = _num(stats_d.get("distanceToEmptyTank"))
@@ -302,6 +304,16 @@ def assemble_status(
     tyre_known = [v for v in tyre_vals if v and v != "UNSPECIFIED"]
     tyre_warning = None if not tyre_known else any(v not in tyre_ok for v in tyre_known)
 
+    # 23 individual bulb checks, same "UNSPECIFIED = not tested, not a fault"
+    # rule as tyres — e.g. reverse-light status is UNSPECIFIED whenever the
+    # car isn't currently in reverse, not a real warning.
+    bulb_ok = {"", "NO_WARNING", "NORMAL", "OK"}
+    bulb_vals = [str(_val(v) or "").upper() for v in warnings_d.values()]
+    bulb_known = [v for v in bulb_vals if v and v != "UNSPECIFIED"]
+    bulb_warning = None if not bulb_known else any(v not in bulb_ok for v in bulb_known)
+
+    target_charge = _num(energy_d.get("targetBatteryChargeLevel"))
+
     avg_fuel = _num(stats_d.get("averageFuelConsumption"))
     trip_km = _num(stats_d.get("tripMeterManual"))
     trip_auto_km = _num(stats_d.get("tripMeterAutomatic"))
@@ -336,6 +348,8 @@ def assemble_status(
         service_in_months=int(service_months) if service_months is not None else None,
         washer_fluid_low=washer_fluid_low,
         tyre_warning=tyre_warning,
+        bulb_warning=bulb_warning,
+        target_charge_pct=target_charge,
         car_reachable=reachable,
         unreachable_reason=reason,
         updated_at=dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),

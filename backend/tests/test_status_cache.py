@@ -77,6 +77,9 @@ class CountingClient:
     async def command_accessibility(self, access_token, vin):
         return {}
 
+    async def warnings(self, access_token, vin):
+        return {}
+
 
 async def test_two_users_with_the_same_empty_vin_do_not_share_a_cache_slot(session, monkeypatch):
     user_a = _make_user(session, "sub-a")
