@@ -52,7 +52,8 @@ whether every door and window is shut, and a service reminder when due.
 
 CHARGING
 Battery percentage, AC/DC, and time to full while plugged in — the battery
-figure turns green the moment it's actively charging.
+figure turns green the moment it's actively charging. Set an eco charge
+limit below 100%? It's shown too.
 
 TRIP
 A large odometer — handy when a fuel card asks for the mileage — average
@@ -60,8 +61,8 @@ fuel consumption, and both trip meters.
 
 WARNINGS
 A real list, not just an icon: doors and windows called out separately,
-service due (with the distance remaining), washer fluid, tyre pressure — or
-a plain "no active warnings" when everything's fine.
+service due (with the distance remaining), washer fluid, tyre pressure, any
+bulb out — or a plain "no active warnings" when everything's fine.
 
 CLIMATE CONTROL
 Start climatisation from the watch, with a confirmation step so it can't be
@@ -74,10 +75,9 @@ services, but pure-EV-specific detail (like charging-curve data) is on the
 roadmap, not in this release.
 
 WHAT THIS APP CAN AND CAN'T DO
-VolvoWatch uses Volvo's Level 1 data — vehicle status and the one climate
-command above. Level 2 actions (remote lock, unlock, flash the lights, honk)
-need a separate, more restricted approval from Volvo and aren't implemented
-yet.
+VolvoWatch uses Volvo's Level 1 data — vehicle status and climate control.
+Level 2 actions (remote lock, unlock, flash, honk) need separate, more
+restricted Volvo approval and aren't implemented yet.
 
 REQUIREMENTS
 • A Volvo with connected services (Volvo On Call, ~2010-2024, or a Google
@@ -100,8 +100,8 @@ GOOD TO KNOW
 
 ABOUT THE HOSTED SERVICE
 The default backend runs on private infrastructure (Tallimedia), as-is with
-no service-level agreement — no guaranteed uptime, and we're not responsible
-for connectivity or hardware issues there. Full terms on the connect page.
+no SLA — no guaranteed uptime, and we're not responsible for connectivity
+or hardware issues. Full terms on the connect page.
 
 An independent project, not affiliated with, endorsed by, or supported by
 Volvo Cars. "Volvo" is a trademark of Volvo Trademark Holding AB. Built on
@@ -113,6 +113,15 @@ Source and setup docs: https://github.com/tallimedia/VolvoWatch
 ---
 
 ## What's new / release notes (≤4000 chars)
+
+### 1.4.0 — DRAFT, not yet uploaded (pending real-car beta test results)
+
+```
+Two additions found sitting unused in data Volvo already shares: a "Check
+lights" warning that catches a bulb out anywhere on the car, and a TARGET
+row on the Charging page showing your eco charge limit when you've set one
+below 100%.
+```
 
 ### 1.3.0
 
