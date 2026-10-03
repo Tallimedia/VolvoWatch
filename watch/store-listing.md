@@ -120,7 +120,9 @@ Source and setup docs: https://github.com/tallimedia/VolvoWatch
 Two additions found sitting unused in data Volvo already shares: a "Check
 lights" warning that catches a bulb out anywhere on the car, and a TARGET
 row on the Charging page showing your eco charge limit when you've set one
-below 100%.
+below 100%. If your Volvo ID has more than one car, the connect page now
+lets you pick which one this watch should show, instead of always
+defaulting to the first one Volvo returns.
 ```
 
 ### 1.3.0
