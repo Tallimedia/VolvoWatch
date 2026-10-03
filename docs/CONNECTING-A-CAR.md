@@ -29,13 +29,23 @@ with their own Volvo ID, on Volvo's own sign-in page.
    climatisation**. It does **not** ask to unlock, honk, flash, or locate
    the car — those need a separate, more restricted Volvo approval this app
    doesn't have yet.
-5. The page shows a **6-character pairing code** (valid 15 minutes, one
+5. **If your Volvo ID has more than one car**, you'll land on a "Which
+   car?" page first — one button per car, showing its model, fuel type and
+   the last 4 characters of its VIN (e.g. "EX30 Cross Country (Electric) ·
+   …0253"), pulled live from Volvo. Tap the one this watch should show.
+   With only one car on the account, this step is skipped automatically and
+   you go straight to the pairing code.
+6. The page shows a **6-character pairing code** (valid 15 minutes, one
    use).
-6. Enter it either in **Garmin Connect Mobile → the VolvoWatch app →
+7. Enter it either in **Garmin Connect Mobile → the VolvoWatch app →
    Settings → Pairing code**, or directly on the watch via the digit-wheel
    code picker (action menu → "Enter pairing code").
-7. The watch exchanges the code once for a private device token and starts
+8. The watch exchanges the code once for a private device token and starts
    showing your car.
+
+To connect a **different** car on the same Volvo ID later (e.g. you sold one
+and want the watch to follow the other), just sign in again at `/link` — the
+car picker reappears and a fresh choice replaces the old `primary_vin`.
 
 To revoke access later: in your Volvo ID account settings, remove
 VolvoWatch's access. That immediately stops the backend from reaching your
@@ -46,7 +56,11 @@ car.
 - Each consent creates one `users` row keyed by the Volvo account id
   (`sub`), holding that person's encrypted refresh token and their
   `primary_vin` (auto-discovered from Volvo's API — nobody types a VIN by
-  hand).
+  hand). One account, one car at a time — the picker above just decides
+  *which* one.
+- If a choice is needed, it's held for 10 minutes in a short-lived
+  `vehicle_choices` row (VIN list + labels only, no tokens) and deleted the
+  moment a car is picked or it expires.
 - Your Volvo password is never seen by this app or its backend — only the
   OAuth tokens Volvo issues after you sign in on Volvo's own page.
 - Everyone's polling shares the backend's Volvo API key and its daily call

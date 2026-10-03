@@ -236,6 +236,12 @@ class VolvoClient:
             item["vin"] for item in items if isinstance(item, dict) and item.get("vin")
         ]
 
+    async def vehicle_info(self, access_token: str, vin: str) -> dict[str, Any]:
+        """Model/fuel-type details for one VIN — used only to label a picker
+        when a Volvo ID has more than one car; the status/command endpoints
+        never need this."""
+        return await self._get(access_token, f"{CONNECTED}/{vin}")
+
     async def fuel(self, access_token: str, vin: str) -> dict[str, Any]:
         return await self._get(access_token, f"{CONNECTED}/{vin}/fuel")
 

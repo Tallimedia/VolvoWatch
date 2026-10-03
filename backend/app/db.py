@@ -50,6 +50,22 @@ class OAuthFlow(Base):
     created_at: Mapped[dt.datetime] = mapped_column(default=_utcnow)
 
 
+class VehicleChoice(Base):
+    """Transient: which car to pick, shown when a Volvo ID has more than one.
+
+    Holds the candidate list (JSON: [{"vin": ..., "label": ...}]) so the user
+    doesn't need to re-fetch from Volvo between the picker page and the click
+    that resolves it. Same TTL/single-use shape as `OAuthFlow`/`PairingCode`.
+    """
+
+    __tablename__ = "vehicle_choices"
+
+    token: Mapped[str] = mapped_column(String(64), primary_key=True)
+    user_id: Mapped[int] = mapped_column(index=True)
+    vehicles_json: Mapped[str] = mapped_column()
+    created_at: Mapped[dt.datetime] = mapped_column(default=_utcnow)
+
+
 class PairingCode(Base):
     """Short code shown to the user after consent, typed into the watch once."""
 
@@ -118,6 +134,9 @@ def purge_expired(session: Session, *, flow_ttl_s: int = 600, pairing_ttl_s: int
             or_(PairingCode.consumed.is_(True), PairingCode.created_at < pairing_cutoff)
         )
     )
+    # Same short window as OAuthFlow — a vehicle choice only needs to survive
+    # one click on the page that was just rendered.
+    session.execute(delete(VehicleChoice).where(VehicleChoice.created_at < flow_cutoff))
 
 
 def aware(value: dt.datetime) -> dt.datetime:
