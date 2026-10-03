@@ -35,9 +35,10 @@ SETUP
    https://volvowatchapp.tallimedia.com/link directly in any browser.
 3. Sign in with your Volvo ID. You sign in on Volvo's own page — this app
    never sees your password.
-4. You'll get a short pairing code. Enter it in Garmin Connect Mobile's app
+4. Multiple cars on your Volvo ID? Choose the one for this watch.
+5. You'll get a short pairing code. Enter it in Garmin Connect Mobile's app
    settings, or directly on the watch with the on-screen code wheels.
-5. The watch exchanges the code once for a private device token and starts
+6. The watch exchanges the code once for a private device token and starts
    showing your car.
 
 The app talks to a backend over HTTPS rather than to Volvo directly (Volvo's
@@ -71,8 +72,7 @@ just that a command was sent.
 
 BUILT FOR PLUG-IN HYBRIDS FIRST
 Developed and tested against a PHEV; works for any Volvo with connected
-services, but pure-EV-specific detail (like charging-curve data) is on the
-roadmap, not in this release.
+services. Pure-EV detail (like charging-curve data) is on the roadmap.
 
 WHAT THIS APP CAN AND CAN'T DO
 VolvoWatch uses Volvo's Level 1 data — vehicle status and climate control.
