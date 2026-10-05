@@ -58,6 +58,9 @@ def page(title: str, body: str, *, crumb: str = "", main_style: str = "") -> str
     return f"""<!doctype html><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>{title}</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/static/icons/volvowatch-favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/icons/volvowatch-favicon-16.png">
+<link rel="apple-touch-icon" href="/static/icons/volvowatch-apple-touch-icon-180.png">
 <link rel="stylesheet" href="/static/styles.css?v=20261005-dark">
 <script>try{{var t=localStorage.getItem("tm-theme");if(t)document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 <style>
