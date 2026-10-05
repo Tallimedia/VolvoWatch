@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tallimedia</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261005-dark">
+<script>try{var t=localStorage.getItem("tm-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <style>
   body { margin: 0; }
   a { color: var(--color-accent-700); }
@@ -28,6 +29,15 @@
       <a href="#apps" style="text-decoration: none; color: var(--color-neutral-700)">Apps</a>
       <a href="#about" style="text-decoration: none; color: var(--color-neutral-700)">About</a>
       <a href="#contact" style="text-decoration: none; color: var(--color-neutral-700)">Contact</a>
+      <a href="https://weather.tallimedia.com/" style="text-decoration: none; color: var(--color-accent-700)">Live weather</a>
+      <span style="display: inline-flex; gap: 6px">
+        <button class="theme-btn" id="theme-light" type="button" aria-label="Light mode" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        </button>
+        <button class="theme-btn" id="theme-dark" type="button" aria-label="Dark mode" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+      </span>
     </div>
   </nav>
 
@@ -40,7 +50,7 @@
       <div style="display: flex; flex-direction: column; gap: 10px; justify-content: flex-end">
         <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-divider); padding-bottom: 8px">
           <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Published</span>
-          <span style="font-family: var(--font-heading); font-size: 16px">1 app</span>
+          <span style="font-family: var(--font-heading); font-size: 16px">2 apps</span>
         </div>
         <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-divider); padding-bottom: 8px">
           <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Platform</span>
@@ -86,9 +96,59 @@
       <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
     </a>
 
+    <a class="blueprint" href="https://weatherapp.tallimedia.com/" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr); gap: 40px; align-items: center; padding: 36px; text-decoration: none; color: var(--color-text); margin-bottom: 28px">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px; flex-wrap: wrap">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
+            <path d="M20 40a11 11 0 0 1 1-22 15 15 0 0 1 28 4 9 9 0 0 1-2 18z" stroke="var(--color-accent-900)" stroke-width="4" stroke-linejoin="round"></path>
+            <path d="M24 47l-3 7M34 47l-3 7M44 47l-3 7" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round"></path>
+          </svg>
+          <span style="font-family: var(--font-heading); font-weight: 700; font-size: 32px">Weather Watch</span>
+          <span class="tag tag-accent">v1.0.0</span>
+        </div>
+        <p style="font-size: 18px; color: var(--color-neutral-800); margin: 0 0 18px; max-width: 52ch">Finnish weather on a Garmin watch — land forecasts, marine wind from the coastal stations, and live wave height from FMI's own buoys. Set your own wind and wave limits and a reading stands out when it matters.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px">
+          <span class="tag tag-outline">Connect IQ widget</span>
+          <span class="tag tag-outline">FMI open data</span>
+          <span class="tag tag-outline">Finland</span>
+        </div>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700)">Open the app site →</span>
+      </div>
+      <!-- Filename carries a content hash: this site sets max-age=14400 with no
+           cache busting, so replacing an image in place leaves Cloudflare serving
+           the old one for four hours. Change the bytes, change the name. -->
+      <figure style="margin: 0">
+        <img src="assets/weatherwatch-1-land.4f848e4eca.png" alt="Weather Watch land page on a Garmin fenix, showing temperature, wind and a six-hourly forecast" style="width: 100%">
+      </figure>
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    </a>
+
+    <div class="blueprint" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr); gap: 40px; align-items: center; padding: 36px; color: var(--color-text); margin-bottom: 28px">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px; flex-wrap: wrap">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none">
+            <ellipse cx="32" cy="46" rx="20" ry="7" stroke="var(--color-accent-900)" stroke-width="4"></ellipse>
+            <path d="M18 22h28l-6 14H24z" stroke="var(--color-accent)" stroke-width="4" stroke-linejoin="round"></path>
+          </svg>
+          <span style="font-family: var(--font-heading); font-weight: 700; font-size: 32px">FILiigaWatch</span>
+          <span class="tag tag-neutral">In Beta testing</span>
+        </div>
+        <p style="font-size: 18px; color: var(--color-neutral-800); margin: 0 0 18px; max-width: 52ch">Live Liiga (SM-liiga) ice hockey scores and standings on a Garmin watch. Unofficial, not affiliated with Liiga.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px">
+          <span class="tag tag-outline">Connect IQ widget</span>
+          <span class="tag tag-outline">liiga.fi data</span>
+          <span class="tag tag-outline">Finland</span>
+        </div>
+      </div>
+      <figure style="margin: 0">
+        <img src="assets/filiigawatch-1-today.8767e5fd.png" alt="FILiigaWatch today's games page on a Garmin fenix, showing a final score" style="width: 100%">
+      </figure>
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    </div>
+
   </section>
 
-  <section id="about" style="background: var(--color-accent-900); color: #f5f8fd; padding: 64px 0">
+  <section id="about" style="background: var(--color-band); color: #f5f8fd; padding: 64px 0">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 56px; align-items: start">
       <div>
         <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px">
@@ -99,15 +159,15 @@
         <p style="color: var(--color-accent-200); margin: 0">Everything published here is a personal project, run on a best-effort basis with no service-level agreement. Sources are open where the licence allows it.</p>
       </div>
       <div style="display: grid; gap: 1px; background: color-mix(in srgb, #f5f8fd 26%, transparent); border: 1px solid color-mix(in srgb, #f5f8fd 26%, transparent)">
-        <div style="background: var(--color-accent-900); padding: 22px 24px">
+        <div style="background: var(--color-band); padding: 22px 24px">
           <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 6px">How it's built</div>
           <div style="color: #f5f8fd">Monkey C on the watch, a small FastAPI backend, and Claude Code doing most of the typing.</div>
         </div>
-        <div style="background: var(--color-accent-900); padding: 22px 24px">
+        <div style="background: var(--color-band); padding: 22px 24px">
           <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 6px">Data</div>
           <div style="color: #f5f8fd">No analytics, no third-party trackers on any app published here.</div>
         </div>
-        <div style="background: var(--color-accent-900); padding: 22px 24px">
+        <div style="background: var(--color-band); padding: 22px 24px">
           <div style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 6px">Licence</div>
           <div style="color: #f5f8fd">PolyForm Noncommercial 1.0.0 — free for any noncommercial purpose.</div>
         </div>
@@ -205,7 +265,7 @@
       <div style="display: flex; gap: 40px; font-size: 14px">
         <div style="display: grid; gap: 6px">
           <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Apps</span>
-          <a href="https://volvowatchapp.tallimedia.com/">VolvoWatch</a>
+          <a href="https://volvowatchapp.tallimedia.com/">VolvoWatch</a><a href="https://weatherapp.tallimedia.com/">FIWeatherWatch</a><a href="https://weather.tallimedia.com/">Live weather</a><span style="color: var(--color-neutral-600)">FILiigaWatch (in beta)</span>
         </div>
         <div style="display: grid; gap: 6px">
           <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600)">Legal</span>
@@ -219,5 +279,26 @@
     </div>
   </footer>
 </div>
+<script>
+/* Light/dark toggle. No stored choice = follow the system (pure CSS). Pressing
+   the active button clears the choice, same as the weather pages. */
+(function () {
+  var root = document.documentElement, light = document.getElementById("theme-light"),
+      dark = document.getElementById("theme-dark");
+  function apply(t) {
+    if (t) root.setAttribute("data-theme", t); else root.removeAttribute("data-theme");
+    light.setAttribute("aria-pressed", String(t === "light"));
+    dark.setAttribute("aria-pressed", String(t === "dark"));
+  }
+  function set(t) {
+    try { if (t) localStorage.setItem("tm-theme", t); else localStorage.removeItem("tm-theme"); } catch (e) {}
+    apply(t);
+  }
+  var stored = null; try { stored = localStorage.getItem("tm-theme"); } catch (e) {}
+  apply(stored);
+  light.addEventListener("click", function () { set(light.getAttribute("aria-pressed") === "true" ? null : "light"); });
+  dark.addEventListener("click", function () { set(dark.getAttribute("aria-pressed") === "true" ? null : "dark"); });
+})();
+</script>
 </body>
 </html>
