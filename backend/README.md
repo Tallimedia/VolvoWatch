@@ -55,8 +55,13 @@ open:
 
 **Before opening this beyond friends & family:**
 - **No per-device rate limiting on `/v1/command`.** `/v1/pair` is rate-limited;
-  commands aren't. Volvo allows ~10 commands/min *per API key*, so one
-  misbehaving watch can rate-limit every user.
+  commands aren't. **Corrected 2026-10-06**: Volvo's limit is 10 commands/min
+  scoped per (Volvo ID, Client ID) pair, not a pool shared across the whole
+  app — confirmed directly against Volvo's own docs. A misbehaving watch can
+  only exhaust *its own* user's budget, not rate-limit anyone else. Real gap,
+  smaller blast radius than previously written here: still worth a guard so
+  one user doesn't spam their own 429s, not the app-wide risk this used to
+  describe.
 - **OAuth `state` isn't bound to a browser session** (no cookie), which allows
   login-CSRF: a victim could be walked through completing an attacker's flow and
   end up paired to the attacker's car. Low impact today (no user accounts).
