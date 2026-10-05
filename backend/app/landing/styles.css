@@ -328,3 +328,70 @@ textarea.input { min-height: 90px; resize: vertical; }
 .btn-primary { border-color: var(--color-accent); }
 .btn-ghost { border-color: transparent; }
 
+
+/* ══ Dark theme ═══════════════════════════════════════════════════════════
+   Follows the system by default; an explicit choice (data-theme on <html>,
+   set by the toggle in the nav and remembered in localStorage) overrides it.
+   Only tokens that need to change are overridden. Keep landing/styles.css and
+   static/styles.css identical. */
+:root { --color-band: var(--color-accent-900); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #141618;
+    --color-surface: #1c1f22;
+    --color-text: #e9ebed;
+    --color-accent: #7fa6cc;
+    --color-accent-2: #8fa9c2;
+    --color-divider: color-mix(in srgb, #e9ebed 18%, transparent);
+    --color-neutral-100: #25282b;
+    --color-neutral-400: #5d6368;
+    --color-neutral-600: #9a9fa5;
+    --color-neutral-700: #b5b9be;
+    --color-neutral-800: #cfd2d6;
+    --color-neutral-900: #e9ebed;
+    --color-accent-100: #1f2a36;
+    --color-accent-700: #94bce3;
+    --color-accent-800: #bcd8f5;
+    /* accent-900 flips to a light step in dark mode (link hover, icon strokes);
+       dark bands keep their own token. */
+    --color-accent-900: #d6ebff;
+    --color-band: #1d2d3d;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.5);
+    --shadow-md: 0 3px 10px rgba(0,0,0,.5);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --color-bg: #141618;
+  --color-surface: #1c1f22;
+  --color-text: #e9ebed;
+  --color-accent: #7fa6cc;
+  --color-accent-2: #8fa9c2;
+  --color-divider: color-mix(in srgb, #e9ebed 18%, transparent);
+  --color-neutral-100: #25282b;
+  --color-neutral-400: #5d6368;
+  --color-neutral-600: #9a9fa5;
+  --color-neutral-700: #b5b9be;
+  --color-neutral-800: #cfd2d6;
+  --color-neutral-900: #e9ebed;
+  --color-accent-100: #1f2a36;
+  --color-accent-700: #94bce3;
+  --color-accent-800: #bcd8f5;
+  /* accent-900 flips to a light step in dark mode (link hover, icon strokes);
+     dark bands keep their own token. */
+  --color-accent-900: #d6ebff;
+  --color-band: #1d2d3d;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.5);
+  --shadow-md: 0 3px 10px rgba(0,0,0,.5);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,.6);
+  color-scheme: dark;
+}
+.theme-btn {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 32px; height: 32px; padding: 0; cursor: pointer;
+  border: 1px solid var(--color-divider); background: transparent;
+  color: var(--color-neutral-700);
+}
+.theme-btn svg { width: 16px; height: 16px; }
+.theme-btn[aria-pressed="true"] { color: var(--color-accent-700); border-color: var(--color-accent-700); }

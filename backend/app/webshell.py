@@ -38,6 +38,14 @@ def nav(crumb: str = "") -> str:
       VolvoWatch
     </a>
     {crumb_html}
+    <span style="display: inline-flex; gap: 6px; margin-left: auto">
+        <button class="theme-btn" id="theme-light" type="button" aria-label="Light mode" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        </button>
+        <button class="theme-btn" id="theme-dark" type="button" aria-label="Dark mode" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+      </span>
   </nav>"""
 
 
@@ -50,7 +58,8 @@ def page(title: str, body: str, *, crumb: str = "", main_style: str = "") -> str
     return f"""<!doctype html><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>{title}</title>
-<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/styles.css?v=20261005-dark">
+<script>try{{var t=localStorage.getItem("tm-theme");if(t)document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 <style>
  body{{margin:0}}
  a{{color:var(--color-accent-700)}}
@@ -59,4 +68,26 @@ def page(title: str, body: str, *, crumb: str = "", main_style: str = "") -> str
 <div style="background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); font-size: 15px; line-height: 1.55; min-height: 100vh">
 {nav(crumb)}
 <main style="{main}">{body}</main>
-</div>"""
+</div>
+<script>
+/* Light/dark toggle. No stored choice = follow the system (pure CSS). Pressing
+   the active button clears the choice. */
+(function () {{
+  var root = document.documentElement, light = document.getElementById("theme-light"),
+      dark = document.getElementById("theme-dark");
+  if (!light || !dark) return;
+  function apply(t) {{
+    if (t) root.setAttribute("data-theme", t); else root.removeAttribute("data-theme");
+    light.setAttribute("aria-pressed", String(t === "light"));
+    dark.setAttribute("aria-pressed", String(t === "dark"));
+  }}
+  function set(t) {{
+    try {{ if (t) localStorage.setItem("tm-theme", t); else localStorage.removeItem("tm-theme"); }} catch (e) {{}}
+    apply(t);
+  }}
+  var stored = null; try {{ stored = localStorage.getItem("tm-theme"); }} catch (e) {{}}
+  apply(stored);
+  light.addEventListener("click", function () {{ set(light.getAttribute("aria-pressed") === "true" ? null : "light"); }});
+  dark.addEventListener("click", function () {{ set(dark.getAttribute("aria-pressed") === "true" ? null : "dark"); }});
+}})();
+</script>"""
