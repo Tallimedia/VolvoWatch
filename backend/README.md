@@ -72,3 +72,22 @@ open:
 - Volvo's `access_token` is stored unencrypted (the refresh token is encrypted);
   it's 5-minute-lived, but it's inconsistent.
 - The watch doesn't pre-check `/command-accessibility` before sending a command.
+- **No stale-device cleanup.** `Device` rows are never removed — re-pairing the
+  same physical watch (or abandoning one) just leaves the old row behind
+  forever. Harmless today (70 devices across 57 users as of 2026-10-05, most
+  of the multi-device accounts are known test pairings), but worth a cleanup
+  script eventually. Plan, not yet built:
+  - Key off `Device.last_seen_at` (stamped on every authenticated call via
+    `resolve_device()` in `service.py`, so it's a real "last actually used"
+    signal, not a guess) — a generous threshold (90 days+) to avoid catching
+    a watch that's just been unused for a season.
+  - Dry-run by default: print a report (device id, user_id, label,
+    created_at, last_seen_at) to stdout, no deletes.
+  - Only delete behind an explicit flag, and dump the doomed rows to a
+    timestamped JSON file in `~/public-services/backups/` first (same spot
+    as the DB snapshots) so a wrong run is recoverable without restoring the
+    whole DB.
+  - Deleting a `Device` row is independent of `User`/`primary_vin` — no
+    cascade, so even an overly aggressive run can't touch car pairing.
+  - Manual/occasional run, not a cron job, until there's real evidence of
+    orphaned devices piling up.
