@@ -66,6 +66,10 @@ class WarningsView extends WatchUi.View {
             icons.add(WatchUi.loadResource(Rez.Drawables.IconTyre));
             texts.add("Tyre pressure warning");
         }
+        if (s["bulb_warning"] == true || fake) {
+            icons.add(WatchUi.loadResource(Rez.Drawables.IconFault));
+            texts.add("Check lights");
+        }
 
         if (icons.size() == 0) {
             dc.setColor(Theme.OK, Graphics.COLOR_TRANSPARENT);

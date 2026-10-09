@@ -4,6 +4,31 @@ Versions here match what's entered in the **Connect IQ Store upload form**
 (<https://apps-developer.garmin.com>). The store requires each upload to have a
 higher version than the last.
 
+## 1.4.0 — bulb warnings, eco charge target, multi-car picker
+
+Tested first as a standing beta ("Volvo Beta", `kavaleff/VolvoWatch`'s `beta`
+branch, app id `49c57e43bccc1646e6d8e7e307e12424`) before promotion, per the
+beta-before-every-release policy. Confirmed on real hardware: "No active
+warnings" correctly shown with no bulb fault present; TARGET row confirmed
+against a real set eco-limit.
+
+- **"Check lights" row on the Warnings page.** Rolls up all 23 of Volvo's
+  individual bulb-check fields into one row (`bulb_warning` — any fault,
+  roughly mirrors the existing "Check doors"/"Check windows"/tyre-pressure
+  any-fault pattern), so a bulb-out warning never costs more than one line
+  regardless of how many bulbs are actually affected. Both scopes already
+  granted at launch (`conve:warnings`), no re-consent needed.
+- **TARGET row on the Charging page.** Shows the owner's eco charge-limit
+  (`targetBatteryChargeLevel`) whenever it's set below 100% — the field was
+  already present in every `energy_state` response and simply never mapped
+  through. Shown regardless of plugged/charging state, since it's a standing
+  car setting, not a session value.
+- **Multi-car picker at `/link`.** A Volvo ID with more than one car no
+  longer silently locks onto whichever one Volvo's API happens to list
+  first — a "Which car?" page appears when there's a real choice to make,
+  showing model, fuel type and the VIN's last 4 characters per car.
+  Backend-only, already live in production independent of this release.
+
 ## 1.3.0 — imperial units
 
 Real user feedback: a UK/Ireland user with a Volvo already in miles/gallons

@@ -63,6 +63,14 @@ class ChargingView extends WatchUi.View {
                 rows.add(["CHARGING POWER", (pw / 1000.0).format("%.1f") + " kW"]);
             }
         }
+        // A standing car setting, not a charging-session value — shown
+        // whenever plugged or not, but only when the owner has actually set
+        // an eco-limit below 100%. At 100% (the common case) it's not
+        // interesting enough to spend a row on.
+        var target = Fmt.num(s["target_charge_pct"]);
+        if (target != null && target < 100) {
+            rows.add(["TARGET", Math.round(target).format("%d") + "%"]);
+        }
 
         // Lay out top-justified, advancing by the real font heights so nothing
         // can collide regardless of the device's font metrics.
