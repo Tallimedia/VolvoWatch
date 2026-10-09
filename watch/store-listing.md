@@ -110,6 +110,94 @@ the public Volvo Cars Developer API.
 Source and setup docs: https://github.com/tallimedia/VolvoWatch
 ```
 
+### Finnish (suomi)
+
+```
+Sinun Volvosi, ranteessasi.
+
+VolvoWatch näyttää autosi tilan suoraan vilkaisunäkymässä ja tarjoaa tila-,
+lataus-, matka- ja varoitussivun — sekä ilmastoinnin ohjauksen — ilman että
+puhelinta tarvitsee avata.
+
+KÄYTTÖÖNOTTO
+1. Asenna sovellus. Ensimmäinen käynnistys pyytää yhdistämään.
+2. Avaa toimintovalikko (paina valitse) → "Open connect page" — lähettää
+   ilmoituksen puhelimeesi. Tai avaa suoraan osoite
+   https://volvowatchapp.tallimedia.com/link missä tahansa selaimessa.
+3. Kirjaudu Volvo ID:lläsi. Kirjautuminen tapahtuu Volvon omalla sivulla —
+   tämä sovellus ei koskaan näe salasanaasi.
+4. Onko Volvo ID:lläsi useampi auto? Valitse tälle kellolle näytettävä auto.
+5. Saat lyhyen parituskoodin. Syötä se Garmin Connect Mobile -sovelluksen
+   asetuksiin, tai suoraan kellolla näytön numeropyörillä.
+6. Kello vaihtaa koodin kertaalleen yksityiseen laitetunnukseen ja alkaa
+   näyttää autosi tietoja.
+
+Sovellus keskustelee taustapalvelimen kanssa HTTPS:n yli suoran Volvo-
+yhteyden sijaan (API-tunnuksia ei voi turvallisesti säilyttää
+kellosovelluksessa). Oletuksena käytetään omaa ylläpidettyä
+taustapalvelinta — avoimen lähdekoodin, jos haluat pyörittää omaasi.
+
+TILA YHDELLÄ VILKAISULLA
+Bensa- ja sähkötoimintamatkan yhteenlaskettu luku yhtenä numerona —
+merkitty "km tot range" ladattavassa hybridissä. Lukitustila, ovien ja
+ikkunoiden sulkeutuminen, sekä huoltomuistutus kun se erääntyy.
+
+LATAUS
+Akun varaustila prosentteina, AC/DC, ja aika täyteen lataukseen latauksen
+aikana — akkuprosentti muuttuu vihreäksi heti kun lataus on aktiivinen.
+Ekolatausraja alle 100 %:n näkyy myös, jos olet sellaisen asettanut.
+
+MATKA
+Suuri matkamittari, keskikulutus, ja molemmat välimatkamittarit.
+
+VAROITUKSET
+Todellinen lista, ei vain kuvake: ovet ja ikkunat eriteltyinä, huolto
+erääntyy (jäljellä olevan matkan kanssa), tuulilasinpesuneste, rengaspaine,
+mikä tahansa polttimo rikki — tai pelkkä "ei aktiivisia varoituksia" kun
+kaikki on kunnossa.
+
+ILMASTOINNIN OHJAUS
+Käynnistä ilmastointi kellosta, vahvistusvaiheen kanssa ettei se käynnisty
+vahingossa. Sovellus kertoo mitä auto todella vastasi, ei vain että komento
+lähetettiin.
+
+KEHITETTY ENSISIJAISESTI LADATTAVILLE HYBRIDEILLE
+Testattu ladattavalla hybridillä (PHEV); toimii kaikilla Volvoilla joissa
+on yhdistetyt palvelut. Sähköautokohtaiset lisätiedot tulossa.
+
+MITÄ TÄMÄ SOVELLUS OSAA JA EI OSAA
+VolvoWatch käyttää Volvon Tason 1 dataa — tilatietoja ja ilmastoinnin
+ohjausta. Tason 2 toiminnot (etälukitus, avaus, valot, äänimerkki) vaativat
+erillisen Volvo-hyväksynnän, ei vielä toteutettu.
+
+VAATIMUKSET
+• Volvo jossa on yhdistetyt palvelut (Volvo On Call, n. 2010–2024, tai
+  Google-pohjainen auto vuodesta 2020) ja Volvo ID johon auto on linkitetty
+• Puhelin lähellä, tai kello WiFi-verkossa — ei LTE:tä tässä laitteessa
+
+HYVÄ TIETÄÄ
+• Lukemat ovat niin tuoreita kuin auton viimeisin yhteydenotto — sovellus
+  näyttää aina kuinka vanhaa data on.
+• Ilmastointikomento toimii vain kun auto on tavoitettavissa; Volvo estää
+  sen ajon aikana, ja sovellus kertoo tästä.
+• Ilmastoinnin pysäytystä ei tarjota — Volvon API ilmoittaa onnistumisesta
+  pysäyttämättä autoa luotettavasti, tunnettu vika Volvon puolella. Käytä
+  Volvo-sovellusta pysäyttämiseen.
+• Metrinen oletuksena. UK/Irlannin kuljettajat voivat vaihtaa maileihin ja
+  UK-yksiköihin Garmin Connect Mobilen asetuksista.
+• Ei analytiikkaa, ei kolmannen osapuolen seurantaa.
+
+TIETOA YLLÄPIDETYSTÄ PALVELUSTA
+Oletustaustapalvelin toimii yksityisellä infrastruktuurilla (Tallimedia)
+ilman SLA:ta. Täydet ehdot yhdistämissivulla.
+
+Riippumaton projekti, ei Volvo Carsin sidonnainen. "Volvo" on Volvo
+Trademark Holding AB:n tavaramerkki. Rakennettu julkiselle Volvo Cars
+Developer API:lle.
+
+Lähdekoodi ja käyttöönotto-ohjeet: https://github.com/tallimedia/VolvoWatch
+```
+
 ---
 
 ## What's new / release notes (≤4000 chars)
@@ -123,6 +211,18 @@ row on the Charging page showing your eco charge limit when you've set one
 below 100%. If your Volvo ID has more than one car, the connect page now
 lets you pick which one this watch should show, instead of always
 defaulting to the first one Volvo returns.
+```
+
+**Finnish (suomi):**
+
+```
+Kaksi lisäystä löytyi Volvon datasta, joka oli jo saatavilla muttei
+käytössä: "Check lights" -varoitus joka havaitsee rikkinäisen polttimon
+missä tahansa autossa, ja TARGET-rivi Lataus-sivulla joka näyttää
+ekolatausrajasi kun olet asettanut sen alle 100 %:iin. Jos Volvo
+ID:lläsi on useampi auto, yhdistämissivu antaa nyt valita kumpi näytetään
+tällä kellolla — sen sijaan että se aina valitsisi ensimmäisen Volvon
+palauttaman auton.
 ```
 
 ### 1.3.0
