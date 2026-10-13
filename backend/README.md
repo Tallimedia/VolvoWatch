@@ -96,3 +96,15 @@ open:
     cascade, so even an overly aggressive run can't touch car pairing.
   - Manual/occasional run, not a cron job, until there's real evidence of
     orphaned devices piling up.
+
+**Feature ideas:**
+- **In-app "update available" notice.** There's no Garmin push channel to an
+  installed app — Connect IQ Store auto-update (most users) or a manual
+  "Update" badge in the store app (everyone else) are the only platform
+  mechanisms, and neither one prompts the user to go check. Raised 2026-10-13
+  for `FIWeatherWatch`, same idea applies here since this app already has its
+  own backend called on every launch: have a status/sync response include a
+  `latest_version` (or `min_version`) field, and have the watch compare it to
+  its own `Config.VERSION` and show a small notice somewhere already visible
+  (e.g. near the version string on the About-style page) when it's behind.
+  Not built yet — candidate alongside the same feature on `FIWeatherWatch`.
