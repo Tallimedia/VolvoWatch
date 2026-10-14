@@ -186,6 +186,7 @@ async def build_status(session: Session, user: User) -> VehicleStatus:
     keys = (
         "fuel", "energy", "statistics", "odometer", "doors",
         "windows", "diagnostics", "tyres", "command_accessibility", "warnings",
+        "brakes", "location",
     )
     calls = (
         client.fuel(access_token, vin),
@@ -198,6 +199,8 @@ async def build_status(session: Session, user: User) -> VehicleStatus:
         client.tyres(access_token, vin),
         client.command_accessibility(access_token, vin),
         client.warnings(access_token, vin),
+        client.brakes(access_token, vin),
+        client.location(access_token, vin),
     )
     results = await asyncio.gather(*(safe(c) for c in calls))
     payloads = dict(zip(keys, results))
@@ -245,6 +248,8 @@ def assemble_status(
     diag_d = unwrap("diagnostics")
     tyres_d = unwrap("tyres")
     warnings_d = unwrap("warnings")
+    brakes_d = unwrap("brakes")
+    location_d = unwrap("location")
     access_d = unwrap("command_accessibility")
 
     fuel_range = _num(stats_d.get("distanceToEmptyTank"))
@@ -312,6 +317,15 @@ def assemble_status(
     bulb_known = [v for v in bulb_vals if v and v != "UNSPECIFIED"]
     bulb_warning = None if not bulb_known else any(v not in bulb_ok for v in bulb_known)
 
+    brake_val = str(_val(brakes_d.get("brakeFluidLevelWarning")) or "").upper()
+    brake_warning = None if not brake_val or brake_val == "UNSPECIFIED" else brake_val not in bulb_ok
+
+    # GeoJSON order is [lon, lat, alt] — easy to transpose, double-check
+    # against a known fix before trusting this if it's ever wrong.
+    coords = location_d.get("geometry", {}).get("coordinates")
+    lat = coords[1] if isinstance(coords, list) and len(coords) >= 2 else None
+    lon = coords[0] if isinstance(coords, list) and len(coords) >= 2 else None
+
     target_charge = _num(energy_d.get("targetBatteryChargeLevel"))
 
     avg_fuel = _num(stats_d.get("averageFuelConsumption"))
@@ -349,7 +363,10 @@ def assemble_status(
         washer_fluid_low=washer_fluid_low,
         tyre_warning=tyre_warning,
         bulb_warning=bulb_warning,
+        brake_warning=brake_warning,
         target_charge_pct=target_charge,
+        lat=lat,
+        lon=lon,
         car_reachable=reachable,
         unreachable_reason=reason,
         updated_at=dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),

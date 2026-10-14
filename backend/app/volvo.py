@@ -22,6 +22,7 @@ API_STATUS_URL = (
 
 CONNECTED = "/connected-vehicle/v2/vehicles"
 ENERGY = "/energy/v2/vehicles"
+LOCATION = "/location/v1/vehicles"
 
 # Reads are quick; commands block while Volvo waits for the car to answer.
 READ_TIMEOUT_S = 30
@@ -265,6 +266,12 @@ class VolvoClient:
 
     async def warnings(self, access_token: str, vin: str) -> dict[str, Any]:
         return await self._get(access_token, f"{CONNECTED}/{vin}/warnings")
+
+    async def brakes(self, access_token: str, vin: str) -> dict[str, Any]:
+        return await self._get(access_token, f"{CONNECTED}/{vin}/brakes")
+
+    async def location(self, access_token: str, vin: str) -> dict[str, Any]:
+        return await self._get(access_token, f"{LOCATION}/{vin}/location")
 
     async def command_accessibility(self, access_token: str, vin: str) -> dict[str, Any]:
         return await self._get(access_token, f"{CONNECTED}/{vin}/command-accessibility")

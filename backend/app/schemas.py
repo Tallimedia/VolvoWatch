@@ -45,7 +45,10 @@ class VehicleStatus(BaseModel):
     washer_fluid_low: bool | None = None
     tyre_warning: bool | None = None       # any corner reporting low; None if no data
     bulb_warning: bool | None = None       # any of 23 bulb checks reporting a fault
+    brake_warning: bool | None = None      # brake fluid level
     target_charge_pct: float | None = None  # eco charge-limit, if the owner set one
+    lat: float | None = None               # last known car position
+    lon: float | None = None
     car_reachable: bool | None = None      # from command-accessibility
     unreachable_reason: str | None = None  # e.g. CAR_IN_USE
     updated_at: str                        # ISO 8601, when the backend fetched this

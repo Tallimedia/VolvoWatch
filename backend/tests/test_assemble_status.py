@@ -209,3 +209,46 @@ def test_non_string_timestamp_is_ignored():
     data = json.loads(json.dumps(FIXTURE))
     data["fuel"]["data"]["fuelAmount"]["timestamp"] = 12345
     assert assemble_status("V", data).vin == "V"
+
+
+def test_brake_warning_none_when_no_data(status):
+    assert status.brake_warning is None
+
+
+def test_brake_warning_false_when_no_warning():
+    data = json.loads(json.dumps(FIXTURE))
+    data["brakes"] = {"data": {"brakeFluidLevelWarning": {"value": "NO_WARNING"}}}
+    s = assemble_status("V", data)
+    assert s.brake_warning is False
+
+
+def test_brake_warning_true_when_a_fault_is_reported():
+    data = json.loads(json.dumps(FIXTURE))
+    data["brakes"] = {"data": {"brakeFluidLevelWarning": {"value": "LOW"}}}
+    s = assemble_status("V", data)
+    assert s.brake_warning is True
+
+
+def test_brake_warning_none_when_unspecified():
+    data = json.loads(json.dumps(FIXTURE))
+    data["brakes"] = {"data": {"brakeFluidLevelWarning": {"value": "UNSPECIFIED"}}}
+    s = assemble_status("V", data)
+    assert s.brake_warning is None
+
+
+def test_location_none_when_no_data(status):
+    assert status.lat is None
+    assert status.lon is None
+
+
+def test_location_maps_lat_lon_from_geojson_coordinates():
+    data = json.loads(json.dumps(FIXTURE))
+    data["location"] = {
+        "data": {
+            "geometry": {"type": "Point", "coordinates": [24.6763834, 60.1445804, 0.0]},
+            "type": "Feature",
+        }
+    }
+    s = assemble_status("V", data)
+    assert s.lon == 24.6763834
+    assert s.lat == 60.1445804
