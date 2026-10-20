@@ -186,7 +186,7 @@ async def build_status(session: Session, user: User) -> VehicleStatus:
     keys = (
         "fuel", "energy", "statistics", "odometer", "doors",
         "windows", "diagnostics", "tyres", "command_accessibility", "warnings",
-        "brakes", "location",
+        "brakes", "location", "vehicle_info",
     )
     calls = (
         client.fuel(access_token, vin),
@@ -201,6 +201,7 @@ async def build_status(session: Session, user: User) -> VehicleStatus:
         client.warnings(access_token, vin),
         client.brakes(access_token, vin),
         client.location(access_token, vin),
+        client.vehicle_info(access_token, vin),
     )
     results = await asyncio.gather(*(safe(c) for c in calls))
     payloads = dict(zip(keys, results))
@@ -251,6 +252,7 @@ def assemble_status(
     brakes_d = unwrap("brakes")
     location_d = unwrap("location")
     access_d = unwrap("command_accessibility")
+    vehicle_d = unwrap("vehicle_info")
 
     fuel_range = _num(stats_d.get("distanceToEmptyTank"))
     batt_range = _num(energy_d.get("electricRange")) or _num(stats_d.get("distanceToEmptyBattery"))
@@ -328,7 +330,15 @@ def assemble_status(
 
     target_charge = _num(energy_d.get("targetBatteryChargeLevel"))
 
+    # fuelType is a bare string here (not a {value:...} field, unlike the
+    # status endpoints) — "ELECTRIC" for a pure EV, "PETROL" or the combined
+    # "PETROL/ELECTRIC" for a PHEV. None (car not yet seen, or the endpoint
+    # failed) means we don't know — fall back to showing fuel, same as today.
+    fuel_type = vehicle_d.get("fuelType")
+    is_ev = str(fuel_type).upper() == "ELECTRIC" if fuel_type else None
+
     avg_fuel = _num(stats_d.get("averageFuelConsumption"))
+    avg_energy = _num(stats_d.get("averageEnergyConsumption"))
     trip_km = _num(stats_d.get("tripMeterManual"))
     trip_auto_km = _num(stats_d.get("tripMeterAutomatic"))
 
@@ -354,7 +364,9 @@ def assemble_status(
         doors_closed=doors_closed,
         windows_closed=windows_closed,
         odometer_km=_num(odo_d.get("odometer")),
+        is_ev=is_ev,
         avg_fuel_l_100=avg_fuel,
+        avg_energy_kwh_100=avg_energy,
         trip_km=trip_km,
         trip_auto_km=trip_auto_km,
         service_due=service_due,

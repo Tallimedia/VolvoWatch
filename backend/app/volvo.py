@@ -238,9 +238,10 @@ class VolvoClient:
         ]
 
     async def vehicle_info(self, access_token: str, vin: str) -> dict[str, Any]:
-        """Model/fuel-type details for one VIN — used only to label a picker
-        when a Volvo ID has more than one car; the status/command endpoints
-        never need this."""
+        """Model/fuel-type details for one VIN — labels the multi-car picker,
+        and build_status() also reads fuelType from this to decide whether a
+        car is a pure EV (show the energy average) vs PHEV/petrol (show the
+        fuel average)."""
         return await self._get(access_token, f"{CONNECTED}/{vin}")
 
     async def fuel(self, access_token: str, vin: str) -> dict[str, Any]:

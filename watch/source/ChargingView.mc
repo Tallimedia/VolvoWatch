@@ -53,7 +53,12 @@ class ChargingView extends WatchUi.View {
         if (plugged) {
             var ttf = Fmt.num(s["time_to_full_min"]);
             if (ttf != null && ttf > 0) {
-                rows.add(["TIME TO FULL", Fmt.duration(ttf.toNumber())]);
+                // An end-of-charge clock time alongside the duration, not a
+                // separate row — the backend already gives us minutes
+                // remaining, so this is just today's clock read forward, no
+                // new data needed.
+                rows.add(["TIME TO FULL",
+                          Fmt.duration(ttf.toNumber()) + "  ·  " + Fmt.etaClock(ttf.toNumber())]);
             }
             // Not shown on the XC60 — Volvo returns PROPERTY_NOT_FOUND for
             // chargingPower even mid-charge (confirmed 2026-09-13, not a bug).

@@ -36,7 +36,9 @@ class VehicleStatus(BaseModel):
     doors_closed: bool | None = None
     windows_closed: bool | None = None
     odometer_km: float | None = None
+    is_ev: bool | None = None              # fuelType == ELECTRIC, from vehicle_info
     avg_fuel_l_100: float | None = None
+    avg_energy_kwh_100: float | None = None  # only meaningful for is_ev cars
     trip_km: float | None = None           # driver-resettable trip meter
     trip_auto_km: float | None = None      # auto-resets on ignition off
     service_due: bool | None = None

@@ -37,9 +37,20 @@ class TripView extends WatchUi.View {
         }
 
         var rows = [] as Array<Array<String>>;
-        var avgTxt = Fmt.fuelConsumption(s["avg_fuel_l_100"]);
-        if (!avgTxt.equals(Fmt.DASH)) {
-            rows.add(["AVG FUEL", avgTxt]);
+        // Pure EVs have no fuel average to show — use the energy average
+        // instead, not alongside it. PHEV and petrol cars are unaffected,
+        // same AVG FUEL row as always. is_ev == null (unknown car type)
+        // falls back to fuel, the pre-existing behaviour.
+        if (s["is_ev"] == true) {
+            var avgEnergyTxt = Fmt.energyConsumption(s["avg_energy_kwh_100"]);
+            if (!avgEnergyTxt.equals(Fmt.DASH)) {
+                rows.add(["AVG ENERGY", avgEnergyTxt]);
+            }
+        } else {
+            var avgTxt = Fmt.fuelConsumption(s["avg_fuel_l_100"]);
+            if (!avgTxt.equals(Fmt.DASH)) {
+                rows.add(["AVG FUEL", avgTxt]);
+            }
         }
         var trip = Fmt.convKm(s["trip_km"]);
         if (trip != null) {

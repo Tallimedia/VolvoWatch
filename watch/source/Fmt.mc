@@ -1,5 +1,8 @@
 import Toybox.Lang;
 import Toybox.Math;
+import Toybox.System;
+import Toybox.Time;
+import Toybox.Time.Gregorian;
 
 //! Small formatting helpers. All tolerate Null / Number / Float / String input
 //! (values come straight from parsed JSON).
@@ -92,6 +95,15 @@ module Fmt {
             : n.format("%.1f") + " l/100km";
     }
 
+    //! Average energy use, kWh/100km — EV cars only, no imperial conversion
+    //! (UK mpg has no kWh equivalent in common use). Zero/negative is treated
+    //! as no data, same convention as fuelConsumption.
+    function energyConsumption(v as Object?) as String {
+        var n = num(v);
+        if (n == null || n <= 0) { return DASH; }
+        return n.format("%.1f") + " kWh/100km";
+    }
+
     function boolText(v as Object?, yes as String, no as String) as String {
         if (v instanceof Boolean) {
             return (v as Boolean) ? yes : no;
@@ -115,6 +127,22 @@ module Fmt {
         var h = minutes / 60;
         var m = minutes % 60;
         return m == 0 ? h.format("%d") + " h" : h.format("%d") + " h " + m.format("%d") + " min";
+    }
+
+    //! Minutes from now -> the clock time that lands on, "16:42" or "4:42 PM"
+    //! depending on the device's own 24h/12h setting — same source the
+    //! system clock face itself reads, so this never disagrees with it.
+    function etaClock(minutesFromNow as Number?) as String {
+        if (minutesFromNow == null || minutesFromNow <= 0) { return DASH; }
+        var moment = new Time.Moment(Time.now().value() + minutesFromNow * 60);
+        var info = Gregorian.info(moment, Time.FORMAT_SHORT);
+        if (System.getDeviceSettings().is24Hour) {
+            return info.hour.format("%02d") + ":" + info.min.format("%02d");
+        }
+        var hour12 = info.hour % 12;
+        if (hour12 == 0) { hour12 = 12; }
+        var ampm = info.hour < 12 ? "AM" : "PM";
+        return hour12.format("%d") + ":" + info.min.format("%02d") + " " + ampm;
     }
 
     //! Seconds -> "just now" / "3m ago" / "2h ago".
