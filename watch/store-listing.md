@@ -21,91 +21,63 @@ Alternatives, all within 50:
 
 ## Full description (≤4000 chars)
 
+Same reflow rule as the "What's new" blocks below — each paragraph and each
+numbered/bulleted item is one unbroken line; only section headers (SETUP,
+CHARGING, …) and list items get their own line, since those breaks are
+intentional structure, not just a wrap. A hard break mid-paragraph pastes
+as a forced line break in the Store's textarea instead of wrapping.
+
 ```
 Your Volvo, on your wrist.
 
-VolvoWatch puts your car's live status in the glance carousel and gives you a
-status page, a charging page, a trip page and a warnings page — plus climate
-control — without reaching for your phone.
+VolvoWatch puts your car's live status in the glance carousel and gives you a status page, a charging page, a trip page and a warnings page — plus climate control — without reaching for your phone.
 
 SETUP
 1. Install the app. First launch asks you to connect.
-2. Open the action menu (press select) → "Open connect page" — sends a
-   notification to your phone. Or just open
-   https://volvowatchapp.tallimedia.com/link directly in any browser.
-3. Sign in with your Volvo ID. You sign in on Volvo's own page — this app
-   never sees your password.
+2. Open the action menu (press select) → "Open connect page" — sends a notification to your phone. Or just open https://volvowatchapp.tallimedia.com/link directly in any browser.
+3. Sign in with your Volvo ID. You sign in on Volvo's own page — this app never sees your password.
 4. Multiple cars on your Volvo ID? Choose the one for this watch.
-5. You'll get a short pairing code. Enter it in Garmin Connect Mobile's app
-   settings, or directly on the watch with the on-screen code wheels.
-6. The watch exchanges the code once for a private device token and starts
-   showing your car.
+5. You'll get a short pairing code. Enter it in Garmin Connect Mobile's app settings, or directly on the watch with the on-screen code wheels.
+6. The watch exchanges the code once for a private device token and starts showing your car.
 
-The app talks to a backend over HTTPS rather than to Volvo directly (Volvo's
-API credentials can't safely live inside a watch app). It comes configured
-to use our own hosted backend, so most people never need to think about
-this — the backend is open source if you'd rather run your own; see the repo.
+The app talks to a backend over HTTPS rather than to Volvo directly (Volvo's API credentials can't safely live inside a watch app). It comes configured to use our own hosted backend, so most people never need to think about this — the backend is open source if you'd rather run your own; see the repo.
 
 STATUS AT A GLANCE
-Combined petrol and electric range as a single number — labelled "km tot
-range" on a plug-in hybrid, so it's clear the figure is both. Lock state,
-whether every door and window is shut, and a service reminder when due.
+Combined petrol and electric range as a single number — labelled "km tot range" on a plug-in hybrid, so it's clear the figure is both. Lock state, whether every door and window is shut, and a service reminder when due.
 
 CHARGING
-Battery percentage, AC/DC, and time to full while plugged in — the battery
-figure turns green the moment it's actively charging. Set an eco charge
-limit below 100%? It's shown too.
+Battery percentage, AC/DC, and time to full while plugged in — the battery figure turns green the moment it's actively charging. Set an eco charge limit below 100%? It's shown too.
 
 TRIP
-A large odometer — handy when a fuel card asks for the mileage — average
-fuel consumption, and both trip meters.
+A large odometer — handy when a fuel card asks for the mileage — average fuel consumption, and both trip meters.
 
 WARNINGS
-A real list, not just an icon: doors and windows called out separately,
-service due (with the distance remaining), washer fluid, tyre pressure, any
-bulb out — or a plain "no active warnings" when everything's fine.
+A real list, not just an icon: doors and windows called out separately, service due (with the distance remaining), washer fluid, tyre pressure, any bulb out — or a plain "no active warnings" when everything's fine.
 
 CLIMATE CONTROL
-Start climatisation from the watch, with a confirmation step so it can't be
-triggered by accident. The app reports what the car actually answered, not
-just that a command was sent.
+Start climatisation from the watch, with a confirmation step so it can't be triggered by accident. The app reports what the car actually answered, not just that a command was sent.
 
 BUILT FOR PLUG-IN HYBRIDS FIRST
-Developed and tested against a PHEV; works for any Volvo with connected
-services. Pure-EV detail (like charging-curve data) is on the roadmap.
+Developed and tested against a PHEV; works for any Volvo with connected services. Pure-EV detail (like charging-curve data) is on the roadmap.
 
 WHAT THIS APP CAN AND CAN'T DO
-VolvoWatch uses Volvo's Level 1 data — vehicle status and climate control.
-Level 2 actions (remote lock, unlock, flash, honk) need separate, more
-restricted Volvo approval and aren't implemented yet.
+VolvoWatch uses Volvo's Level 1 data — vehicle status and climate control. Level 2 actions (remote lock, unlock, flash, honk) need separate, more restricted Volvo approval and aren't implemented yet.
 
 REQUIREMENTS
-• A Volvo with connected services (Volvo On Call, ~2010-2024, or a Google
-  built-in car from 2020 on) and a Volvo ID with the car linked
-• Your phone nearby, or the watch on WiFi — no LTE on this device, so it
-  needs one of those to reach the backend
+• A Volvo with connected services (Volvo On Call, ~2010-2024, or a Google built-in car from 2020 on) and a Volvo ID with the car linked
+• Your phone nearby, or the watch on WiFi — no LTE on this device, so it needs one of those to reach the backend
 
 GOOD TO KNOW
-• Readings are as fresh as the car's last check-in — a parked car can go
-  hours between updates unless plugged in or recently driven, so the app
-  always shows how old the data is.
-• The climate command only works while the car is reachable; Volvo refuses
-  it while someone's driving, and the app says so.
-• Stopping climatisation isn't offered here — Volvo's public API reports
-  success without reliably stopping the car, a known fault on Volvo's side.
-  Use the Volvo app to stop it.
-• Metric by default. UK/Ireland drivers can switch to miles, UK mpg and UK
-  gallons in Garmin Connect Mobile's settings for this watch app.
+• Readings are as fresh as the car's last check-in — a parked car can go hours between updates unless plugged in or recently driven, so the app always shows how old the data is.
+• The climate command only works while the car is reachable; Volvo refuses it while someone's driving, and the app says so.
+• Stopping climatisation isn't offered here — Volvo's public API reports success without reliably stopping the car, a known fault on Volvo's side. Use the Volvo app to stop it.
+• Metric by default. UK/Ireland drivers can switch to miles, UK mpg and UK gallons in Garmin Connect Mobile's settings for this watch app.
 • No analytics, no third-party trackers.
 
 ABOUT THE HOSTED SERVICE
-The default backend runs on private infrastructure (Tallimedia), as-is with
-no SLA — no guaranteed uptime, and we're not responsible for connectivity
-or hardware issues. Full terms on the connect page.
+The default backend runs on private infrastructure (Tallimedia), as-is with no SLA — no guaranteed uptime, and we're not responsible for connectivity or hardware issues. Full terms on the connect page.
 
-An independent project, not affiliated with, endorsed by, or supported by
-Volvo Cars. "Volvo" is a trademark of Volvo Trademark Holding AB. Built on
-the public Volvo Cars Developer API.
+An independent project, not affiliated with, endorsed by, or supported by Volvo Cars. "Volvo" is a trademark of Volvo Trademark Holding AB. Built on the public Volvo Cars Developer API.
 
 Source and setup docs: https://github.com/tallimedia/VolvoWatch
 ```
@@ -115,85 +87,54 @@ Source and setup docs: https://github.com/tallimedia/VolvoWatch
 ```
 Sinun Volvosi, ranteessasi.
 
-VolvoWatch näyttää autosi tilan suoraan vilkaisunäkymässä ja tarjoaa tila-,
-lataus-, matka- ja varoitussivun — sekä ilmastoinnin ohjauksen — ilman että
-puhelinta tarvitsee avata.
+VolvoWatch näyttää autosi tilan suoraan vilkaisunäkymässä ja tarjoaa tila-, lataus-, matka- ja varoitussivun — sekä ilmastoinnin ohjauksen — ilman että puhelinta tarvitsee avata.
 
 KÄYTTÖÖNOTTO
 1. Asenna sovellus. Ensimmäinen käynnistys pyytää yhdistämään.
-2. Avaa toimintovalikko (paina valitse) → "Open connect page" — lähettää
-   ilmoituksen puhelimeesi. Tai avaa suoraan osoite
-   https://volvowatchapp.tallimedia.com/link missä tahansa selaimessa.
-3. Kirjaudu Volvo ID:lläsi. Kirjautuminen tapahtuu Volvon omalla sivulla —
-   tämä sovellus ei koskaan näe salasanaasi.
+2. Avaa toimintovalikko (paina valitse) → "Open connect page" — lähettää ilmoituksen puhelimeesi. Tai avaa suoraan osoite https://volvowatchapp.tallimedia.com/link missä tahansa selaimessa.
+3. Kirjaudu Volvo ID:lläsi. Kirjautuminen tapahtuu Volvon omalla sivulla — tämä sovellus ei koskaan näe salasanaasi.
 4. Onko Volvo ID:lläsi useampi auto? Valitse tälle kellolle näytettävä auto.
-5. Saat lyhyen parituskoodin. Syötä se Garmin Connect Mobile -sovelluksen
-   asetuksiin, tai suoraan kellolla näytön numeropyörillä.
-6. Kello vaihtaa koodin kertaalleen yksityiseen laitetunnukseen ja alkaa
-   näyttää autosi tietoja.
+5. Saat lyhyen parituskoodin. Syötä se Garmin Connect Mobile -sovelluksen asetuksiin, tai suoraan kellolla näytön numeropyörillä.
+6. Kello vaihtaa koodin kertaalleen yksityiseen laitetunnukseen ja alkaa näyttää autosi tietoja.
 
-Sovellus keskustelee taustapalvelimen kanssa HTTPS:n yli suoran Volvo-
-yhteyden sijaan (API-tunnuksia ei voi turvallisesti säilyttää
-kellosovelluksessa). Oletuksena käytetään omaa ylläpidettyä
-taustapalvelinta — avoimen lähdekoodin, jos haluat pyörittää omaasi.
+Sovellus keskustelee taustapalvelimen kanssa HTTPS:n yli suoran Volvo-yhteyden sijaan (API-tunnuksia ei voi turvallisesti säilyttää kellosovelluksessa). Oletuksena käytetään omaa ylläpidettyä taustapalvelinta — avoimen lähdekoodin, jos haluat pyörittää omaasi.
 
 TILA YHDELLÄ VILKAISULLA
-Bensa- ja sähkötoimintamatkan yhteenlaskettu luku yhtenä numerona —
-merkitty "km tot range" ladattavassa hybridissä. Lukitustila, ovien ja
-ikkunoiden sulkeutuminen, sekä huoltomuistutus kun se erääntyy.
+Bensa- ja sähkötoimintamatkan yhteenlaskettu luku yhtenä numerona — merkitty "km tot range" ladattavassa hybridissä. Lukitustila, ovien ja ikkunoiden sulkeutuminen, sekä huoltomuistutus kun se erääntyy.
 
 LATAUS
-Akun varaustila prosentteina, AC/DC, ja aika täyteen lataukseen latauksen
-aikana — akkuprosentti muuttuu vihreäksi heti kun lataus on aktiivinen.
-Ekolatausraja alle 100 %:n näkyy myös, jos olet sellaisen asettanut.
+Akun varaustila prosentteina, AC/DC, ja aika täyteen lataukseen latauksen aikana — akkuprosentti muuttuu vihreäksi heti kun lataus on aktiivinen. Ekolatausraja alle 100 %:n näkyy myös, jos olet sellaisen asettanut.
 
 MATKA
 Suuri matkamittari, keskikulutus, ja molemmat välimatkamittarit.
 
 VAROITUKSET
-Todellinen lista, ei vain kuvake: ovet ja ikkunat eriteltyinä, huolto
-erääntyy (jäljellä olevan matkan kanssa), tuulilasinpesuneste, rengaspaine,
-mikä tahansa polttimo rikki — tai pelkkä "ei aktiivisia varoituksia" kun
-kaikki on kunnossa.
+Todellinen lista, ei vain kuvake: ovet ja ikkunat eriteltyinä, huolto erääntyy (jäljellä olevan matkan kanssa), tuulilasinpesuneste, rengaspaine, mikä tahansa polttimo rikki — tai pelkkä "ei aktiivisia varoituksia" kun kaikki on kunnossa.
 
 ILMASTOINNIN OHJAUS
-Käynnistä ilmastointi kellosta, vahvistusvaiheen kanssa ettei se käynnisty
-vahingossa. Sovellus kertoo mitä auto todella vastasi, ei vain että komento
-lähetettiin.
+Käynnistä ilmastointi kellosta, vahvistusvaiheen kanssa ettei se käynnisty vahingossa. Sovellus kertoo mitä auto todella vastasi, ei vain että komento lähetettiin.
 
 KEHITETTY ENSISIJAISESTI LADATTAVILLE HYBRIDEILLE
-Testattu ladattavalla hybridillä (PHEV); toimii kaikilla Volvoilla joissa
-on yhdistetyt palvelut. Sähköautokohtaiset lisätiedot tulossa.
+Testattu ladattavalla hybridillä (PHEV); toimii kaikilla Volvoilla joissa on yhdistetyt palvelut. Sähköautokohtaiset lisätiedot tulossa.
 
 MITÄ TÄMÄ SOVELLUS OSAA JA EI OSAA
-VolvoWatch käyttää Volvon Tason 1 dataa — tilatietoja ja ilmastoinnin
-ohjausta. Tason 2 toiminnot (etälukitus, avaus, valot, äänimerkki) vaativat
-erillisen Volvo-hyväksynnän, ei vielä toteutettu.
+VolvoWatch käyttää Volvon Tason 1 dataa — tilatietoja ja ilmastoinnin ohjausta. Tason 2 toiminnot (etälukitus, avaus, valot, äänimerkki) vaativat erillisen Volvo-hyväksynnän, ei vielä toteutettu.
 
 VAATIMUKSET
-• Volvo jossa on yhdistetyt palvelut (Volvo On Call, n. 2010–2024, tai
-  Google-pohjainen auto vuodesta 2020) ja Volvo ID johon auto on linkitetty
+• Volvo jossa on yhdistetyt palvelut (Volvo On Call, n. 2010–2024, tai Google-pohjainen auto vuodesta 2020) ja Volvo ID johon auto on linkitetty
 • Puhelin lähellä, tai kello WiFi-verkossa — ei LTE:tä tässä laitteessa
 
 HYVÄ TIETÄÄ
-• Lukemat ovat niin tuoreita kuin auton viimeisin yhteydenotto — sovellus
-  näyttää aina kuinka vanhaa data on.
-• Ilmastointikomento toimii vain kun auto on tavoitettavissa; Volvo estää
-  sen ajon aikana, ja sovellus kertoo tästä.
-• Ilmastoinnin pysäytystä ei tarjota — Volvon API ilmoittaa onnistumisesta
-  pysäyttämättä autoa luotettavasti, tunnettu vika Volvon puolella. Käytä
-  Volvo-sovellusta pysäyttämiseen.
-• Metrinen oletuksena. UK/Irlannin kuljettajat voivat vaihtaa maileihin ja
-  UK-yksiköihin Garmin Connect Mobilen asetuksista.
+• Lukemat ovat niin tuoreita kuin auton viimeisin yhteydenotto — sovellus näyttää aina kuinka vanhaa data on.
+• Ilmastointikomento toimii vain kun auto on tavoitettavissa; Volvo estää sen ajon aikana, ja sovellus kertoo tästä.
+• Ilmastoinnin pysäytystä ei tarjota — Volvon API ilmoittaa onnistumisesta pysäyttämättä autoa luotettavasti, tunnettu vika Volvon puolella. Käytä Volvo-sovellusta pysäyttämiseen.
+• Metrinen oletuksena. UK/Irlannin kuljettajat voivat vaihtaa maileihin ja UK-yksiköihin Garmin Connect Mobilen asetuksista.
 • Ei analytiikkaa, ei kolmannen osapuolen seurantaa.
 
 TIETOA YLLÄPIDETYSTÄ PALVELUSTA
-Oletustaustapalvelin toimii yksityisellä infrastruktuurilla (Tallimedia)
-ilman SLA:ta. Täydet ehdot yhdistämissivulla.
+Oletustaustapalvelin toimii yksityisellä infrastruktuurilla (Tallimedia) ilman SLA:ta. Täydet ehdot yhdistämissivulla.
 
-Riippumaton projekti, ei Volvo Carsin sidonnainen. "Volvo" on Volvo
-Trademark Holding AB:n tavaramerkki. Rakennettu julkiselle Volvo Cars
-Developer API:lle.
+Riippumaton projekti, ei Volvo Carsin sidonnainen. "Volvo" on Volvo Trademark Holding AB:n tavaramerkki. Rakennettu julkiselle Volvo Cars Developer API:lle.
 
 Lähdekoodi ja käyttöönotto-ohjeet: https://github.com/tallimedia/VolvoWatch
 ```
@@ -218,86 +159,52 @@ oldest/least-interesting entries first if it ever gets close.
 
 ### Paste into Store — English (cumulative, newest first)
 
+Each paragraph below is a single unbroken line on purpose — a hard line
+break inside a paragraph pastes as a forced line break in the Store's
+textarea too (it doesn't re-wrap text you paste in), which is what made
+earlier pastes show up as a narrow column of short lines instead of normal
+wrapping paragraphs. Only the blank lines between versions are real breaks.
+
 ```
 v1.4.1
-The Charging page's countdown to a full battery now also shows the clock
-time it'll finish ("2 h 15 min · 21:02"), not just the duration. Pure
-electric cars now see an average energy figure (kWh/100km) on the Trip
-page instead of an average fuel figure that never applied to them.
+The Charging page's countdown to a full battery now also shows the clock time it'll finish ("2 h 15 min · 21:02"), not just the duration. Pure electric cars now see an average energy figure (kWh/100km) on the Trip page instead of an average fuel figure that never applied to them.
 
 v1.4.0
-Two additions found sitting unused in data Volvo already shares: a "Check
-lights" warning that catches a bulb out anywhere on the car, and a TARGET
-row on the Charging page showing your eco charge limit when you've set one
-below 100%. If your Volvo ID has more than one car, the connect page now
-lets you pick which one this watch should show, instead of always
-defaulting to the first one Volvo returns.
+Two additions found sitting unused in data Volvo already shares: a "Check lights" warning that catches a bulb out anywhere on the car, and a TARGET row on the Charging page showing your eco charge limit when you've set one below 100%. If your Volvo ID has more than one car, the connect page now lets you pick which one this watch should show, instead of always defaulting to the first one Volvo returns.
 
 v1.3.0
-Added an imperial units option (miles, UK mpg, UK gallons) for UK/Ireland
-drivers — off by default, on in the phone app's settings for this watch
-app. Everywhere else stays km/litres.
+Added an imperial units option (miles, UK mpg, UK gallons) for UK/Ireland drivers — off by default, on in the phone app's settings for this watch app. Everywhere else stays km/litres.
 
 v1.2.0
-Fixed the Warnings page so a long line (like "Service due" with distance
-remaining) can't run past the edge of the screen on smaller watches. A
-clearer message when the car is asleep and can't be reached right now.
-Removed "Stop climate" from the menu — Volvo's API doesn't reliably
-execute it, so we've pulled it rather than ship a button that often does
-nothing; it'll return once that's fixed on Volvo's side.
+Fixed the Warnings page so a long line (like "Service due" with distance remaining) can't run past the edge of the screen on smaller watches. A clearer message when the car is asleep and can't be reached right now. Removed "Stop climate" from the menu — Volvo's API doesn't reliably execute it, so we've pulled it rather than ship a button that often does nothing; it'll return once that's fixed on Volvo's side.
 
 v1.1.0
-Fixed a display bug on the status page: EV owners without a fuel tank were
-seeing a stray "Fuel" reading with no value. The battery figure now shows
-on its own when a car has no fuel data.
+Fixed a display bug on the status page: EV owners without a fuel tank were seeing a stray "Fuel" reading with no value. The battery figure now shows on its own when a car has no fuel data.
 
 v1.0.0
-First public release. Range, fuel and battery at a glance, plus dedicated
-Charging, Trip and Warnings pages, and climate control from your wrist —
-built on a hosted backend, no setup beyond signing in with your Volvo ID.
+First public release. Range, fuel and battery at a glance, plus dedicated Charging, Trip and Warnings pages, and climate control from your wrist — built on a hosted backend, no setup beyond signing in with your Volvo ID.
 ```
 
 ### Paste into Store — Finnish (cumulative, newest first)
 
 ```
 v1.4.1
-Lataus-sivun arvio täyteen lataukseen näyttää nyt myös kellonajan jolloin
-lataus valmistuu ("2 h 15 min · 21:02"), ei pelkkää kestoa. Täyssähköautot
-näkevät Matka-sivulla nyt keskikulutuksen kWh/100 km, aiemman
-polttoainekulutuksen sijaan joka ei koskaan koskenut niitä.
+Lataus-sivun arvio täyteen lataukseen näyttää nyt myös kellonajan jolloin lataus valmistuu ("2 h 15 min · 21:02"), ei pelkkää kestoa. Täyssähköautot näkevät Matka-sivulla nyt keskikulutuksen kWh/100 km, aiemman polttoainekulutuksen sijaan joka ei koskaan koskenut niitä.
 
 v1.4.0
-Kaksi lisäystä löytyi Volvon datasta, joka oli jo saatavilla muttei
-käytössä: "Check lights" -varoitus joka havaitsee rikkinäisen polttimon
-missä tahansa autossa, ja TARGET-rivi Lataus-sivulla joka näyttää
-ekolatausrajasi kun olet asettanut sen alle 100 %:iin. Jos Volvo
-ID:lläsi on useampi auto, yhdistämissivu antaa nyt valita kumpi näytetään
-tällä kellolla — sen sijaan että se aina valitsisi ensimmäisen Volvon
-palauttaman auton.
+Kaksi lisäystä löytyi Volvon datasta, joka oli jo saatavilla muttei käytössä: "Check lights" -varoitus joka havaitsee rikkinäisen polttimon missä tahansa autossa, ja TARGET-rivi Lataus-sivulla joka näyttää ekolatausrajasi kun olet asettanut sen alle 100 %:iin. Jos Volvo ID:lläsi on useampi auto, yhdistämissivu antaa nyt valita kumpi näytetään tällä kellolla — sen sijaan että se aina valitsisi ensimmäisen Volvon palauttaman auton.
 
 v1.3.0
-Lisätty imperiaaliyksiköt (mailit, UK mpg, UK gallonat) UK/Irlannin
-kuljettajille — pois päältä oletuksena, päällä puhelinsovelluksen
-asetuksista tälle kellosovellukselle. Muualla pysyy km/litroissa.
+Lisätty imperiaaliyksiköt (mailit, UK mpg, UK gallonat) UK/Irlannin kuljettajille — pois päältä oletuksena, päällä puhelinsovelluksen asetuksista tälle kellosovellukselle. Muualla pysyy km/litroissa.
 
 v1.2.0
-Korjattu Varoitukset-sivu niin, ettei pitkä rivi (kuten "Huolto erääntyy"
-jäljellä olevan matkan kanssa) voi ylittää näytön reunaa pienemmillä
-kelloilla. Selkeämpi viesti kun auto on unessa eikä sitä tavoiteta juuri
-nyt. Poistettu "Stop climate" valikosta — Volvon API ei suorita sitä
-luotettavasti, joten poistimme sen sen sijaan että tarjoaisimme painikkeen
-joka usein ei tee mitään; se palaa kun Volvo korjaa ongelman puoleltaan.
+Korjattu Varoitukset-sivu niin, ettei pitkä rivi (kuten "Huolto erääntyy" jäljellä olevan matkan kanssa) voi ylittää näytön reunaa pienemmillä kelloilla. Selkeämpi viesti kun auto on unessa eikä sitä tavoiteta juuri nyt. Poistettu "Stop climate" valikosta — Volvon API ei suorita sitä luotettavasti, joten poistimme sen sen sijaan että tarjoaisimme painikkeen joka usein ei tee mitään; se palaa kun Volvo korjaa ongelman puoleltaan.
 
 v1.1.0
-Korjattu näyttövika tila-sivulla: sähköautojen omistajat ilman
-polttoainesäiliötä näkivät harhaan jääneen "Fuel"-lukeman ilman arvoa.
-Akkulukema näkyy nyt yksinään kun autolla ei ole polttoainedataa.
+Korjattu näyttövika tila-sivulla: sähköautojen omistajat ilman polttoainesäiliötä näkivät harhaan jääneen "Fuel"-lukeman ilman arvoa. Akkulukema näkyy nyt yksinään kun autolla ei ole polttoainedataa.
 
 v1.0.0
-Ensimmäinen julkinen julkaisu. Toimintamatka, polttoaine ja akku yhdellä
-silmäyksellä, sekä omat Lataus-, Matka- ja Varoitukset-sivut, ja
-ilmastoinnin ohjaus ranteesta — toimii ylläpidetyllä taustapalvelimella,
-ei muuta asennusta kuin Volvo ID:llä kirjautuminen.
+Ensimmäinen julkinen julkaisu. Toimintamatka, polttoaine ja akku yhdellä silmäyksellä, sekä omat Lataus-, Matka- ja Varoitukset-sivut, ja ilmastoinnin ohjaus ranteesta — toimii ylläpidetyllä taustapalvelimella, ei muuta asennusta kuin Volvo ID:llä kirjautuminen.
 ```
 
 ### 1.4.1
