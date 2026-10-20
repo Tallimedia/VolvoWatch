@@ -202,6 +202,122 @@ Lähdekoodi ja käyttöönotto-ohjeet: https://github.com/tallimedia/VolvoWatch
 
 ## What's new / release notes (≤4000 chars)
 
+**Policy (2026-10-20, applies to every future release of every IQ Store
+app, not just this one):** the Store's "What's new" field is a single
+free-text box that gets overwritten on every upload — Garmin doesn't keep
+version history for the user to scroll back through. So the text actually
+pasted into that field is never just the new version's note; it's the new
+note **prepended to every previous version's note**, newest first, so
+anyone reading the live Store listing can see the full history in one
+place. Per-version notes below are still drafted individually (so each one
+stays easy to review and translate), but the "Paste into Store" block at
+the top of each language is what actually goes in the upload form. Rebuild
+it each release: write the new version's note, then prepend it to the
+previous cumulative block. Stay inside 4000 chars per language — trim the
+oldest/least-interesting entries first if it ever gets close.
+
+### Paste into Store — English (cumulative, newest first)
+
+```
+v1.4.1
+The Charging page's countdown to a full battery now also shows the clock
+time it'll finish ("2 h 15 min · 21:02"), not just the duration. Pure
+electric cars now see an average energy figure (kWh/100km) on the Trip
+page instead of an average fuel figure that never applied to them.
+
+v1.4.0
+Two additions found sitting unused in data Volvo already shares: a "Check
+lights" warning that catches a bulb out anywhere on the car, and a TARGET
+row on the Charging page showing your eco charge limit when you've set one
+below 100%. If your Volvo ID has more than one car, the connect page now
+lets you pick which one this watch should show, instead of always
+defaulting to the first one Volvo returns.
+
+v1.3.0
+Added an imperial units option (miles, UK mpg, UK gallons) for UK/Ireland
+drivers — off by default, on in the phone app's settings for this watch
+app. Everywhere else stays km/litres.
+
+v1.2.0
+Fixed the Warnings page so a long line (like "Service due" with distance
+remaining) can't run past the edge of the screen on smaller watches. A
+clearer message when the car is asleep and can't be reached right now.
+Removed "Stop climate" from the menu — Volvo's API doesn't reliably
+execute it, so we've pulled it rather than ship a button that often does
+nothing; it'll return once that's fixed on Volvo's side.
+
+v1.1.0
+Fixed a display bug on the status page: EV owners without a fuel tank were
+seeing a stray "Fuel" reading with no value. The battery figure now shows
+on its own when a car has no fuel data.
+
+v1.0.0
+First public release. Range, fuel and battery at a glance, plus dedicated
+Charging, Trip and Warnings pages, and climate control from your wrist —
+built on a hosted backend, no setup beyond signing in with your Volvo ID.
+```
+
+### Paste into Store — Finnish (cumulative, newest first)
+
+```
+v1.4.1
+Lataus-sivun arvio täyteen lataukseen näyttää nyt myös kellonajan jolloin
+lataus valmistuu ("2 h 15 min · 21:02"), ei pelkkää kestoa. Täyssähköautot
+näkevät Matka-sivulla nyt keskikulutuksen kWh/100 km, aiemman
+polttoainekulutuksen sijaan joka ei koskaan koskenut niitä.
+
+v1.4.0
+Kaksi lisäystä löytyi Volvon datasta, joka oli jo saatavilla muttei
+käytössä: "Check lights" -varoitus joka havaitsee rikkinäisen polttimon
+missä tahansa autossa, ja TARGET-rivi Lataus-sivulla joka näyttää
+ekolatausrajasi kun olet asettanut sen alle 100 %:iin. Jos Volvo
+ID:lläsi on useampi auto, yhdistämissivu antaa nyt valita kumpi näytetään
+tällä kellolla — sen sijaan että se aina valitsisi ensimmäisen Volvon
+palauttaman auton.
+
+v1.3.0
+Lisätty imperiaaliyksiköt (mailit, UK mpg, UK gallonat) UK/Irlannin
+kuljettajille — pois päältä oletuksena, päällä puhelinsovelluksen
+asetuksista tälle kellosovellukselle. Muualla pysyy km/litroissa.
+
+v1.2.0
+Korjattu Varoitukset-sivu niin, ettei pitkä rivi (kuten "Huolto erääntyy"
+jäljellä olevan matkan kanssa) voi ylittää näytön reunaa pienemmillä
+kelloilla. Selkeämpi viesti kun auto on unessa eikä sitä tavoiteta juuri
+nyt. Poistettu "Stop climate" valikosta — Volvon API ei suorita sitä
+luotettavasti, joten poistimme sen sen sijaan että tarjoaisimme painikkeen
+joka usein ei tee mitään; se palaa kun Volvo korjaa ongelman puoleltaan.
+
+v1.1.0
+Korjattu näyttövika tila-sivulla: sähköautojen omistajat ilman
+polttoainesäiliötä näkivät harhaan jääneen "Fuel"-lukeman ilman arvoa.
+Akkulukema näkyy nyt yksinään kun autolla ei ole polttoainedataa.
+
+v1.0.0
+Ensimmäinen julkinen julkaisu. Toimintamatka, polttoaine ja akku yhdellä
+silmäyksellä, sekä omat Lataus-, Matka- ja Varoitukset-sivut, ja
+ilmastoinnin ohjaus ranteesta — toimii ylläpidetyllä taustapalvelimella,
+ei muuta asennusta kuin Volvo ID:llä kirjautuminen.
+```
+
+### 1.4.1
+
+```
+The Charging page's countdown to a full battery now also shows the clock
+time it'll finish ("2 h 15 min · 21:02"), not just the duration. Pure
+electric cars now see an average energy figure (kWh/100km) on the Trip
+page instead of an average fuel figure that never applied to them.
+```
+
+**Finnish (suomi):**
+
+```
+Lataus-sivun arvio täyteen lataukseen näyttää nyt myös kellonajan jolloin
+lataus valmistuu ("2 h 15 min · 21:02"), ei pelkkää kestoa. Täyssähköautot
+näkevät Matka-sivulla nyt keskikulutuksen kWh/100 km, aiemman
+polttoainekulutuksen sijaan joka ei koskaan koskenut niitä.
+```
+
 ### 1.4.0
 
 ```

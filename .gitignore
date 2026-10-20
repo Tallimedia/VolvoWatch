@@ -43,8 +43,16 @@ watch/bin/
 *.prg
 *.prg.debug.xml
 
-# per-person sideload builds — contain live car credentials, never commit
-/dist/
+# dist/ is the tracked release-artifact folder (see claude-docs root
+# CLAUDE.md "Release artifacts" convention) — only build-release.sh's output
+# belongs here, since that script refuses to build with a DevConfig.mc
+# device token set. A personalized/sideload build with an embedded token
+# (built by hand, bypassing build-release.sh) must NEVER be copied in here —
+# that's exactly what happened before (tester builds found + removed
+# 2026-10-13); the rule is discipline, not a gitignore block, since dist/
+# itself has to be reachable from other machines.
+!dist/
+!dist/**
 
 # raw sim captures — framed into store/screenshot-*.png by make_store_art.py
 watch/store/capture-*.png
