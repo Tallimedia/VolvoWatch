@@ -61,3 +61,6 @@ watch/store/capture-*.png
 watch/store/pg*.png
 watch/store/pairing.png
 html/*.zip
+
+# scripts/ runtime state — lives only on public-vm, not the repo
+backend/scripts/.last_user_count
