@@ -54,6 +54,17 @@ watch/bin/
 !dist/
 !dist/**
 
+# EXCEPT the app binary itself — this repo's remote is public, and a public
+# repo handing out the installable app bypasses the Connect IQ Store
+# entirely. Untracked 2026-10-27 (public-repo audit); full copies preserved
+# locally and in this repo's own git history up to that commit.
+dist/*.iq
+dist/*.prg
+dist/*-settings.json
+dist/archive/*.iq
+dist/archive/*.prg
+dist/archive/*-settings.json
+
 # raw sim captures — framed into store/screenshot-*.png by make_store_art.py
 watch/store/capture-*.png
 
