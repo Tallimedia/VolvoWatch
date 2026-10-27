@@ -64,3 +64,14 @@ html/*.zip
 
 # scripts/ runtime state — lives only on public-vm, not the repo
 backend/scripts/.last_user_count
+
+# Monkey C compiler intermediates — build output, not source. Untracked
+# 2026-10-27 after a public-repo audit found them committed by accident.
+watch/gen/
+watch/internal-mir/
+watch/mir/
+
+# Editor config — not meant for a public source repo. Untracked 2026-10-27,
+# same audit as above.
+watch/.vscode/
+watch/.project
