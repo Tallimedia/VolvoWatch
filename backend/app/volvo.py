@@ -13,8 +13,11 @@ from typing import Any
 
 import httpx
 
-AUTHORIZE_URL = "https://volvoid.eu.volvocars.com/as/authorization.oauth2"
-TOKEN_URL = "https://volvoid.eu.volvocars.com/as/token.oauth2"
+# Keycloak-based service (migrated 2026-11), replacing the old PingFederate
+# volvoid.eu.volvocars.com endpoints — see ../OAUTH-MIGRATION.md. Confirmed against
+# the live discovery document: https://auth.volvocars.com/realms/volvocars/.well-known/openid-configuration
+AUTHORIZE_URL = "https://auth.volvocars.com/realms/volvocars/protocol/openid-connect/auth"
+TOKEN_URL = "https://auth.volvocars.com/realms/volvocars/protocol/openid-connect/token"
 API_BASE = "https://api.volvocars.com"
 API_STATUS_URL = (
     "https://public-developer-portal-bff.weu-prod.ecpaz.volvocars.biz/api/v1/backend-status"
