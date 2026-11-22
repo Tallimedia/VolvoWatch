@@ -302,7 +302,7 @@ built on a hosted backend, no setup beyond signing in with your Volvo ID.
   full description (setup + requirements + disclaimer), and the release notes
   ("what's new"). The release notes deliberately end by pointing at the
   description, so they are not interchangeable.
-- **Version:** `1.4.0`
+- **Version:** `1.4.1`
 - **Type:** Widget (detected from the manifest)
 - **Class / category:** Lifestyle (Finnish portal: *Elämäntyyli*; *Työkalut* =
   Tools, the fallback if Lifestyle isn't offered). The store's own bucket for
