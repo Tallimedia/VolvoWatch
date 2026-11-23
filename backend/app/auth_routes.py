@@ -37,6 +37,9 @@ async def link_landing() -> str:
         "<h1>Connect your Volvo</h1>"
         "<p>Sign in with your Volvo ID to let VolvoWatch read your car's status "
         "and start climatisation from your watch.</p>"
+        '<p><b>On Volvo\'s sign-in page, tick "Remember me".</b> Without it, '
+        "Volvo ends the sign-in after about 30 minutes without use and the watch "
+        "will keep asking you to reconnect.</p>"
         '<p><a class="btn btn-primary" style="text-transform: uppercase; '
         'letter-spacing: 0.06em" href="/auth/login">Sign in with Volvo</a></p>'
         '<p class="text-muted">You sign in on Volvo\'s own site. This service never sees '
