@@ -55,8 +55,10 @@ watch↔phone (Bluetooth/WiFi) → backend (HTTPS) → Volvo Cars API
 2. On the watch, open the action menu (press select) → **Open connect
    page** — this sends a notification to your phone. Or just open the
    backend's `/link` page directly in any browser.
-3. Sign in with your Volvo ID. You sign in on Volvo's own page — this app
-   and its backend never see your password.
+3. Sign in with your Volvo ID and tick **"Remember me"** — without it, Volvo
+   ends the sign-in after about 30 minutes without use and the watch keeps
+   asking you to reconnect. You sign in on Volvo's own page — this app and
+   its backend never see your password.
 4. You'll get a short pairing code. Enter it in Garmin Connect Mobile's app
    settings, or directly on the watch with the on-screen code wheels.
 
