@@ -35,7 +35,7 @@ VolvoWatch puts your car's live status in the glance carousel and gives you a st
 SETUP
 1. Install the app. First launch asks you to connect.
 2. Open the action menu (press select) → "Open connect page" — sends a notification to your phone. Or just open https://volvowatchapp.tallimedia.com/link directly in any browser.
-3. Sign in with your Volvo ID. You sign in on Volvo's own page — this app never sees your password.
+3. Sign in with your Volvo ID and tick "Remember me", or the watch will keep asking you to reconnect. You sign in on Volvo's own page — this app never sees your password.
 4. Multiple cars on your Volvo ID? Choose the one for this watch.
 5. You'll get a short pairing code. Enter it in Garmin Connect Mobile's app settings, or directly on the watch with the on-screen code wheels.
 6. The watch exchanges the code once for a private device token and starts showing your car.
@@ -57,9 +57,6 @@ A real list, not just an icon: doors and windows called out separately, service 
 CLIMATE CONTROL
 Start climatisation from the watch, with a confirmation step so it can't be triggered by accident. The app reports what the car actually answered, not just that a command was sent.
 
-BUILT FOR PLUG-IN HYBRIDS FIRST
-Developed and tested against a PHEV; works for any Volvo with connected services. Pure-EV detail (like charging-curve data) is on the roadmap.
-
 WHAT THIS APP CAN AND CAN'T DO
 VolvoWatch uses Volvo's Level 1 data — vehicle status and climate control. Level 2 actions (remote lock, unlock, flash, honk) need separate, more restricted Volvo approval and aren't implemented yet.
 
@@ -68,6 +65,7 @@ REQUIREMENTS
 • Your phone nearby, or the watch on WiFi — no LTE on this device, so it needs one of those to reach the backend
 
 GOOD TO KNOW
+• Asked to reconnect? Sign in again on the connect page with "Remember me" ticked — no new pairing code needed.
 • Readings are as fresh as the car's last check-in — a parked car can go hours between updates unless plugged in or recently driven, so the app always shows how old the data is.
 • The climate command only works while the car is reachable; Volvo refuses it while someone's driving, and the app says so.
 • Stopping climatisation isn't offered here — Volvo's public API reports success without reliably stopping the car, a known fault on Volvo's side. Use the Volvo app to stop it.
@@ -92,7 +90,7 @@ VolvoWatch näyttää autosi tilan suoraan vilkaisunäkymässä ja tarjoaa tila-
 KÄYTTÖÖNOTTO
 1. Asenna sovellus. Ensimmäinen käynnistys pyytää yhdistämään.
 2. Avaa toimintovalikko (paina valitse) → "Open connect page" — lähettää ilmoituksen puhelimeesi. Tai avaa suoraan osoite https://volvowatchapp.tallimedia.com/link missä tahansa selaimessa.
-3. Kirjaudu Volvo ID:lläsi. Kirjautuminen tapahtuu Volvon omalla sivulla — tämä sovellus ei koskaan näe salasanaasi.
+3. Kirjaudu Volvo ID:lläsi ja valitse "Muista minut" ("Remember me"), muuten kello pyytää yhdistämään uudelleen. Kirjautuminen tapahtuu Volvon omalla sivulla — tämä sovellus ei koskaan näe salasanaasi.
 4. Onko Volvo ID:lläsi useampi auto? Valitse tälle kellolle näytettävä auto.
 5. Saat lyhyen parituskoodin. Syötä se Garmin Connect Mobile -sovelluksen asetuksiin, tai suoraan kellolla näytön numeropyörillä.
 6. Kello vaihtaa koodin kertaalleen yksityiseen laitetunnukseen ja alkaa näyttää autosi tietoja.
@@ -114,9 +112,6 @@ Todellinen lista, ei vain kuvake: ovet ja ikkunat eriteltyinä, huolto eräänty
 ILMASTOINNIN OHJAUS
 Käynnistä ilmastointi kellosta, vahvistusvaiheen kanssa ettei se käynnisty vahingossa. Sovellus kertoo mitä auto todella vastasi, ei vain että komento lähetettiin.
 
-KEHITETTY ENSISIJAISESTI LADATTAVILLE HYBRIDEILLE
-Testattu ladattavalla hybridillä (PHEV); toimii kaikilla Volvoilla joissa on yhdistetyt palvelut. Sähköautokohtaiset lisätiedot tulossa.
-
 MITÄ TÄMÄ SOVELLUS OSAA JA EI OSAA
 VolvoWatch käyttää Volvon Tason 1 dataa — tilatietoja ja ilmastoinnin ohjausta. Tason 2 toiminnot (etälukitus, avaus, valot, äänimerkki) vaativat erillisen Volvo-hyväksynnän, ei vielä toteutettu.
 
@@ -125,6 +120,7 @@ VAATIMUKSET
 • Puhelin lähellä, tai kello WiFi-verkossa — ei LTE:tä tässä laitteessa
 
 HYVÄ TIETÄÄ
+• Pyytääkö kello yhdistämään uudelleen? Kirjaudu yhdistämissivulla uudelleen "Muista minut" valittuna — uutta parituskoodia ei tarvita.
 • Lukemat ovat niin tuoreita kuin auton viimeisin yhteydenotto — sovellus näyttää aina kuinka vanhaa data on.
 • Ilmastointikomento toimii vain kun auto on tavoitettavissa; Volvo estää sen ajon aikana, ja sovellus kertoo tästä.
 • Ilmastoinnin pysäytystä ei tarjota — Volvon API ilmoittaa onnistumisesta pysäyttämättä autoa luotettavasti, tunnettu vika Volvon puolella. Käytä Volvo-sovellusta pysäyttämiseen.
